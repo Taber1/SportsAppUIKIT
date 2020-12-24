@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class RegisterScreen extends StatefulWidget {
   @override
@@ -70,7 +71,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(5)),
                       hintText: 'Password',
-                      suffixIcon: Icon(Icons.lock)),
+                      suffixIcon: Icon(FontAwesomeIcons.lockOpen)),
                 ),
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.01,
@@ -83,7 +84,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(5)),
                       hintText: 'Confirm Password',
-                      suffixIcon: Icon(Icons.lock)),
+                      suffixIcon: Icon(FontAwesomeIcons.lockOpen)),
                 ),
               ],
             ),
