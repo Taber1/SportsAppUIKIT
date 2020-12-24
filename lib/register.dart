@@ -91,14 +91,18 @@ class _RegisterScreenState extends State<RegisterScreen> {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
             ),
-            RaisedButton(
-              onPressed: () {},
-              color: Colors.tealAccent,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20)),
-              child: Text(
-                "REGISTER",
-                style: TextStyle(color: Colors.black),
+            ButtonTheme(
+              minWidth: MediaQuery.of(context).size.width * 0.4,
+              height: MediaQuery.of(context).size.height * 0.05,
+              child: RaisedButton(
+                onPressed: () {},
+                color: Colors.tealAccent,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20)),
+                child: Text(
+                  "REGISTER",
+                  style: TextStyle(color: Colors.black),
+                ),
               ),
             ),
           ],

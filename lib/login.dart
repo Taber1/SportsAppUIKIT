@@ -86,19 +86,23 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               )
             ]),
-            RaisedButton(
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => BottomAppbarScreen()));
-              },
-              color: Colors.tealAccent,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20)),
-              child: Text(
-                "SIGN IN",
-                style: TextStyle(color: Colors.black),
+            ButtonTheme(
+              minWidth: MediaQuery.of(context).size.width * 0.4,
+              height: MediaQuery.of(context).size.height * 0.05,
+              child: RaisedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => BottomAppbarScreen()));
+                },
+                color: Colors.tealAccent,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20)),
+                child: Text(
+                  "SIGN IN",
+                  style: TextStyle(color: Colors.black),
+                ),
               ),
             ),
             SizedBox(
