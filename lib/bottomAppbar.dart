@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sport/player_profile.dart';
+import 'package:sport/sport_select.dart';
 
 import 'booking.dart';
 import 'home.dart';
@@ -16,6 +18,7 @@ class _BottomAppbarScreenState extends State<BottomAppbarScreen> {
   final List<Widget> screen = [
     HomeScreen(),
     NotificationScreen(),
+    SelectSportScreen(),
     BookingScreen(),
     ProfileScreen()
   ];
@@ -30,8 +33,19 @@ class _BottomAppbarScreenState extends State<BottomAppbarScreen> {
         child: PageStorage(bucket: bucket, child: currentScreen),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Icons.sports),
+        elevation: 0.0,
+        foregroundColor: Colors.transparent,
+        backgroundColor: Colors.transparent,
+        onPressed: () {
+          setState(() {
+            currentScreen = SelectSportScreen();
+            currentTab = 5;
+          });
+        },
+        child: Icon(
+          FontAwesomeIcons.footballBall,
+          color: Colors.orange,
+        ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
