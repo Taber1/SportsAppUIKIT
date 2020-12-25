@@ -64,8 +64,45 @@ class _BookingScreenState extends State<BookingScreen> {
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.05,
           ),
+          Container(
+            height: MediaQuery.of(context).size.height * 0.2,
+            child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (BuildContext context, int index) {
+                  return VerticalCard();
+                }),
+          )
         ],
       ),
     ));
+  }
+}
+
+class HorizontalCard extends StatelessWidget {
+  final String time1;
+  final String time2;
+  HorizontalCard({this.time1, this.time2});
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+          color: Colors.grey[900], borderRadius: BorderRadius.circular(30)),
+      height: MediaQuery.of(context).size.height * 0.1,
+      width: MediaQuery.of(context).size.width * 0.2,
+    );
+  }
+}
+
+class VerticalCard extends StatelessWidget {
+  final String date;
+  final String day;
+  VerticalCard({this.date, this.day});
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+          color: Colors.grey[900], borderRadius: BorderRadius.circular(50)),
+      width: MediaQuery.of(context).size.width * 0.25,
+    );
   }
 }
