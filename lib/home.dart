@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sport/filter.dart';
 import 'package:sport/invite_friend.dart';
@@ -27,6 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: CircleAvatar(
+                      backgroundColor: Colors.grey[900],
                       child: Theme(
                           data: Theme.of(context)
                               .copyWith(canvasColor: Colors.transparent),
@@ -43,6 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: CircleAvatar(
+                      backgroundColor: Colors.grey[900],
                       child: Icon(
                         FontAwesomeIcons.mapMarkerAlt,
                         size: 30,
@@ -53,6 +56,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
               CircleAvatar(
+                backgroundImage: NetworkImage(
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm96ilAyzUnorJ54lXDKHkwicW-C2V7McaAw&usqp=CAU'),
                 maxRadius: 170,
               ),
               SizedBox(
@@ -79,7 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
               Divider(
-                thickness: 1.0,
+                thickness: 1.5,
                 color: Colors.grey,
               ),
               SizedBox(
@@ -138,7 +143,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
               Divider(
-                thickness: 1.0,
+                thickness: 1.5,
                 color: Colors.grey,
               ),
               SizedBox(
@@ -179,7 +184,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.03,
+                height: MediaQuery.of(context).size.height * 0.05,
               ),
             ],
           ),
@@ -204,6 +209,8 @@ class EachCard extends StatelessWidget {
               width: 5,
             ),
             CircleAvatar(
+              backgroundImage: NetworkImage(
+                  'https://cdn.pixabay.com/photo/2016/03/09/15/10/man-1246508__340.jpg'),
               maxRadius: 27,
             ),
             SizedBox(
@@ -216,30 +223,38 @@ class EachCard extends StatelessWidget {
                 Text("John Doe"),
                 Row(
                   children: [
-                    Icon(
-                      Icons.sports_cricket,
-                      size: 15,
-                      color: Colors.tealAccent,
-                    ),
+                    Container(
+                        height: 20,
+                        width: 20,
+                        child: SvgPicture.asset(
+                          'assets/icon/cricket.svg',
+                          color: Colors.yellow,
+                        )),
                     SizedBox(
                       width: 5,
                     ),
-                    Icon(
-                      FontAwesomeIcons.futbol,
-                      size: 15,
-                      color: Colors.lightBlueAccent,
-                    ),
+                    Container(
+                        height: 20,
+                        width: 20,
+                        child: SvgPicture.asset(
+                          'assets/icon/basketball.svg',
+                          color: Colors.blueAccent,
+                        )),
                     SizedBox(
                       width: 5,
                     ),
-                    Icon(
-                      FontAwesomeIcons.swimmer,
-                      size: 15,
-                      color: Colors.redAccent[100],
-                    )
+                    Container(
+                        height: 20,
+                        width: 20,
+                        child: SvgPicture.asset(
+                          'assets/icon/swimming.svg',
+                          color: Colors.redAccent[100],
+                        ))
                   ],
                 ),
-                Text('20 - 25 Age')
+                Text('20 - 25 Age',
+                    style: TextStyle(
+                        color: Colors.grey, letterSpacing: 0, fontSize: 13))
               ],
             )
           ],
