@@ -33,20 +33,16 @@ class _BottomAppbarScreenState extends State<BottomAppbarScreen> {
         child: PageStorage(bucket: bucket, child: currentScreen),
       ),
       floatingActionButton: FloatingActionButton(
-        elevation: 0.0,
-        foregroundColor: Colors.transparent,
-        backgroundColor: Colors.transparent,
-        onPressed: () {
-          setState(() {
-            currentScreen = SelectSportScreen();
-            currentTab = 5;
-          });
-        },
-        child: Icon(
-          FontAwesomeIcons.footballBall,
-          color: Colors.orange,
-        ),
-      ),
+          elevation: 0.0,
+          foregroundColor: Colors.transparent,
+          backgroundColor: Colors.transparent,
+          onPressed: () {
+            setState(() {
+              currentScreen = SelectSportScreen();
+              currentTab = 5;
+            });
+          },
+          child: Image.asset('assets/images/sport-35492.png')),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         shape: CircularNotchedRectangle(),

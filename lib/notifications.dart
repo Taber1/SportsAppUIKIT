@@ -138,11 +138,10 @@ class _NotificationScreenState extends State<NotificationScreen> {
 
 class EachCard extends StatelessWidget {
   final IconData icon;
+  final String name;
+  final String status;
   final Color color;
-  final String sport;
-  final String date;
-  final String time;
-  EachCard({this.icon, this.color, this.sport, this.date, this.time});
+  EachCard({this.icon, this.name, this.status, this.color});
   @override
   Widget build(BuildContext context) {
     return Container(
