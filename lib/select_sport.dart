@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 enum rating { Yes, No }
@@ -125,15 +126,10 @@ class _SelectSportScreenState extends State<SelectSportScreen> {
                     child: CircleAvatar(
                       backgroundColor: Colors.grey[900],
                       child: InkWell(
-                        onTap: () {
-                          Navigator.pop(context);
-                        },
-                        child: Icon(
-                          Icons.arrow_back,
-                          color: Colors.tealAccent,
-                          size: 35,
-                        ),
-                      ),
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
+                          child: SvgPicture.asset('assets/icon/back.svg')),
                       maxRadius: 35,
                     ),
                   ),

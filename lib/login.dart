@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sport/bottomAppbar.dart';
 import 'package:sport/register.dart';
@@ -16,14 +17,17 @@ class _LoginScreenState extends State<LoginScreen> {
       body: Padding(
         padding: EdgeInsets.all(8),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Center(
-              child: Text("Sign In"),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.1,
+            ),
+            Text(
+              "Sign In",
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.01,
+              height: MediaQuery.of(context).size.height * 0.1,
             ),
             Column(
               children: [
@@ -35,6 +39,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(5)),
                       hintText: 'sarahkaramsi@gmail.com',
+                      hintStyle: TextStyle(
+                        fontSize: 18,
+                      ),
                       suffixIcon: Icon(
                         Icons.mail_outline,
                         size: 30,
@@ -51,6 +58,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(5)),
                       hintText: '********',
+                      hintStyle: TextStyle(
+                        fontSize: 18,
+                      ),
                       suffixIcon: Icon(
                         FontAwesomeIcons.lockOpen,
                       )),
@@ -76,16 +86,25 @@ class _LoginScreenState extends State<LoginScreen> {
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.01,
                   ),
-                  Text('Stay Signed In'),
+                  Text(
+                    'Stay Signed In',
+                    style: TextStyle(
+                      fontSize: 16,
+                    ),
+                  ),
                 ],
               ),
               InkWell(
                 child: Text(
                   'Forget Password ?',
-                  style: TextStyle(decoration: TextDecoration.underline),
+                  style: TextStyle(
+                      fontSize: 16, decoration: TextDecoration.underline),
                 ),
               )
             ]),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.05,
+            ),
             ButtonTheme(
               minWidth: MediaQuery.of(context).size.width * 0.4,
               height: MediaQuery.of(context).size.height * 0.05,
@@ -101,16 +120,22 @@ class _LoginScreenState extends State<LoginScreen> {
                     borderRadius: BorderRadius.circular(20)),
                 child: Text(
                   "SIGN IN",
-                  style: TextStyle(color: Colors.black),
+                  style: TextStyle(
+                      color: Colors.black, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
             ),
-            Text("or sign in with"),
+            Text(
+              "or sign in with",
+              style: TextStyle(
+                fontSize: 16,
+              ),
+            ),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.05,
+              height: MediaQuery.of(context).size.height * 0.02,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -118,32 +143,35 @@ class _LoginScreenState extends State<LoginScreen> {
                 RawMaterialButton(
                   onPressed: () {},
                   elevation: 2.0,
-                  child: Icon(
-                    FontAwesomeIcons.facebook,
-                    size: 35.0,
+                  child: SvgPicture.asset(
+                    'assets/icon/facebook.svg',
+                    color: Colors.grey,
                   ),
                   padding: EdgeInsets.all(15.0),
-                  shape: CircleBorder(),
+                  shape: CircleBorder(side: BorderSide(color: Colors.blue)),
                 ),
                 RawMaterialButton(
                   onPressed: () {},
                   elevation: 5.0,
-                  child: Icon(
-                    FontAwesomeIcons.google,
-                    size: 35.0,
+                  child: SvgPicture.asset(
+                    'assets/icon/google_plus.svg',
+                    color: Colors.grey,
                   ),
                   padding: EdgeInsets.all(15.0),
-                  shape: CircleBorder(),
+                  shape: CircleBorder(side: BorderSide(color: Colors.red)),
                 ),
               ],
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.04,
+              height: MediaQuery.of(context).size.height * 0.05,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Don't have an account?"),
+                Text(
+                  "Don't have an account?",
+                  style: TextStyle(fontSize: 16),
+                ),
                 InkWell(
                   onTap: () {
                     Navigator.push(
@@ -154,6 +182,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: Text(
                     "Register",
                     style: TextStyle(
+                        fontSize: 16,
                         color: Colors.tealAccent,
                         decoration: TextDecoration.underline),
                   ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sport/player_profile.dart';
-import 'package:sport/sport_select.dart';
+import 'package:sport/select_sport.dart';
 
 import 'booking.dart';
 import 'home.dart';

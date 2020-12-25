@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sport/filter.dart';
 
@@ -28,18 +29,10 @@ class _NotificationScreenState extends State<NotificationScreen> {
                   child: CircleAvatar(
                     backgroundColor: Colors.grey[900],
                     child: InkWell(
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => FilterScreen()));
-                      },
-                      child: Icon(
-                        FontAwesomeIcons.filter,
-                        size: 30,
-                        color: Colors.grey,
-                      ),
-                    ),
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: SvgPicture.asset('assets/icon/back.svg')),
                     maxRadius: 30,
                   ),
                 ),

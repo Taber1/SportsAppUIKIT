@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:sport/moreDetailBottomSheet.dart';
+import 'package:sport/venue_more_detail.dart';
 
 class VenueScreen extends StatefulWidget {
   @override
@@ -27,15 +28,10 @@ class _VenueScreenState extends State<VenueScreen> {
                     child: CircleAvatar(
                       backgroundColor: Colors.grey[900],
                       child: InkWell(
-                        onTap: () {
-                          Navigator.pop(context);
-                        },
-                        child: Icon(
-                          Icons.arrow_back,
-                          color: Colors.tealAccent,
-                          size: 35,
-                        ),
-                      ),
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
+                          child: SvgPicture.asset('assets/icon/back.svg')),
                       maxRadius: 30,
                     ),
                   ),

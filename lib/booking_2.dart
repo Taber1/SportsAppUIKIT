@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Booking2Screen extends StatefulWidget {
@@ -28,15 +29,10 @@ class _Booking2ScreenState extends State<Booking2Screen> {
                     child: CircleAvatar(
                       backgroundColor: Colors.grey[900],
                       child: InkWell(
-                        onTap: () {
-                          Navigator.pop(context);
-                        },
-                        child: Icon(
-                          Icons.arrow_back,
-                          color: Colors.tealAccent,
-                          size: 35,
-                        ),
-                      ),
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
+                          child: SvgPicture.asset('assets/icon/back.svg')),
                       maxRadius: 30,
                     ),
                   ),

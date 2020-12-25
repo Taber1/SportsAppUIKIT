@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 enum q1Ans { Yes, No }
@@ -240,24 +241,29 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   EachSport(
-                    icon: Icons.sports_cricket,
+                    icon: 'assets/icon/football.svg',
                     color: Colors.redAccent,
+                    icolor: Colors.black,
                   ),
                   EachSport(
-                    icon: Icons.sports_football,
+                    icon: 'assets/icon/cricket.svg',
                     color: Colors.tealAccent,
+                    icolor: Colors.black,
                   ),
                   EachSport(
-                    icon: Icons.sports_tennis,
+                    icon: 'assets/icon/badminton.svg',
                     color: Colors.grey[900],
+                    icolor: Colors.grey,
                   ),
                   EachSport(
-                    icon: Icons.sports_hockey,
+                    icon: 'assets/icon/basketball.svg',
                     color: Colors.grey[900],
+                    icolor: Colors.grey,
                   ),
                   EachSport(
-                    icon: FontAwesomeIcons.swimmer,
+                    icon: 'assets/icon/swimming.svg',
                     color: Colors.yellowAccent,
+                    icolor: Colors.black,
                   )
                 ],
               ),
@@ -268,24 +274,29 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   EachSport(
-                    icon: Icons.sports_rugby,
+                    icon: 'assets/icon/gym.svg',
                     color: Colors.grey[900],
+                    icolor: Colors.grey,
                   ),
                   EachSport(
-                    icon: Icons.sports_soccer,
+                    icon: 'assets/icon/rugby.svg',
                     color: Colors.grey[900],
+                    icolor: Colors.grey,
                   ),
                   EachSport(
-                    icon: Icons.sports_volleyball,
+                    icon: 'assets/icon/squash.svg',
+                    color: Colors.grey[900],
+                    icolor: Colors.grey,
+                  ),
+                  EachSport(
+                    icon: 'assets/icon/tennis.svg',
                     color: Colors.blueAccent,
+                    icolor: Colors.black,
                   ),
                   EachSport(
-                    icon: Icons.sports_basketball,
+                    icon: 'assets/icon/netball.svg',
                     color: Colors.grey[900],
-                  ),
-                  EachSport(
-                    icon: FontAwesomeIcons.dumbbell,
-                    color: Colors.grey[900],
+                    icolor: Colors.grey,
                   )
                 ],
               ),
@@ -483,9 +494,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
 }
 
 class EachSport extends StatefulWidget {
-  final IconData icon;
+  final String icon;
   final Color color;
-  EachSport({this.icon, this.color});
+  final Color icolor;
+  EachSport({this.icon, this.color, this.icolor});
   @override
   _EachSportState createState() => _EachSportState();
 }
@@ -499,11 +511,10 @@ class _EachSportState extends State<EachSport> {
       height: MediaQuery.of(context).size.height * 0.085,
       width: MediaQuery.of(context).size.width * 0.18,
       child: Center(
-        child: Icon(
-          widget.icon,
-          size: 30,
-        ),
-      ),
+          child: Container(
+              height: 30,
+              width: 30,
+              child: SvgPicture.asset(widget.icon, color: widget.icolor))),
     );
   }
 }
