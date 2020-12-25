@@ -51,27 +51,124 @@ class _BookingScreenState extends State<BookingScreen> {
           ),
           Row(
             children: [
+              SizedBox(
+                width: MediaQuery.of(context).size.width * 0.05,
+              ),
               Text(
                 "Nov",
                 style: TextStyle(fontSize: 22),
               ),
               SizedBox(
-                width: MediaQuery.of(context).size.width * 0.6,
+                width: MediaQuery.of(context).size.width * 0.55,
               ),
               Text("Dec", style: TextStyle(fontSize: 22)),
             ],
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.05,
+            height: MediaQuery.of(context).size.height * 0.02,
           ),
           Container(
-            height: MediaQuery.of(context).size.height * 0.2,
-            child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (BuildContext context, int index) {
-                  return VerticalCard();
-                }),
-          )
+            height: MediaQuery.of(context).size.height * 0.17,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                VerticalCard(
+                  date: "8th",
+                  day: "Wed",
+                  color: Colors.tealAccent,
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                VerticalCard(
+                  date: "9th",
+                  day: "Thurs",
+                  color: Colors.grey[900],
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                VerticalCard(
+                  date: "10th",
+                  day: "Fri",
+                  color: Colors.grey[900],
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                VerticalCard(
+                  date: "11th",
+                  day: "Sat",
+                  color: Colors.grey[900],
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                VerticalCard(
+                  date: "12th",
+                  day: "Sun",
+                  color: Colors.grey[900],
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                VerticalCard(
+                  date: "13th",
+                  day: "Mon",
+                  color: Colors.grey[900],
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                VerticalCard(
+                  date: "14th",
+                  day: "Tues",
+                  color: Colors.grey[900],
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                VerticalCard(
+                  date: "15th",
+                  day: "Wed",
+                  color: Colors.grey[900],
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                VerticalCard(
+                  date: "16th",
+                  day: "Thur",
+                  color: Colors.grey[900],
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                VerticalCard(
+                  date: "17th",
+                  day: "Fri",
+                  color: Colors.grey[900],
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.02,
+          ),
+          Container(
+              width: MediaQuery.of(context).size.width,
+              padding: EdgeInsets.only(left: 10),
+              child: Text(
+                "Available Slots",
+                style: TextStyle(fontSize: 22),
+              )),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.02,
+          ),
+          HorizontalCard()
         ],
       ),
     ));
@@ -81,14 +178,15 @@ class _BookingScreenState extends State<BookingScreen> {
 class HorizontalCard extends StatelessWidget {
   final String time1;
   final String time2;
-  HorizontalCard({this.time1, this.time2});
+  final Color color;
+  HorizontalCard({this.time1, this.time2, this.color});
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: Colors.grey[900], borderRadius: BorderRadius.circular(30)),
-      height: MediaQuery.of(context).size.height * 0.1,
-      width: MediaQuery.of(context).size.width * 0.2,
+          color: Colors.grey, borderRadius: BorderRadius.circular(15)),
+      height: MediaQuery.of(context).size.height * 0.07,
+      width: MediaQuery.of(context).size.width * 0.3,
     );
   }
 }
@@ -96,13 +194,33 @@ class HorizontalCard extends StatelessWidget {
 class VerticalCard extends StatelessWidget {
   final String date;
   final String day;
-  VerticalCard({this.date, this.day});
+  final Color color;
+  VerticalCard({this.date, this.day, this.color});
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-          color: Colors.grey[900], borderRadius: BorderRadius.circular(50)),
+      decoration:
+          BoxDecoration(color: color, borderRadius: BorderRadius.circular(50)),
       width: MediaQuery.of(context).size.width * 0.25,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Text(
+            date,
+            style: TextStyle(
+                fontSize: 22,
+                color: color == Colors.grey[900] ? Colors.white : Colors.black,
+                fontWeight: FontWeight.bold),
+          ),
+          Text(
+            day,
+            style: TextStyle(
+                fontSize: 22,
+                color: color == Colors.grey[900] ? Colors.white : Colors.black,
+                fontWeight: FontWeight.bold),
+          )
+        ],
+      ),
     );
   }
 }
