@@ -61,7 +61,96 @@ class _SelectSportScreenState extends State<SelectSportScreen> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.05,
               ),
-              EachCard()
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  EachCard(icon: Icons.sports_cricket),
+                  EachCard(
+                    icon: Icons.sports_football,
+                  )
+                ],
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  EachCard(
+                    icon: FontAwesomeIcons.futbol,
+                  ),
+                  EachCard(
+                    icon: Icons.sports_tennis,
+                  )
+                ],
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  EachCard(
+                    icon: Icons.sports_basketball,
+                  ),
+                  EachCard(
+                    icon: FontAwesomeIcons.dumbbell,
+                  )
+                ],
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  EachCard(
+                    icon: FontAwesomeIcons.swimmer,
+                  ),
+                  EachCard(
+                    icon: Icons.sports_golf,
+                  )
+                ],
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  EachCard(
+                    icon: Icons.sports_handball,
+                  ),
+                  EachCard(
+                    icon: Icons.sports_rugby,
+                  )
+                ],
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.05,
+              ),
+              ButtonTheme(
+                minWidth: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height * 0.05,
+                child: RaisedButton(
+                  onPressed: () {
+                    // Navigator.push(
+                    //     context,
+                    //     MaterialPageRoute(
+                    //         builder: (context) => BottomAppbarScreen()));
+                  },
+                  color: Colors.tealAccent,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
+                  child: Text(
+                    "NEXT",
+                    style: TextStyle(color: Colors.black),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.05,
+              ),
             ],
           ),
         ),
@@ -71,6 +160,8 @@ class _SelectSportScreenState extends State<SelectSportScreen> {
 }
 
 class EachCard extends StatefulWidget {
+  final IconData icon;
+  EachCard({this.icon});
   @override
   _EachCardState createState() => _EachCardState();
 }
@@ -82,10 +173,10 @@ class _EachCardState extends State<EachCard> {
       decoration: BoxDecoration(
           color: Colors.grey[900], borderRadius: BorderRadius.circular(30)),
       height: MediaQuery.of(context).size.height * 0.17,
-      width: MediaQuery.of(context).size.width * 0.45,
+      width: MediaQuery.of(context).size.width * 0.42,
       child: Center(
         child: Icon(
-          FontAwesomeIcons.volleyballBall,
+          widget.icon,
           color: Colors.grey,
           size: 60,
         ),

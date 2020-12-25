@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:sport/venue.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -24,6 +25,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: CircleAvatar(
+                      child: Icon(
+                        FontAwesomeIcons.filter,
+                        size: 30,
+                      ),
                       maxRadius: 30,
                     ),
                   ),
@@ -36,6 +41,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: CircleAvatar(
+                      child: Icon(
+                        FontAwesomeIcons.mapMarkerAlt,
+                        size: 30,
+                      ),
                       maxRadius: 30,
                     ),
                   )
@@ -51,7 +60,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 minWidth: MediaQuery.of(context).size.width * 0.3,
                 height: MediaQuery.of(context).size.height * 0.05,
                 child: RaisedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => VenueScreen()));
+                  },
                   color: Colors.tealAccent,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
@@ -195,7 +207,7 @@ class EachCard extends StatelessWidget {
                 Row(
                   children: [
                     Icon(
-                      FontAwesomeIcons.tableTennis,
+                      Icons.sports_cricket,
                       size: 15,
                       color: Colors.tealAccent,
                     ),
