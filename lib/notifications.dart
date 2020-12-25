@@ -128,7 +128,30 @@ class _NotificationScreenState extends State<NotificationScreen> {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.04,
             ),
-            EachCard()
+            EachCard(
+              icon: Icons.person,
+              name: 'John Doe',
+              status: "IN",
+              color: Colors.tealAccent,
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.015,
+            ),
+            EachCard(
+              icon: Icons.person,
+              name: 'Don Jhoe',
+              status: "PENDING",
+              color: Colors.yellowAccent,
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.015,
+            ),
+            EachCard(
+              icon: Icons.person,
+              name: 'Ohn Djoe',
+              status: "OUT",
+              color: Colors.redAccent,
+            )
           ],
         ),
       ),
@@ -155,13 +178,18 @@ class EachCard extends StatelessWidget {
           Row(
             children: [
               CircleAvatar(
+                backgroundColor: color,
+                child: Icon(
+                  icon,
+                  size: 30,
+                ),
                 maxRadius: 25,
               ),
               SizedBox(
                 width: 20,
               ),
               Text(
-                "John Doe",
+                name,
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
             ],
@@ -171,11 +199,11 @@ class EachCard extends StatelessWidget {
             height: MediaQuery.of(context).size.height * 0.03,
             child: RaisedButton(
               onPressed: () {},
-              color: Colors.tealAccent,
+              color: color,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20)),
               child: Text(
-                "IN",
+                status,
                 style: TextStyle(color: Colors.black),
               ),
             ),

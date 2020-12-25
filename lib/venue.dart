@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:sport/bottomSheet.dart';
 
 class VenueScreen extends StatefulWidget {
   @override
@@ -182,20 +183,10 @@ class _EachCardState extends State<EachCard> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 17.0),
-                  child: InkWell(
-                    onTap: () {},
-                    child: Text(
-                      "MORE DETAILS",
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          decoration: TextDecoration.underline,
-                          color: Colors.tealAccent),
-                    ),
-                  ),
-                ),
+                Theme(
+                    data: Theme.of(context)
+                        .copyWith(canvasColor: Colors.transparent),
+                    child: ModalTrigger()),
                 Padding(
                   padding: const EdgeInsets.only(right: 17.0),
                   child: ButtonTheme(
