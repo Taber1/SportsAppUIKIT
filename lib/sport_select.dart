@@ -1,14 +1,114 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+enum rating { Yes, No }
+
 class SelectSportScreen extends StatefulWidget {
   @override
   _SelectSportScreenState createState() => _SelectSportScreenState();
 }
 
 class _SelectSportScreenState extends State<SelectSportScreen> {
+  List<DropdownMenuItem<String>> level = [];
+  rating _rate = rating.Yes;
+  var levelselected;
+  void loadLevel() {
+    level = [];
+    level.add(DropdownMenuItem(child: Text("Beginner"), value: "Beginner"));
+    level.add(
+        DropdownMenuItem(child: Text("Intermediate"), value: "Intermediate"));
+    level.add(DropdownMenuItem(child: Text("Expert"), value: "Expert"));
+  }
+
+  showAlertDialog(BuildContext context) {
+    // Create button
+    Widget okButton = ButtonTheme(
+      minWidth: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height * 0.05,
+      child: RaisedButton(
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        color: Colors.tealAccent,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        child: Text(
+          "NEXT",
+          style: TextStyle(color: Colors.black),
+        ),
+      ),
+    );
+
+    // Create AlertDialog
+    AlertDialog alert = AlertDialog(
+      shape: RoundedRectangleBorder(
+          side: BorderSide(color: Colors.tealAccent),
+          borderRadius: BorderRadius.circular(20)),
+      title: Text("Level"),
+      content: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          DropdownButtonFormField(
+            decoration: InputDecoration(
+                border:
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(5))),
+            value: levelselected,
+            items: level,
+            hint: Text("Beginner"),
+            onChanged: (value) {
+              levelselected = value;
+              setState(() {});
+            },
+          ),
+          Row(
+            children: [
+              Radio(
+                value: rating.Yes,
+                groupValue: _rate,
+                onChanged: (value) {
+                  setState(() {
+                    _rate = value;
+                  });
+                },
+              ),
+              Text(
+                'Yes',
+                style: TextStyle(fontSize: 16.0),
+              ),
+              Radio(
+                  value: rating.No,
+                  groupValue: _rate,
+                  onChanged: (value) {
+                    setState(() {
+                      _rate = value;
+                    });
+                  }),
+              Text(
+                'No',
+                style: TextStyle(
+                  fontSize: 16.0,
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+      actions: [
+        okButton,
+      ],
+    );
+
+    // show the dialog
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return alert;
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
+    loadLevel();
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
@@ -134,10 +234,7 @@ class _SelectSportScreenState extends State<SelectSportScreen> {
                 height: MediaQuery.of(context).size.height * 0.05,
                 child: RaisedButton(
                   onPressed: () {
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //         builder: (context) => BottomAppbarScreen()));
+                    showAlertDialog(context);
                   },
                   color: Colors.tealAccent,
                   shape: RoundedRectangleBorder(
