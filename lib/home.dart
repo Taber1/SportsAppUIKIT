@@ -27,18 +27,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: CircleAvatar(
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => FilterScreen()));
-                        },
-                        child: Icon(
-                          FontAwesomeIcons.filter,
-                          size: 30,
-                        ),
-                      ),
+                      child: Theme(
+                          data: Theme.of(context)
+                              .copyWith(canvasColor: Colors.transparent),
+                          child: FilterScreen()),
                       maxRadius: 30,
                     ),
                   ),
