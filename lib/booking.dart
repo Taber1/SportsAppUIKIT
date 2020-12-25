@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:sport/booking2.dart';
 
 class BookingScreen extends StatefulWidget {
   @override
@@ -205,7 +206,12 @@ class _BookingScreenState extends State<BookingScreen> {
               minWidth: MediaQuery.of(context).size.width * 0.4,
               height: MediaQuery.of(context).size.height * 0.05,
               child: RaisedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => Booking2Screen()));
+                },
                 color: Colors.tealAccent,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20)),

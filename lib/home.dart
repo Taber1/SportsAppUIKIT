@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:sport/filter.dart';
+import 'package:sport/invite_friend.dart';
 import 'package:sport/venue.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -25,9 +27,17 @@ class _HomeScreenState extends State<HomeScreen> {
                   Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: CircleAvatar(
-                      child: Icon(
-                        FontAwesomeIcons.filter,
-                        size: 30,
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => FilterScreen()));
+                        },
+                        child: Icon(
+                          FontAwesomeIcons.filter,
+                          size: 30,
+                        ),
                       ),
                       maxRadius: 30,
                     ),
@@ -117,7 +127,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 minWidth: MediaQuery.of(context).size.width * 0.3,
                 height: MediaQuery.of(context).size.height * 0.05,
                 child: RaisedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => InviteFriendScreen()));
+                  },
                   color: Colors.tealAccent,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
