@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sport/filter.dart';
+import 'package:sport/game_details.dart';
 
 class InviteFriendScreen extends StatefulWidget {
   @override
@@ -102,7 +103,12 @@ class _InviteFriendScreenState extends State<InviteFriendScreen> {
               minWidth: MediaQuery.of(context).size.width * 0.4,
               height: MediaQuery.of(context).size.height * 0.05,
               child: RaisedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => EventDetailScreen()));
+                },
                 color: Colors.tealAccent,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20)),
