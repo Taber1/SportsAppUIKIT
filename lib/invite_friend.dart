@@ -43,7 +43,7 @@ class _InviteFriendScreenState extends State<InviteFriendScreen> {
                   ),
                 ),
                 Text(
-                  "Home",
+                  "Buddies",
                   style: TextStyle(
                     fontSize: 28,
                   ),
