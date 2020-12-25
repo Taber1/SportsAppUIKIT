@@ -57,12 +57,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.05,
               ),
-              Center(child: Text("Profile")),
+              Center(
+                  child: Text(
+                "Profile",
+                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+              )),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.03,
               ),
               CircleAvatar(
-                backgroundColor: Colors.tealAccent,
+                backgroundImage: NetworkImage(
+                  'https://cdn.pixabay.com/photo/2016/03/09/15/10/man-1246508__340.jpg',
+                ),
                 radius: 80,
               ),
               SizedBox(
@@ -75,18 +81,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                   Container(
                       width: MediaQuery.of(context).size.width * 0.2,
-                      child: Text("Name")),
+                      child: Text(
+                        "Name",
+                        style: TextStyle(fontSize: 17, color: Colors.grey),
+                      )),
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.1,
                   ),
                   Text(
                     "John Doe",
                     textAlign: TextAlign.left,
+                    style: TextStyle(fontSize: 20, color: Colors.grey[200]),
                   )
                 ],
               ),
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.01,
+                height: MediaQuery.of(context).size.height * 0.015,
               ),
               Row(
                 children: [
@@ -95,18 +105,35 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                   Container(
                       width: MediaQuery.of(context).size.width * 0.2,
-                      child: Text("Email")),
+                      child: Text(
+                        "Email",
+                        style: TextStyle(fontSize: 17, color: Colors.grey),
+                      )),
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.1,
                   ),
-                  Text(
-                    "johndoe123@gmail.com",
-                    textAlign: TextAlign.left,
+                  Row(
+                    children: [
+                      Text(
+                        "johndoe123@gmail.com",
+                        textAlign: TextAlign.left,
+                        style:
+                            TextStyle(fontSize: 16, color: Colors.tealAccent),
+                      ),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.15,
+                      ),
+                      Icon(
+                        FontAwesomeIcons.caretRight,
+                        size: 15,
+                        color: Colors.yellow,
+                      )
+                    ],
                   )
                 ],
               ),
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.01,
+                height: MediaQuery.of(context).size.height * 0.015,
               ),
               Row(
                 children: [
@@ -115,18 +142,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                   Container(
                       width: MediaQuery.of(context).size.width * 0.2,
-                      child: Text("Phone #")),
+                      child: Text(
+                        "Phone #",
+                        style: TextStyle(fontSize: 17, color: Colors.grey),
+                      )),
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.1,
                   ),
                   Text(
                     "+1(36) 007 1234 789",
                     textAlign: TextAlign.left,
+                    style: TextStyle(fontSize: 16, color: Colors.grey),
                   )
                 ],
               ),
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.01,
+                height: MediaQuery.of(context).size.height * 0.015,
               ),
               Row(
                 children: [
@@ -135,7 +166,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                   Container(
                       width: MediaQuery.of(context).size.width * 0.2,
-                      child: Text("Age")),
+                      child: Text(
+                        "Age",
+                        style: TextStyle(fontSize: 17, color: Colors.grey),
+                      )),
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.1,
                   ),
@@ -144,10 +178,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     child: DropdownButtonFormField(
                       decoration: InputDecoration(
                           border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(5))),
+                              borderRadius: BorderRadius.circular(20))),
                       value: ageselected,
                       items: age,
-                      hint: Text("25-30"),
+                      hint: Text(
+                        "25-30",
+                        style: TextStyle(fontSize: 17),
+                      ),
                       onChanged: (value) {
                         ageselected = value;
                         setState(() {});
@@ -157,7 +194,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ],
               ),
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.01,
+                height: MediaQuery.of(context).size.height * 0.015,
               ),
               Row(
                 children: [
@@ -166,7 +203,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                   Container(
                       width: MediaQuery.of(context).size.width * 0.2,
-                      child: Text("Gender")),
+                      child: Text(
+                        "Gender",
+                        style: TextStyle(fontSize: 16, color: Colors.grey),
+                      )),
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.1,
                   ),
@@ -175,10 +215,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     child: DropdownButtonFormField(
                       decoration: InputDecoration(
                           border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(5))),
+                              borderRadius: BorderRadius.circular(20))),
                       value: genderselected,
                       items: gender,
-                      hint: Text("Male"),
+                      hint: Text(
+                        "Male",
+                        style: TextStyle(fontSize: 17),
+                      ),
                       onChanged: (value) {
                         genderselected = value;
                         setState(() {});
@@ -192,7 +235,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
               Divider(
                 indent: 10,
-                thickness: 1.0,
+                thickness: 1.5,
                 color: Colors.grey,
               ),
               SizedBox(
@@ -201,7 +244,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
               Container(
                   width: MediaQuery.of(context).size.width,
                   padding: EdgeInsets.only(left: 10),
-                  child: Text("Are you member of a club?")),
+                  child: Text(
+                    "Are you member of a club?",
+                    style: TextStyle(fontSize: 17, color: Colors.grey),
+                  )),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
@@ -210,7 +256,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 child: DropdownButtonFormField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(5))),
+                          borderRadius: BorderRadius.circular(20))),
                   value: aNS,
                   items: ans,
                   onChanged: (value) {
@@ -224,7 +270,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
               Divider(
                 indent: 10,
-                thickness: 1.0,
+                thickness: 1.5,
                 color: Colors.grey,
               ),
               SizedBox(
@@ -233,7 +279,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
               Container(
                   width: MediaQuery.of(context).size.width,
                   padding: EdgeInsets.only(left: 10),
-                  child: Text("Which sports do you want to play?")),
+                  child: Text(
+                    "Which sports do you want to play?",
+                    style: TextStyle(fontSize: 17, color: Colors.grey),
+                  )),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
@@ -305,7 +354,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
               Divider(
                 indent: 10,
-                thickness: 1.0,
+                thickness: 1.5,
                 color: Colors.grey,
               ),
               SizedBox(
@@ -316,7 +365,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   padding: EdgeInsets.only(left: 10),
                   child: Text(
                     "Are you willing to buddy up?",
-                    style: TextStyle(fontSize: 22),
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                   )),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
@@ -357,7 +406,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
               Divider(
                 indent: 10,
-                thickness: 1.0,
+                thickness: 1.5,
                 color: Colors.grey,
               ),
               SizedBox(
@@ -368,7 +417,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   padding: EdgeInsets.only(left: 10),
                   child: Text(
                     "Are you a coach?",
-                    style: TextStyle(fontSize: 22),
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                   )),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
@@ -412,7 +461,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   padding: EdgeInsets.only(left: 10),
                   child: Text(
                     "Please share a link",
-                    style: TextStyle(),
+                    style: TextStyle(fontSize: 17, color: Colors.grey),
                   )),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
@@ -421,9 +470,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 decoration: InputDecoration(
                   focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.tealAccent),
-                      borderRadius: BorderRadius.circular(5)),
+                      borderRadius: BorderRadius.circular(20)),
                   border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5)),
+                      borderRadius: BorderRadius.circular(20)),
                 ),
               ),
               SizedBox(
@@ -436,7 +485,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     children: [
                       Text(
                         "Upload file",
-                        style: TextStyle(fontSize: 22),
+                        style: TextStyle(fontSize: 20, color: Colors.grey),
                       ),
                       SizedBox(
                         width: MediaQuery.of(context).size.width * 0.2,
@@ -451,7 +500,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               borderRadius: BorderRadius.circular(20)),
                           child: Text(
                             "UPLOAD",
-                            style: TextStyle(color: Colors.black),
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 15.5,
+                                fontWeight: FontWeight.bold),
                           ),
                         ),
                       ),
@@ -462,7 +514,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
               Divider(
                 indent: 10,
-                thickness: 1.0,
+                thickness: 1.5,
                 color: Colors.grey,
               ),
               SizedBox(
@@ -478,7 +530,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       borderRadius: BorderRadius.circular(20)),
                   child: Text(
                     "NEXT",
-                    style: TextStyle(color: Colors.black),
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 15.5,
+                        fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
