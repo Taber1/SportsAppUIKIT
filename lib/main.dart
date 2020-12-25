@@ -14,7 +14,9 @@ class MyApp extends StatelessWidget {
       navigatorKey: navigatorKey,
       title: "Sport App UI",
       darkTheme: ThemeData(
-          brightness: Brightness.dark, primaryColor: Colors.tealAccent),
+          fontFamily: 'Cabin',
+          brightness: Brightness.dark,
+          primaryColor: Colors.tealAccent),
       themeMode: ThemeMode.dark,
       home: LoginScreen(),
     );
