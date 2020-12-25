@@ -171,22 +171,20 @@ class _BookingScreenState extends State<BookingScreen> {
               alignment: Alignment.topCenter,
               height: MediaQuery.of(context).size.height * 0.4,
               width: MediaQuery.of(context).size.width * 0.9,
-              child: GridView.builder(
+              child: GridView.count(
                   physics: NeverScrollableScrollPhysics(),
-                  itemCount: 16,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      childAspectRatio: MediaQuery.of(context).size.height /
-                          MediaQuery.of(context).size.width *
-                          0.8,
-                      mainAxisSpacing: 8,
-                      crossAxisSpacing: 8,
-                      crossAxisCount: 4),
-                  itemBuilder: (BuildContext context, int index) {
-                    return HorizontalCard();
-                  }),
-            ),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.1,
+                  crossAxisCount: 4,
+                  crossAxisSpacing: 8,
+                  mainAxisSpacing: 8,
+                  childAspectRatio: MediaQuery.of(context).size.height *
+                      1.2 /
+                      MediaQuery.of(context).size.width *
+                      0.8,
+                  children: List.generate(choices.length, (index) {
+                    return HorizontalCard(
+                      choice: choices[index],
+                    );
+                  })),
             ),
             TextField(
                 decoration: InputDecoration(
@@ -197,8 +195,29 @@ class _BookingScreenState extends State<BookingScreen> {
                   OutlineInputBorder(borderRadius: BorderRadius.circular(5)),
               hintText: 'Total Amount',
               suffixStyle: TextStyle(color: Colors.tealAccent, fontSize: 22),
-              suffixText: '300 KES',
+              suffix: Text('300 KES'),
+              floatingLabelBehavior: FloatingLabelBehavior.always,
             )),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.05,
+            ),
+            ButtonTheme(
+              minWidth: MediaQuery.of(context).size.width * 0.4,
+              height: MediaQuery.of(context).size.height * 0.05,
+              child: RaisedButton(
+                onPressed: () {},
+                color: Colors.tealAccent,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20)),
+                child: Text(
+                  "PAY",
+                  style: TextStyle(color: Colors.black),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.1,
+            ),
           ],
         ),
       ),
@@ -206,16 +225,52 @@ class _BookingScreenState extends State<BookingScreen> {
   }
 }
 
-class HorizontalCard extends StatelessWidget {
+class Choice {
+  const Choice({this.time1, this.time2, this.color});
   final String time1;
   final String time2;
   final Color color;
-  HorizontalCard({this.time1, this.time2, this.color});
+}
+
+const List<Choice> choices = const <Choice>[
+  const Choice(time1: '8am', time2: '9am', color: Colors.grey),
+  const Choice(time1: '6am', time2: '7am', color: Colors.grey),
+  const Choice(time1: '8am', time2: '9am', color: Colors.grey),
+  const Choice(time1: '8am', time2: '9am', color: Colors.tealAccent),
+  const Choice(time1: '8am', time2: '9am', color: Colors.grey),
+  const Choice(time1: '8am', time2: '9am', color: Colors.grey),
+  const Choice(time1: '8am', time2: '9am', color: Colors.grey),
+  const Choice(time1: '6am', time2: '7am', color: Colors.grey),
+  const Choice(time1: '8am', time2: '9am', color: Colors.grey),
+  const Choice(time1: '8am', time2: '9am', color: Colors.tealAccent),
+  const Choice(time1: '8am', time2: '9am', color: Colors.grey),
+  const Choice(time1: '8am', time2: '9am', color: Colors.grey),
+  const Choice(time1: '8am', time2: '9am', color: Colors.grey),
+  const Choice(time1: '7am', time2: '8am', color: Colors.grey),
+  const Choice(time1: '8am', time2: '9am', color: Colors.grey),
+  const Choice(time1: '8am', time2: '9am', color: Colors.grey),
+];
+
+class HorizontalCard extends StatelessWidget {
+  final Choice choice;
+  const HorizontalCard({Key key, this.choice}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
+      // width: MediaQuery.of(context).size.width*0.1,
+      // height: MediaQuery.of(context).size.height*0.2,
       decoration: BoxDecoration(
-          color: Colors.grey, borderRadius: BorderRadius.circular(15)),
+          color: choice.color, borderRadius: BorderRadius.circular(15)),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            choice.time1 + "-" + choice.time2,
+            style: TextStyle(
+                color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold),
+          )
+        ],
+      ),
     );
   }
 }
