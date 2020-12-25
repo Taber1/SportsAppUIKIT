@@ -14,188 +14,187 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-              child: Padding(
-          padding: EdgeInsets.all(8),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.1,
-              ),
-              Text(
-                "Sign In",
-                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.1,
-              ),
-              Column(
+        body: SingleChildScrollView(
+      child: Padding(
+        padding: EdgeInsets.all(8),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.1,
+            ),
+            Text(
+              "Sign In",
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.1,
+            ),
+            Column(
+              children: [
+                TextField(
+                  decoration: InputDecoration(
+                      focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.tealAccent),
+                          borderRadius: BorderRadius.circular(5)),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(5)),
+                      hintText: 'sarahkaramsi@gmail.com',
+                      hintStyle: TextStyle(
+                        fontSize: 18,
+                      ),
+                      suffixIcon: Icon(
+                        Icons.mail_outline,
+                        size: 30,
+                      )),
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.01,
+                ),
+                TextField(
+                  decoration: InputDecoration(
+                      focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.tealAccent),
+                          borderRadius: BorderRadius.circular(5)),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(5)),
+                      hintText: '********',
+                      hintStyle: TextStyle(
+                        fontSize: 18,
+                      ),
+                      suffixIcon: Icon(
+                        FontAwesomeIcons.lockOpen,
+                      )),
+                )
+              ],
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.01,
+            ),
+            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+              Row(
                 children: [
-                  TextField(
-                    decoration: InputDecoration(
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.tealAccent),
-                            borderRadius: BorderRadius.circular(5)),
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(5)),
-                        hintText: 'sarahkaramsi@gmail.com',
-                        hintStyle: TextStyle(
-                          fontSize: 18,
-                        ),
-                        suffixIcon: Icon(
-                          Icons.mail_outline,
-                          size: 30,
-                        )),
+                  Checkbox(
+                    value: _checkedValue,
+                    onChanged: (newValue) {
+                      setState(() {
+                        _checkedValue = newValue;
+                      });
+                    },
+                    // controlAffinity:
+                    //     ListTileControlAffinity.leading, //  <-- leading Checkbox
                   ),
                   SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.01,
+                    width: MediaQuery.of(context).size.width * 0.01,
                   ),
-                  TextField(
-                    decoration: InputDecoration(
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.tealAccent),
-                            borderRadius: BorderRadius.circular(5)),
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(5)),
-                        hintText: '********',
-                        hintStyle: TextStyle(
-                          fontSize: 18,
-                        ),
-                        suffixIcon: Icon(
-                          FontAwesomeIcons.lockOpen,
-                        )),
-                  )
+                  Text(
+                    'Stay Signed In',
+                    style: TextStyle(
+                      fontSize: 16,
+                    ),
+                  ),
                 ],
               ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.01,
+              InkWell(
+                child: Text(
+                  'Forget Password ?',
+                  style: TextStyle(
+                      fontSize: 16, decoration: TextDecoration.underline),
+                ),
+              )
+            ]),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.05,
+            ),
+            ButtonTheme(
+              minWidth: MediaQuery.of(context).size.width * 0.4,
+              height: MediaQuery.of(context).size.height * 0.05,
+              child: RaisedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => BottomAppbarScreen()));
+                },
+                color: Colors.tealAccent,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20)),
+                child: Text(
+                  "SIGN IN",
+                  style: TextStyle(
+                      fontSize: 17,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
+                ),
               ),
-              Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                Row(
-                  children: [
-                    Checkbox(
-                      value: _checkedValue,
-                      onChanged: (newValue) {
-                        setState(() {
-                          _checkedValue = newValue;
-                        });
-                      },
-                      // controlAffinity:
-                      //     ListTileControlAffinity.leading, //  <-- leading Checkbox
-                    ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.01,
-                    ),
-                    Text(
-                      'Stay Signed In',
-                      style: TextStyle(
-                        fontSize: 16,
-                      ),
-                    ),
-                  ],
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.05,
+            ),
+            Text(
+              "or sign in with",
+              style: TextStyle(
+                fontSize: 16,
+              ),
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.02,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                RawMaterialButton(
+                  onPressed: () {},
+                  elevation: 2.0,
+                  child: SvgPicture.asset(
+                    'assets/icon/facebook.svg',
+                    color: Colors.grey,
+                  ),
+                  padding: EdgeInsets.all(15.0),
+                  shape: CircleBorder(side: BorderSide(color: Colors.blue)),
+                ),
+                RawMaterialButton(
+                  onPressed: () {},
+                  elevation: 5.0,
+                  child: SvgPicture.asset(
+                    'assets/icon/google_plus.svg',
+                    color: Colors.grey,
+                  ),
+                  padding: EdgeInsets.all(15.0),
+                  shape: CircleBorder(side: BorderSide(color: Colors.red)),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.05,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Don't have an account?",
+                  style: TextStyle(fontSize: 16),
                 ),
                 InkWell(
-                  child: Text(
-                    'Forget Password ?',
-                    style: TextStyle(
-                        fontSize: 16, decoration: TextDecoration.underline),
-                  ),
-                )
-              ]),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.05,
-              ),
-              ButtonTheme(
-                minWidth: MediaQuery.of(context).size.width * 0.4,
-                height: MediaQuery.of(context).size.height * 0.05,
-                child: RaisedButton(
-                  onPressed: () {
+                  onTap: () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => BottomAppbarScreen()));
+                            builder: (context) => RegisterScreen()));
                   },
-                  color: Colors.tealAccent,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)),
                   child: Text(
-                    "SIGN IN",
+                    "Register",
                     style: TextStyle(
-                        fontSize: 17,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold),
+                        fontSize: 16,
+                        color: Colors.tealAccent,
+                        decoration: TextDecoration.underline),
                   ),
-                ),
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.05,
-              ),
-              Text(
-                "or sign in with",
-                style: TextStyle(
-                  fontSize: 16,
-                ),
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  RawMaterialButton(
-                    onPressed: () {},
-                    elevation: 2.0,
-                    child: SvgPicture.asset(
-                      'assets/icon/facebook.svg',
-                      color: Colors.grey,
-                    ),
-                    padding: EdgeInsets.all(15.0),
-                    shape: CircleBorder(side: BorderSide(color: Colors.blue)),
-                  ),
-                  RawMaterialButton(
-                    onPressed: () {},
-                    elevation: 5.0,
-                    child: SvgPicture.asset(
-                      'assets/icon/google_plus.svg',
-                      color: Colors.grey,
-                    ),
-                    padding: EdgeInsets.all(15.0),
-                    shape: CircleBorder(side: BorderSide(color: Colors.red)),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.05,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Don't have an account?",
-                    style: TextStyle(fontSize: 16),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => RegisterScreen()));
-                    },
-                    child: Text(
-                      "Register",
-                      style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.tealAccent,
-                          decoration: TextDecoration.underline),
-                    ),
-                  )
-                ],
-              )
-            ],
-          ),
+                )
+              ],
+            )
+          ],
         ),
-      )),
-    );
+      ),
+    ));
   }
 }
