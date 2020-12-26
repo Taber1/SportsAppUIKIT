@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 enum q1Ans { Yes, No }
+enum q2Ans { Yes, No }
 
 class ProfileScreen extends StatefulWidget {
   @override
@@ -17,6 +18,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   List<DropdownMenuItem<String>> gender = [];
   var genderselected;
   q1Ans _ans1 = q1Ans.Yes;
+  q2Ans _ans2 = q2Ans.Yes;
 
   void ansWer() {
     ans = [];
@@ -424,11 +426,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
               Row(
                 children: [
                   Radio(
-                    value: q1Ans.Yes,
-                    groupValue: _ans1,
+                    value: q2Ans.Yes,
+                    groupValue: _ans2,
                     onChanged: (value) {
                       setState(() {
-                        _ans1 = value;
+                        _ans2 = value;
                       });
                     },
                   ),
@@ -437,11 +439,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     style: TextStyle(fontSize: 16.0),
                   ),
                   Radio(
-                      value: q1Ans.No,
-                      groupValue: _ans1,
+                      value: q2Ans.No,
+                      groupValue: _ans2,
                       onChanged: (value) {
                         setState(() {
-                          _ans1 = value;
+                          _ans2 = value;
                         });
                       }),
                   Text(

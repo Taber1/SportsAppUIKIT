@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sport/bottomAppbar.dart';
@@ -51,20 +52,29 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.01,
                 ),
-                TextField(
-                  decoration: InputDecoration(
-                      focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.green),
-                          borderRadius: BorderRadius.circular(5)),
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(5)),
-                      hintText: '********',
-                      hintStyle: TextStyle(
-                        fontSize: 18,
-                      ),
-                      suffixIcon: Icon(
-                        FontAwesomeIcons.lockOpen,
-                      )),
+                Neumorphic(
+                  style: NeumorphicStyle(
+                      shape: NeumorphicShape.concave,
+                      boxShape: NeumorphicBoxShape.roundRect(
+                          BorderRadius.circular(12)),
+                      depth: 8,
+                      lightSource: LightSource.topLeft,
+                      color: Colors.grey),
+                  child: TextField(
+                    decoration: InputDecoration(
+                        focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: Colors.green),
+                            borderRadius: BorderRadius.circular(5)),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(5)),
+                        hintText: '********',
+                        hintStyle: TextStyle(
+                          fontSize: 18,
+                        ),
+                        suffixIcon: Icon(
+                          FontAwesomeIcons.lockOpen,
+                        )),
+                  ),
                 )
               ],
             ),
@@ -74,15 +84,36 @@ class _LoginScreenState extends State<LoginScreen> {
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
               Row(
                 children: [
-                  Checkbox(
-                    value: _checkedValue,
-                    onChanged: (newValue) {
-                      setState(() {
-                        _checkedValue = newValue;
-                      });
-                    },
-                    // controlAffinity:
-                    //     ListTileControlAffinity.leading, //  <-- leading Checkbox
+                  Container(
+                    height: 22,
+                    width: 22,
+                    decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                            end: Alignment.topCenter,
+                            begin: Alignment.bottomCenter,
+                            colors: [
+                          Colors.tealAccent[100],
+                          Colors.lightGreenAccent[100],
+                          Colors.lightGreenAccent,
+                        ])),
+                    child: Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: Container(
+                        height: 22,
+                        width: 22,
+                        color: Colors.grey[800],
+                        child: Checkbox(
+                          value: _checkedValue,
+                          onChanged: (newValue) {
+                            setState(() {
+                              _checkedValue = newValue;
+                            });
+                          },
+                          // controlAffinity:
+                          //     ListTileControlAffinity.leading, //  <-- leading Checkbox
+                        ),
+                      ),
+                    ),
                   ),
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.01,
@@ -106,25 +137,48 @@ class _LoginScreenState extends State<LoginScreen> {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
             ),
-            ButtonTheme(
-              minWidth: MediaQuery.of(context).size.width * 0.4,
-              height: MediaQuery.of(context).size.height * 0.05,
-              child: RaisedButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => BottomAppbarScreen()));
-                },
-                color: Colors.green,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
-                child: Text(
-                  "SIGN IN",
-                  style: TextStyle(
-                      fontSize: 17,
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold),
+            RaisedButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => BottomAppbarScreen()));
+              },
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50.0)),
+              padding: EdgeInsets.all(0.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(colors: [
+                    Colors.tealAccent[100],
+                    Colors.lightGreenAccent[100],
+                    Colors.lightGreenAccent,
+                  ]),
+                  borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.all(3),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(colors: [
+                        Colors.lightGreenAccent,
+                        Colors.lightGreenAccent[100],
+                        Colors.tealAccent[100]
+                      ]),
+                      borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                    ),
+                    height: MediaQuery.of(context).size.height * 0.06,
+                    width: MediaQuery.of(context).size.height * 0.2,
+                    alignment: Alignment.center,
+                    child: const Text(
+                      'SIGN IN',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 17),
+                    ),
+                  ),
                 ),
               ),
             ),
@@ -143,25 +197,76 @@ class _LoginScreenState extends State<LoginScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                RawMaterialButton(
-                  onPressed: () {},
-                  elevation: 2.0,
-                  child: SvgPicture.asset(
-                    'assets/icon/facebook.svg',
-                    color: Colors.grey,
+                Container(
+                  decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      gradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: [
+                            Colors.lightBlueAccent,
+                            Colors.blueAccent,
+                            Colors.grey[900],
+                            Colors.black
+                          ])),
+                  child: Padding(
+                    padding: EdgeInsets.all(5),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          gradient: LinearGradient(
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                              colors: [
+                                Colors.black,
+                                Colors.grey[900],
+                                Colors.grey[700]
+                              ])),
+                      child: SvgPicture.asset(
+                        'assets/icon/facebook.svg',
+                        color: Colors.grey,
+                      ),
+                      padding: EdgeInsets.all(15.0),
+                    ),
                   ),
-                  padding: EdgeInsets.all(15.0),
-                  shape: CircleBorder(side: BorderSide(color: Colors.blue)),
                 ),
-                RawMaterialButton(
-                  onPressed: () {},
-                  elevation: 5.0,
-                  child: SvgPicture.asset(
-                    'assets/icon/google_plus.svg',
-                    color: Colors.grey,
+                SizedBox(
+                  width: 15,
+                ),
+                Container(
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      gradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: [
+                            Colors.redAccent,
+                            Colors.red,
+                            Colors.grey[900],
+                            Colors.black
+                          ])),
+                  child: Padding(
+                    padding: EdgeInsets.all(5),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          gradient: LinearGradient(
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                              colors: [
+                                Colors.black,
+                                Colors.grey[900],
+                                Colors.grey[700]
+                              ])),
+                      child: SvgPicture.asset(
+                        'assets/icon/google_plus.svg',
+                        color: Colors.grey,
+                      ),
+                      padding: EdgeInsets.all(7.0),
+                    ),
                   ),
-                  padding: EdgeInsets.all(15.0),
-                  shape: CircleBorder(side: BorderSide(color: Colors.red)),
                 ),
               ],
             ),

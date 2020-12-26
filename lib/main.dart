@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
       navigatorKey: navigatorKey,
       title: "Sport App UI",
       darkTheme: ThemeData(
+          unselectedWidgetColor: Colors.grey[800],
           fontFamily: 'Cabin',
           brightness: Brightness.dark,
           primaryColor: Colors.green),
