@@ -74,7 +74,11 @@ class _BookingScreenState extends State<BookingScreen> {
                   VerticalCard(
                     date: "8th",
                     day: "Wed",
-                    color: Colors.green,
+                    color: [
+                      Colors.lightGreenAccent,
+                      Colors.lightGreenAccent[100],
+                      Colors.tealAccent[100]
+                    ].toList(),
                   ),
                   SizedBox(
                     width: 20,
@@ -82,7 +86,7 @@ class _BookingScreenState extends State<BookingScreen> {
                   VerticalCard(
                     date: "9th",
                     day: "Thurs",
-                    color: Colors.grey[900],
+                    color: [Colors.grey[900], Colors.grey[900]].toList(),
                   ),
                   SizedBox(
                     width: 20,
@@ -90,7 +94,7 @@ class _BookingScreenState extends State<BookingScreen> {
                   VerticalCard(
                     date: "10th",
                     day: "Fri",
-                    color: Colors.grey[900],
+                    color: [Colors.grey[900], Colors.grey[900]].toList(),
                   ),
                   SizedBox(
                     width: 20,
@@ -98,7 +102,7 @@ class _BookingScreenState extends State<BookingScreen> {
                   VerticalCard(
                     date: "11th",
                     day: "Sat",
-                    color: Colors.grey[900],
+                    color: [Colors.grey[900], Colors.grey[900]].toList(),
                   ),
                   SizedBox(
                     width: 20,
@@ -106,7 +110,7 @@ class _BookingScreenState extends State<BookingScreen> {
                   VerticalCard(
                     date: "12th",
                     day: "Sun",
-                    color: Colors.grey[900],
+                    color: [Colors.grey[900], Colors.grey[900]].toList(),
                   ),
                   SizedBox(
                     width: 20,
@@ -114,7 +118,7 @@ class _BookingScreenState extends State<BookingScreen> {
                   VerticalCard(
                     date: "13th",
                     day: "Mon",
-                    color: Colors.grey[900],
+                    color: [Colors.grey[900], Colors.grey[900]].toList(),
                   ),
                   SizedBox(
                     width: 20,
@@ -122,7 +126,7 @@ class _BookingScreenState extends State<BookingScreen> {
                   VerticalCard(
                     date: "14th",
                     day: "Tues",
-                    color: Colors.grey[900],
+                    color: [Colors.grey[900], Colors.grey[900]].toList(),
                   ),
                   SizedBox(
                     width: 20,
@@ -130,7 +134,7 @@ class _BookingScreenState extends State<BookingScreen> {
                   VerticalCard(
                     date: "15th",
                     day: "Wed",
-                    color: Colors.grey[900],
+                    color: [Colors.grey[900], Colors.grey[900]].toList(),
                   ),
                   SizedBox(
                     width: 20,
@@ -138,7 +142,7 @@ class _BookingScreenState extends State<BookingScreen> {
                   VerticalCard(
                     date: "16th",
                     day: "Thur",
-                    color: Colors.grey[900],
+                    color: [Colors.grey[900], Colors.grey[900]].toList(),
                   ),
                   SizedBox(
                     width: 20,
@@ -146,7 +150,7 @@ class _BookingScreenState extends State<BookingScreen> {
                   VerticalCard(
                     date: "17th",
                     day: "Fri",
-                    color: Colors.grey[900],
+                    color: [Colors.grey[900], Colors.grey[900]].toList(),
                   ),
                   SizedBox(
                     width: 20,
@@ -198,25 +202,46 @@ class _BookingScreenState extends State<BookingScreen> {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
             ),
-            ButtonTheme(
-              minWidth: MediaQuery.of(context).size.width * 0.4,
-              height: MediaQuery.of(context).size.height * 0.06,
-              child: RaisedButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => Booking2Screen()));
-                },
-                color: Colors.green,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30)),
-                child: Text(
-                  "PAY",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18),
+            RaisedButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Booking2Screen()));
+              },
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50.0)),
+              padding: EdgeInsets.all(0.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(colors: [
+                    Colors.tealAccent[100],
+                    Colors.lightGreenAccent[100],
+                    Colors.lightGreenAccent,
+                  ]),
+                  borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.all(3),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(colors: [
+                        Colors.lightGreenAccent,
+                        Colors.lightGreenAccent[100],
+                        Colors.tealAccent[100]
+                      ]),
+                      borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                    ),
+                    height: MediaQuery.of(context).size.height * 0.06,
+                    width: MediaQuery.of(context).size.height * 0.2,
+                    alignment: Alignment.center,
+                    child: const Text(
+                      'PAY',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18),
+                    ),
+                  ),
                 ),
               ),
             ),
@@ -234,26 +259,54 @@ class Choice {
   const Choice({this.time1, this.time2, this.color});
   final String time1;
   final String time2;
-  final Color color;
+  final List color;
 }
 
-const List<Choice> choices = const <Choice>[
-  const Choice(time1: '8am', time2: '9am', color: Colors.grey),
-  const Choice(time1: '6am', time2: '7am', color: Colors.grey),
-  const Choice(time1: '8am', time2: '9am', color: Colors.grey),
-  const Choice(time1: '8am', time2: '9am', color: Colors.green),
-  const Choice(time1: '8am', time2: '9am', color: Colors.grey),
-  const Choice(time1: '8am', time2: '9am', color: Colors.grey),
-  const Choice(time1: '8am', time2: '9am', color: Colors.grey),
-  const Choice(time1: '6am', time2: '7am', color: Colors.grey),
-  const Choice(time1: '8am', time2: '9am', color: Colors.grey),
-  const Choice(time1: '8am', time2: '9am', color: Colors.green),
-  const Choice(time1: '8am', time2: '9am', color: Colors.grey),
-  const Choice(time1: '8am', time2: '9am', color: Colors.grey),
-  const Choice(time1: '8am', time2: '9am', color: Colors.grey),
-  const Choice(time1: '7am', time2: '8am', color: Colors.grey),
-  const Choice(time1: '8am', time2: '9am', color: Colors.grey),
-  const Choice(time1: '8am', time2: '9am', color: Colors.grey),
+List<Choice> choices = <Choice>[
+  Choice(
+      time1: '8am', time2: '9am', color: [Colors.grey, Colors.grey].toList()),
+  Choice(
+      time1: '6am', time2: '7am', color: [Colors.grey, Colors.grey].toList()),
+  Choice(
+      time1: '8am', time2: '9am', color: [Colors.grey, Colors.grey].toList()),
+  Choice(
+      time1: '8am',
+      time2: '9am',
+      color: [
+        Colors.lightGreenAccent,
+        Colors.lightGreenAccent[100],
+        Colors.tealAccent[100]
+      ].toList()),
+  Choice(
+      time1: '8am', time2: '9am', color: [Colors.grey, Colors.grey].toList()),
+  Choice(
+      time1: '8am', time2: '9am', color: [Colors.grey, Colors.grey].toList()),
+  Choice(
+      time1: '8am', time2: '9am', color: [Colors.grey, Colors.grey].toList()),
+  Choice(
+      time1: '6am', time2: '7am', color: [Colors.grey, Colors.grey].toList()),
+  Choice(
+      time1: '8am', time2: '9am', color: [Colors.grey, Colors.grey].toList()),
+  Choice(
+      time1: '8am',
+      time2: '9am',
+      color: [
+        Colors.lightGreenAccent,
+        Colors.lightGreenAccent[100],
+        Colors.tealAccent[100]
+      ].toList()),
+  Choice(
+      time1: '8am', time2: '9am', color: [Colors.grey, Colors.grey].toList()),
+  Choice(
+      time1: '8am', time2: '9am', color: [Colors.grey, Colors.grey].toList()),
+  Choice(
+      time1: '8am', time2: '9am', color: [Colors.grey, Colors.grey].toList()),
+  Choice(
+      time1: '7am', time2: '8am', color: [Colors.grey, Colors.grey].toList()),
+  Choice(
+      time1: '8am', time2: '9am', color: [Colors.grey, Colors.grey].toList()),
+  Choice(
+      time1: '8am', time2: '9am', color: [Colors.grey, Colors.grey].toList()),
 ];
 
 class HorizontalCard extends StatelessWidget {
@@ -265,7 +318,8 @@ class HorizontalCard extends StatelessWidget {
       // width: MediaQuery.of(context).size.width*0.1,
       // height: MediaQuery.of(context).size.height*0.2,
       decoration: BoxDecoration(
-          color: choice.color, borderRadius: BorderRadius.circular(15)),
+          gradient: LinearGradient(colors: choice.color),
+          borderRadius: BorderRadius.circular(15)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -283,32 +337,46 @@ class HorizontalCard extends StatelessWidget {
 class VerticalCard extends StatelessWidget {
   final String date;
   final String day;
-  final Color color;
+  final List color;
   VerticalCard({this.date, this.day, this.color});
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration:
-          BoxDecoration(color: color, borderRadius: BorderRadius.circular(50)),
-      width: MediaQuery.of(context).size.width * 0.19,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Text(
-            date,
-            style: TextStyle(
-                fontSize: 22,
-                color: color == Colors.grey[900] ? Colors.white : Colors.black,
-                fontWeight: FontWeight.bold),
+      decoration: BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.centerRight,
+              end: Alignment.centerLeft,
+              colors: color),
+          borderRadius: BorderRadius.circular(50)),
+      child: Padding(
+        padding: EdgeInsets.all(3),
+        child: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(colors: color),
+              borderRadius: BorderRadius.circular(50)),
+          width: MediaQuery.of(context).size.width * 0.19,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Text(
+                date,
+                style: TextStyle(
+                    fontSize: 22,
+                    color:
+                        color == Colors.grey[900] ? Colors.white : Colors.black,
+                    fontWeight: FontWeight.bold),
+              ),
+              Text(
+                day,
+                style: TextStyle(
+                    fontSize: 22,
+                    color:
+                        color == Colors.grey[900] ? Colors.white : Colors.black,
+                    fontWeight: FontWeight.bold),
+              )
+            ],
           ),
-          Text(
-            day,
-            style: TextStyle(
-                fontSize: 22,
-                color: color == Colors.grey[900] ? Colors.white : Colors.black,
-                fontWeight: FontWeight.bold),
-          )
-        ],
+        ),
       ),
     );
   }
