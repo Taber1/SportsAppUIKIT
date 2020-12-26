@@ -67,7 +67,7 @@ class _BookingScreenState extends State<BookingScreen> {
               height: MediaQuery.of(context).size.height * 0.02,
             ),
             Container(
-              height: MediaQuery.of(context).size.height * 0.17,
+              height: MediaQuery.of(context).size.height * 0.14,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
@@ -200,7 +200,7 @@ class _BookingScreenState extends State<BookingScreen> {
             ),
             ButtonTheme(
               minWidth: MediaQuery.of(context).size.width * 0.4,
-              height: MediaQuery.of(context).size.height * 0.05,
+              height: MediaQuery.of(context).size.height * 0.06,
               child: RaisedButton(
                 onPressed: () {
                   Navigator.push(
@@ -210,10 +210,13 @@ class _BookingScreenState extends State<BookingScreen> {
                 },
                 color: Colors.tealAccent,
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
+                    borderRadius: BorderRadius.circular(30)),
                 child: Text(
                   "PAY",
-                  style: TextStyle(color: Colors.black),
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18),
                 ),
               ),
             ),
@@ -287,7 +290,7 @@ class VerticalCard extends StatelessWidget {
     return Container(
       decoration:
           BoxDecoration(color: color, borderRadius: BorderRadius.circular(50)),
-      width: MediaQuery.of(context).size.width * 0.25,
+      width: MediaQuery.of(context).size.width * 0.19,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [

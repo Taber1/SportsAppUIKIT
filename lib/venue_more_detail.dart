@@ -55,7 +55,7 @@ class ModalTrigger extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: MediaQuery.of(context).size.height * 0.035,
+                        height: MediaQuery.of(context).size.height * 0.04,
                       ),
                       Container(
                           width: MediaQuery.of(context).size.width,
@@ -185,7 +185,7 @@ class ModalTrigger extends StatelessWidget {
                                 fontWeight: FontWeight.bold),
                           )),
                       SizedBox(
-                        height: MediaQuery.of(context).size.height * 0.05,
+                        height: MediaQuery.of(context).size.height * 0.02,
                       ),
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.start,

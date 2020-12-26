@@ -46,11 +46,11 @@ class _Booking2ScreenState extends State<Booking2Screen> {
                     padding: const EdgeInsets.all(15.0),
                     child: CircleAvatar(
                       backgroundColor: Colors.grey[900],
-                      child: Icon(
-                        Icons.sports_soccer,
-                        color: Colors.grey,
-                        size: 30,
-                      ),
+                      child: Container(
+                          height: 30,
+                          width: 30,
+                          child:
+                              SvgPicture.asset('assets/icon/basketball.svg')),
                       maxRadius: 30,
                     ),
                   )
@@ -60,7 +60,7 @@ class _Booking2ScreenState extends State<Booking2Screen> {
                 height: MediaQuery.of(context).size.height * 0.05,
               ),
               EachCard(
-                icon: Icons.sports_cricket,
+                icon: 'assets/icon/cricket.svg',
                 color: Colors.yellowAccent,
                 sport: "Cricket",
                 date: "Oct 26, Mon",
@@ -70,7 +70,7 @@ class _Booking2ScreenState extends State<Booking2Screen> {
                 height: MediaQuery.of(context).size.height * 0.03,
               ),
               EachCard(
-                icon: FontAwesomeIcons.futbol,
+                icon: 'assets/icon/football.svg',
                 color: Colors.blueAccent,
                 sport: "Football",
                 date: "Oct 27, Tue",
@@ -85,7 +85,7 @@ class _Booking2ScreenState extends State<Booking2Screen> {
 }
 
 class EachCard extends StatelessWidget {
-  final IconData icon;
+  final String icon;
   final Color color;
   final String sport;
   final String date;
@@ -112,16 +112,17 @@ class EachCard extends StatelessWidget {
                   width: MediaQuery.of(context).size.width * 0.05,
                 ),
                 CircleAvatar(
-                  maxRadius: 30,
-                  backgroundColor: Colors.grey[900],
-                  child: Icon(
-                    icon,
-                    size: 30,
-                    color: color,
-                  ),
-                ),
+                    maxRadius: 30,
+                    backgroundColor: Colors.grey[900],
+                    child: Container(
+                        height: 35,
+                        width: 35,
+                        child: SvgPicture.asset(
+                          icon,
+                          color: color,
+                        ))),
                 SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.05,
+                  width: MediaQuery.of(context).size.width * 0.07,
                 ),
                 Text(
                   sport,
