@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sport/filter.dart';
 import 'package:sport/game_details.dart';
@@ -53,11 +54,10 @@ class _InviteFriendScreenState extends State<InviteFriendScreen> {
                   padding: const EdgeInsets.all(15.0),
                   child: CircleAvatar(
                     backgroundColor: Colors.grey[900],
-                    child: Icon(
-                      Icons.sports_soccer,
-                      size: 30,
-                      color: Colors.grey,
-                    ),
+                    child: Container(
+                        height: 30,
+                        width: 30,
+                        child: SvgPicture.asset('assets/icon/basketball.svg')),
                     maxRadius: 30,
                   ),
                 )
@@ -67,8 +67,9 @@ class _InviteFriendScreenState extends State<InviteFriendScreen> {
               height: MediaQuery.of(context).size.height * 0.05,
             ),
             EachCard(
-              icon: Icons.person,
-              color: Colors.yellowAccent,
+              image:
+                  'https://cdn.pixabay.com/photo/2015/09/03/06/59/man-920083__340.jpg',
+              icon: 'assets/icon/basketball.svg',
               name: "John Doe",
               gender: "Male",
               age: "20-25",
@@ -78,8 +79,9 @@ class _InviteFriendScreenState extends State<InviteFriendScreen> {
               height: MediaQuery.of(context).size.height * 0.03,
             ),
             EachCard(
-              icon: Icons.person,
-              color: Colors.blueAccent,
+              image:
+                  'https://cdn.pixabay.com/photo/2016/03/09/15/10/man-1246508__340.jpg',
+              icon: 'assets/icon/cricket.svg',
               name: "John Doe",
               gender: "Male",
               age: "20-25",
@@ -89,8 +91,9 @@ class _InviteFriendScreenState extends State<InviteFriendScreen> {
               height: MediaQuery.of(context).size.height * 0.03,
             ),
             EachCard(
-              icon: Icons.person,
-              color: Colors.redAccent,
+              image:
+                  'https://cdn.pixabay.com/photo/2017/02/20/10/30/fashion-2082066__340.jpg',
+              icon: 'assets/icon/gym.svg',
               name: "John Doe",
               gender: "Male",
               age: "20-25",
@@ -114,7 +117,10 @@ class _InviteFriendScreenState extends State<InviteFriendScreen> {
                     borderRadius: BorderRadius.circular(20)),
                 child: Text(
                   "NEXT",
-                  style: TextStyle(color: Colors.black),
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18),
                 ),
               ),
             ),
@@ -129,18 +135,18 @@ class _InviteFriendScreenState extends State<InviteFriendScreen> {
 }
 
 class EachCard extends StatelessWidget {
-  final IconData icon;
-  final Color color;
+  final String image;
+  final String icon;
   final String name;
   final String gender;
   final String age;
   final String level;
   EachCard(
-      {this.icon, this.color, this.name, this.gender, this.age, this.level});
+      {this.icon, this.image, this.name, this.gender, this.age, this.level});
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.37,
+      height: MediaQuery.of(context).size.height * 0.38,
       width: MediaQuery.of(context).size.width * 0.87,
       decoration: BoxDecoration(
           border: Border.all(width: 2.5, color: Colors.grey),
@@ -160,11 +166,7 @@ class EachCard extends StatelessWidget {
                 CircleAvatar(
                   maxRadius: 30,
                   backgroundColor: Colors.grey[900],
-                  child: Icon(
-                    icon,
-                    size: 30,
-                    color: color,
-                  ),
+                  backgroundImage: NetworkImage(image),
                 ),
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 0.05,
@@ -254,22 +256,40 @@ class EachCard extends StatelessWidget {
                   width: MediaQuery.of(context).size.width * 0.12,
                 ),
                 CircleAvatar(
-                  child: Icon(Icons.sports_cricket),
+                  backgroundColor: Colors.grey[900],
+                  child: Container(
+                      height: 20,
+                      width: 20,
+                      child: SvgPicture.asset(
+                        'assets/icon/basketball.svg',
+                        color: Colors.grey,
+                      )),
                 ),
                 SizedBox(
                   width: 5,
                 ),
                 CircleAvatar(
-                  child: Icon(Icons.sports_soccer),
+                  backgroundColor: Colors.grey[900],
+                  child: Container(
+                      height: 20,
+                      width: 20,
+                      child: SvgPicture.asset(
+                        'assets/icon/cricket.svg',
+                        color: Colors.grey,
+                      )),
                 ),
                 SizedBox(
                   width: 5,
                 ),
                 CircleAvatar(
-                  child: Icon(
-                    FontAwesomeIcons.dumbbell,
-                    size: 17,
-                  ),
+                  backgroundColor: Colors.grey[900],
+                  child: Container(
+                      height: 20,
+                      width: 20,
+                      child: SvgPicture.asset(
+                        'assets/icon/gym.svg',
+                        color: Colors.grey,
+                      )),
                 ),
               ],
             ),

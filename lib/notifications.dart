@@ -37,7 +37,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                   ),
                 ),
                 Text(
-                  "Event Details",
+                  "Notifications",
                   style: TextStyle(
                     fontSize: 28,
                   ),
@@ -46,11 +46,10 @@ class _NotificationScreenState extends State<NotificationScreen> {
                   padding: const EdgeInsets.all(15.0),
                   child: CircleAvatar(
                     backgroundColor: Colors.grey[900],
-                    child: Icon(
-                      Icons.sports_soccer,
-                      size: 30,
-                      color: Colors.grey,
-                    ),
+                    child: Container(
+                        height: 30,
+                        width: 30,
+                        child: SvgPicture.asset('assets/icon/basketball.svg')),
                     maxRadius: 30,
                   ),
                 )
@@ -59,53 +58,56 @@ class _NotificationScreenState extends State<NotificationScreen> {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
             ),
-            Flexible(
-              fit: FlexFit.loose,
-              child: DropdownButtonFormField(
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(5))),
-                value: null,
-                items: null,
-                hint: Text("Event Name"),
-                onChanged: (value) {
-                  setState(() {});
-                },
-              ),
+            TextField(
+              decoration: InputDecoration(
+                  focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.tealAccent),
+                      borderRadius: BorderRadius.circular(5)),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5)),
+                  hintText: 'Event Name',
+                  hintStyle: TextStyle(
+                    fontSize: 18,
+                  ),
+                  suffixIcon: Icon(
+                    FontAwesomeIcons.caretDown,
+                  )),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.03,
             ),
-            Flexible(
-              fit: FlexFit.loose,
-              child: DropdownButtonFormField(
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(5))),
-                value: null,
-                items: null,
-                hint: Text("Date"),
-                onChanged: (value) {
-                  setState(() {});
-                },
-              ),
+            TextField(
+              decoration: InputDecoration(
+                  focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.tealAccent),
+                      borderRadius: BorderRadius.circular(5)),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5)),
+                  hintText: 'Day',
+                  hintStyle: TextStyle(
+                    fontSize: 18,
+                  ),
+                  suffixIcon: Icon(
+                    FontAwesomeIcons.caretDown,
+                  )),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.03,
             ),
-            Flexible(
-              fit: FlexFit.loose,
-              child: DropdownButtonFormField(
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(5))),
-                value: null,
-                items: null,
-                hint: Text("Time"),
-                onChanged: (value) {
-                  setState(() {});
-                },
-              ),
+            TextField(
+              decoration: InputDecoration(
+                  focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.tealAccent),
+                      borderRadius: BorderRadius.circular(5)),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5)),
+                  hintText: 'Time',
+                  hintStyle: TextStyle(
+                    fontSize: 18,
+                  ),
+                  suffixIcon: Icon(
+                    FontAwesomeIcons.caretDown,
+                  )),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.04,
@@ -122,7 +124,8 @@ class _NotificationScreenState extends State<NotificationScreen> {
               height: MediaQuery.of(context).size.height * 0.04,
             ),
             EachCard(
-              icon: Icons.person,
+              icon:
+                  'https://cdn.pixabay.com/photo/2016/03/09/15/10/man-1246508__340.jpg',
               name: 'John Doe',
               status: "IN",
               color: Colors.tealAccent,
@@ -131,8 +134,9 @@ class _NotificationScreenState extends State<NotificationScreen> {
               height: MediaQuery.of(context).size.height * 0.015,
             ),
             EachCard(
-              icon: Icons.person,
-              name: 'Don Jhoe',
+              icon:
+                  'https://cdn.pixabay.com/photo/2016/03/09/15/10/man-1246508__340.jpg',
+              name: 'John Doe',
               status: "PENDING",
               color: Colors.yellowAccent,
             ),
@@ -140,11 +144,15 @@ class _NotificationScreenState extends State<NotificationScreen> {
               height: MediaQuery.of(context).size.height * 0.015,
             ),
             EachCard(
-              icon: Icons.person,
-              name: 'Ohn Djoe',
+              icon:
+                  'https://cdn.pixabay.com/photo/2016/03/09/15/10/man-1246508__340.jpg',
+              name: 'John Doe',
               status: "OUT",
               color: Colors.redAccent,
-            )
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.05,
+            ),
           ],
         ),
       ),
@@ -153,7 +161,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
 }
 
 class EachCard extends StatelessWidget {
-  final IconData icon;
+  final String icon;
   final String name;
   final String status;
   final Color color;
@@ -172,10 +180,7 @@ class EachCard extends StatelessWidget {
             children: [
               CircleAvatar(
                 backgroundColor: color,
-                child: Icon(
-                  icon,
-                  size: 30,
-                ),
+                backgroundImage: NetworkImage(icon),
                 maxRadius: 25,
               ),
               SizedBox(

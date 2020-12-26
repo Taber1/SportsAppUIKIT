@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sport/filter.dart';
 
@@ -53,11 +54,11 @@ class _EventDetailScreenState extends State<EventDetailScreen> {
                     padding: const EdgeInsets.all(15.0),
                     child: CircleAvatar(
                       backgroundColor: Colors.grey[900],
-                      child: Icon(
-                        Icons.sports_soccer,
-                        size: 30,
-                        color: Colors.grey,
-                      ),
+                      child: Container(
+                          height: 30,
+                          width: 30,
+                          child:
+                              SvgPicture.asset('assets/icon/basketball.svg')),
                       maxRadius: 30,
                     ),
                   )
@@ -66,87 +67,92 @@ class _EventDetailScreenState extends State<EventDetailScreen> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.08,
               ),
-              Flexible(
-                fit: FlexFit.loose,
-                child: DropdownButtonFormField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(5))),
-                  value: null,
-                  items: null,
-                  hint: Text("Day"),
-                  onChanged: (value) {
-                    setState(() {});
-                  },
-                ),
+              TextField(
+                decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.tealAccent),
+                        borderRadius: BorderRadius.circular(5)),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(5)),
+                    hintText: 'Day',
+                    hintStyle: TextStyle(
+                      fontSize: 18,
+                    ),
+                    suffixIcon: Icon(
+                      FontAwesomeIcons.caretDown,
+                    )),
               ),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.03,
               ),
-              Flexible(
-                fit: FlexFit.loose,
-                child: DropdownButtonFormField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(5))),
-                  value: null,
-                  items: null,
-                  hint: Text("Time"),
-                  onChanged: (value) {
-                    setState(() {});
-                  },
-                ),
+              TextField(
+                decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.tealAccent),
+                        borderRadius: BorderRadius.circular(5)),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(5)),
+                    hintText: 'Time',
+                    hintStyle: TextStyle(
+                      fontSize: 18,
+                    ),
+                    suffixIcon: Icon(
+                      FontAwesomeIcons.caretDown,
+                    )),
               ),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.03,
               ),
-              Flexible(
-                fit: FlexFit.loose,
-                child: DropdownButtonFormField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(5))),
-                  value: null,
-                  items: null,
-                  hint: Text("Duration"),
-                  onChanged: (value) {
-                    setState(() {});
-                  },
-                ),
+              TextField(
+                decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.tealAccent),
+                        borderRadius: BorderRadius.circular(5)),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(5)),
+                    hintText: 'Duration',
+                    hintStyle: TextStyle(
+                      fontSize: 18,
+                    ),
+                    suffixIcon: Icon(
+                      FontAwesomeIcons.caretDown,
+                    )),
               ),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.03,
               ),
-              Flexible(
-                fit: FlexFit.loose,
-                child: DropdownButtonFormField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(5))),
-                  value: null,
-                  items: null,
-                  hint: Text("Venue"),
-                  onChanged: (value) {
-                    setState(() {});
-                  },
-                ),
+              TextField(
+                decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.tealAccent),
+                        borderRadius: BorderRadius.circular(5)),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(5)),
+                    hintText: 'Venue',
+                    hintStyle: TextStyle(
+                      fontSize: 18,
+                    ),
+                    suffixIcon: Icon(
+                      FontAwesomeIcons.caretDown,
+                    )),
               ),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.03,
               ),
-              Flexible(
-                fit: FlexFit.loose,
-                child: DropdownButtonFormField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(5))),
-                  value: null,
-                  items: null,
-                  hint: Text("Event Name"),
-                  onChanged: (value) {
-                    setState(() {});
-                  },
-                ),
+              TextField(
+                decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.tealAccent),
+                        borderRadius: BorderRadius.circular(5)),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(5)),
+                    hintText: 'Event Name',
+                    hintStyle: TextStyle(
+                      fontSize: 18,
+                    ),
+                    suffixIcon: Icon(
+                      FontAwesomeIcons.caretDown,
+                    )),
               ),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.08,
@@ -161,7 +167,10 @@ class _EventDetailScreenState extends State<EventDetailScreen> {
                       borderRadius: BorderRadius.circular(20)),
                   child: Text(
                     "CREATE EVENT",
-                    style: TextStyle(color: Colors.black),
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18),
                   ),
                 ),
               ),
