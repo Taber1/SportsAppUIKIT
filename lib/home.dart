@@ -63,20 +63,44 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
-              ButtonTheme(
-                minWidth: MediaQuery.of(context).size.width * 0.3,
-                height: MediaQuery.of(context).size.height * 0.05,
-                child: RaisedButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => VenueScreen()));
-                  },
-                  color: Colors.green,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)),
-                  child: Text(
-                    "FIND A VENUE?",
-                    style: TextStyle(color: Colors.black, letterSpacing: 0.0),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => VenueScreen()));
+                },
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50.0)),
+                padding: EdgeInsets.all(0.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(colors: [
+                      Colors.tealAccent[100],
+                      Colors.lightGreenAccent[100],
+                      Colors.lightGreenAccent,
+                    ]),
+                    borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.all(3),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(colors: [
+                          Colors.lightGreenAccent,
+                          Colors.lightGreenAccent[100],
+                          Colors.tealAccent[100]
+                        ]),
+                        borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                      ),
+                      height: MediaQuery.of(context).size.height * 0.05,
+                      width: MediaQuery.of(context).size.height * 0.2,
+                      alignment: Alignment.center,
+                      child: const Text(
+                        'FIND A VENUE?',
+                        textAlign: TextAlign.center,
+                        style:
+                            TextStyle(color: Colors.black, letterSpacing: 0.0),
+                      ),
+                    ),
                   ),
                 ),
               ),
@@ -120,22 +144,46 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
-              ButtonTheme(
-                minWidth: MediaQuery.of(context).size.width * 0.3,
-                height: MediaQuery.of(context).size.height * 0.05,
-                child: RaisedButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => InviteFriendScreen()));
-                  },
-                  color: Colors.green,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)),
-                  child: Text(
-                    "FIND BUDDIES?",
-                    style: TextStyle(color: Colors.black, letterSpacing: 0.0),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => InviteFriendScreen()));
+                },
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50.0)),
+                padding: EdgeInsets.all(0.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(colors: [
+                      Colors.tealAccent[100],
+                      Colors.lightGreenAccent[100],
+                      Colors.lightGreenAccent,
+                    ]),
+                    borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.all(3),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(colors: [
+                          Colors.lightGreenAccent,
+                          Colors.lightGreenAccent[100],
+                          Colors.tealAccent[100]
+                        ]),
+                        borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                      ),
+                      height: MediaQuery.of(context).size.height * 0.05,
+                      width: MediaQuery.of(context).size.height * 0.2,
+                      alignment: Alignment.center,
+                      child: const Text(
+                        'FIND BUDDIES?',
+                        textAlign: TextAlign.center,
+                        style:
+                            TextStyle(color: Colors.black, letterSpacing: 0.0),
+                      ),
+                    ),
                   ),
                 ),
               ),
@@ -169,17 +217,41 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
-              ButtonTheme(
-                minWidth: MediaQuery.of(context).size.width * 0.3,
-                height: MediaQuery.of(context).size.height * 0.05,
-                child: RaisedButton(
-                  onPressed: () {},
-                  color: Colors.green,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)),
-                  child: Text(
-                    "FIND A COACH?",
-                    style: TextStyle(color: Colors.black, letterSpacing: 0.0),
+              RaisedButton(
+                onPressed: () {},
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50.0)),
+                padding: EdgeInsets.all(0.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(colors: [
+                      Colors.tealAccent[100],
+                      Colors.lightGreenAccent[100],
+                      Colors.lightGreenAccent,
+                    ]),
+                    borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.all(3),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(colors: [
+                          Colors.lightGreenAccent,
+                          Colors.lightGreenAccent[100],
+                          Colors.tealAccent[100]
+                        ]),
+                        borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                      ),
+                      height: MediaQuery.of(context).size.height * 0.05,
+                      width: MediaQuery.of(context).size.height * 0.2,
+                      alignment: Alignment.center,
+                      child: const Text(
+                        'FIND A COACH?',
+                        textAlign: TextAlign.center,
+                        style:
+                            TextStyle(color: Colors.black, letterSpacing: 0.0),
+                      ),
+                    ),
                   ),
                 ),
               ),

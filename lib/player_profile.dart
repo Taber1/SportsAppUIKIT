@@ -292,27 +292,31 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 children: [
                   EachSport(
                     icon: 'assets/icon/football.svg',
-                    color: Colors.redAccent,
+                    color: [Colors.red, Colors.redAccent[100]].toList(),
                     icolor: Colors.black,
                   ),
                   EachSport(
                     icon: 'assets/icon/cricket.svg',
-                    color: Colors.green,
+                    color: [
+                      Colors.lightGreenAccent,
+                      Colors.lightGreenAccent[100],
+                      Colors.tealAccent[100]
+                    ].toList(),
                     icolor: Colors.black,
                   ),
                   EachSport(
                     icon: 'assets/icon/badminton.svg',
-                    color: Colors.grey[900],
+                    color: [Colors.grey[900], Colors.grey[900]].toList(),
                     icolor: Colors.grey,
                   ),
                   EachSport(
                     icon: 'assets/icon/basketball.svg',
-                    color: Colors.grey[900],
+                    color: [Colors.grey[900], Colors.grey[900]].toList(),
                     icolor: Colors.grey,
                   ),
                   EachSport(
                     icon: 'assets/icon/swimming.svg',
-                    color: Colors.yellowAccent,
+                    color: [Colors.yellowAccent, Colors.yellow[300]].toList(),
                     icolor: Colors.black,
                   )
                 ],
@@ -325,27 +329,27 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 children: [
                   EachSport(
                     icon: 'assets/icon/gym.svg',
-                    color: Colors.grey[900],
+                    color: [Colors.grey[900], Colors.grey[900]].toList(),
                     icolor: Colors.grey,
                   ),
                   EachSport(
                     icon: 'assets/icon/rugby.svg',
-                    color: Colors.grey[900],
+                    color: [Colors.grey[900], Colors.grey[900]].toList(),
                     icolor: Colors.grey,
                   ),
                   EachSport(
                     icon: 'assets/icon/squash.svg',
-                    color: Colors.grey[900],
+                    color: [Colors.grey[900], Colors.grey[900]].toList(),
                     icolor: Colors.grey,
                   ),
                   EachSport(
                     icon: 'assets/icon/tennis.svg',
-                    color: Colors.blueAccent,
+                    color: [Colors.blueAccent, Colors.blue[200]].toList(),
                     icolor: Colors.black,
                   ),
                   EachSport(
                     icon: 'assets/icon/netball.svg',
-                    color: Colors.grey[900],
+                    color: [Colors.grey[900], Colors.grey[900]].toList(),
                     icolor: Colors.grey,
                   )
                 ],
@@ -373,7 +377,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
               Row(
                 children: [
-                  Radio(
+                  CustomRadioWidget(
                     value: q1Ans.Yes,
                     groupValue: _ans1,
                     onChanged: (value) {
@@ -386,7 +390,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     'Yes',
                     style: TextStyle(fontSize: 16.0),
                   ),
-                  Radio(
+                  CustomRadioWidget(
                       value: q1Ans.No,
                       groupValue: _ans1,
                       onChanged: (value) {
@@ -421,11 +425,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                   )),
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
+                height: MediaQuery.of(context).size.height * 0.025,
               ),
               Row(
                 children: [
-                  Radio(
+                  CustomRadioWidget(
                     value: q2Ans.Yes,
                     groupValue: _ans2,
                     onChanged: (value) {
@@ -438,7 +442,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     'Yes',
                     style: TextStyle(fontSize: 16.0),
                   ),
-                  Radio(
+                  CustomRadioWidget(
                       value: q2Ans.No,
                       groupValue: _ans2,
                       onChanged: (value) {
@@ -489,22 +493,48 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         style: TextStyle(fontSize: 20, color: Colors.grey),
                       ),
                       SizedBox(
-                        width: MediaQuery.of(context).size.width * 0.2,
+                        width: MediaQuery.of(context).size.width * 0.23,
                       ),
-                      ButtonTheme(
-                        minWidth: MediaQuery.of(context).size.width * 0.4,
-                        height: MediaQuery.of(context).size.height * 0.05,
-                        child: RaisedButton(
-                          onPressed: () {},
-                          color: Colors.green,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20)),
-                          child: Text(
-                            "UPLOAD",
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 15.5,
-                                fontWeight: FontWeight.bold),
+                      RaisedButton(
+                        onPressed: () {},
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(50.0)),
+                        padding: EdgeInsets.all(0.0),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(colors: [
+                              Colors.tealAccent[100],
+                              Colors.lightGreenAccent[100],
+                              Colors.lightGreenAccent,
+                            ]),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(80.0)),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsets.all(3),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                gradient: LinearGradient(colors: [
+                                  Colors.lightGreenAccent,
+                                  Colors.lightGreenAccent[100],
+                                  Colors.tealAccent[100]
+                                ]),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(80.0)),
+                              ),
+                              height:
+                                  MediaQuery.of(context).size.height * 0.045,
+                              width: MediaQuery.of(context).size.height * 0.17,
+                              alignment: Alignment.center,
+                              child: const Text(
+                                'UPLOAD',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 15.5),
+                              ),
+                            ),
                           ),
                         ),
                       ),
@@ -521,20 +551,43 @@ class _ProfileScreenState extends State<ProfileScreen> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.03,
               ),
-              ButtonTheme(
-                minWidth: MediaQuery.of(context).size.width * 0.4,
-                height: MediaQuery.of(context).size.height * 0.05,
-                child: RaisedButton(
-                  onPressed: () {},
-                  color: Colors.green,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)),
-                  child: Text(
-                    "NEXT",
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 15.5,
-                        fontWeight: FontWeight.bold),
+              RaisedButton(
+                onPressed: () {},
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50.0)),
+                padding: EdgeInsets.all(0.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(colors: [
+                      Colors.tealAccent[100],
+                      Colors.lightGreenAccent[100],
+                      Colors.lightGreenAccent,
+                    ]),
+                    borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.all(3),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(colors: [
+                          Colors.lightGreenAccent,
+                          Colors.lightGreenAccent[100],
+                          Colors.tealAccent[100]
+                        ]),
+                        borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                      ),
+                      height: MediaQuery.of(context).size.height * 0.045,
+                      width: MediaQuery.of(context).size.height * 0.17,
+                      alignment: Alignment.center,
+                      child: const Text(
+                        'NEXT',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15.5),
+                      ),
+                    ),
                   ),
                 ),
               ),
@@ -551,7 +604,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
 class EachSport extends StatefulWidget {
   final String icon;
-  final Color color;
+  final List<Color> color;
   final Color icolor;
   EachSport({this.icon, this.color, this.icolor});
   @override
@@ -563,7 +616,8 @@ class _EachSportState extends State<EachSport> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: widget.color, borderRadius: BorderRadius.circular(30)),
+          gradient: LinearGradient(colors: widget.color),
+          borderRadius: BorderRadius.circular(30)),
       height: MediaQuery.of(context).size.height * 0.085,
       width: MediaQuery.of(context).size.width * 0.18,
       child: Center(
@@ -571,6 +625,60 @@ class _EachSportState extends State<EachSport> {
               height: 30,
               width: 30,
               child: SvgPicture.asset(widget.icon, color: widget.icolor))),
+    );
+  }
+}
+
+class CustomRadioWidget<T> extends StatelessWidget {
+  final T value;
+  final T groupValue;
+  final ValueChanged<T> onChanged;
+  final double width;
+  final double height;
+
+  CustomRadioWidget(
+      {this.value,
+      this.groupValue,
+      this.onChanged,
+      this.width = 17,
+      this.height = 17});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: GestureDetector(
+        onTap: () {
+          onChanged(this.value);
+        },
+        child: Container(
+          height: this.height,
+          width: this.width,
+          decoration: ShapeDecoration(
+            shape: CircleBorder(),
+            gradient: LinearGradient(
+              colors: [Colors.lightGreenAccent, Colors.tealAccent[100]],
+            ),
+          ),
+          child: Center(
+            child: Container(
+              height: this.height - 3,
+              width: this.width - 3,
+              decoration: ShapeDecoration(
+                shape: CircleBorder(side: BorderSide(width: 3)),
+                gradient: LinearGradient(
+                  colors: value == groupValue
+                      ? [Colors.lightGreenAccent, Colors.tealAccent[100]]
+                      : [
+                          Theme.of(context).scaffoldBackgroundColor,
+                          Theme.of(context).scaffoldBackgroundColor,
+                        ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

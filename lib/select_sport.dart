@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:sport/player_profile.dart';
 
-enum rating { Yes, No }
+enum q2Ans { Yes, No }
 
 class SelectSportScreen extends StatefulWidget {
   @override
@@ -11,7 +12,8 @@ class SelectSportScreen extends StatefulWidget {
 
 class _SelectSportScreenState extends State<SelectSportScreen> {
   List<DropdownMenuItem<String>> level = [];
-  rating _rate = rating.Yes;
+
+  q2Ans _ans2 = q2Ans.Yes;
   var levelselected;
   void loadLevel() {
     level = [];
@@ -23,18 +25,44 @@ class _SelectSportScreenState extends State<SelectSportScreen> {
 
   showAlertDialog(BuildContext context) {
     // Create button
-    Widget okButton = ButtonTheme(
-      minWidth: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height * 0.05,
-      child: RaisedButton(
-        onPressed: () {
-          Navigator.pop(context);
-        },
-        color: Colors.green,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-        child: Text(
-          "NEXT",
-          style: TextStyle(color: Colors.black),
+    Widget okButton = RaisedButton(
+      onPressed: () {
+        Navigator.pop(context);
+      },
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
+      padding: EdgeInsets.all(0.0),
+      child: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(colors: [
+            Colors.tealAccent[100],
+            Colors.lightGreenAccent[100],
+            Colors.lightGreenAccent,
+          ]),
+          borderRadius: BorderRadius.all(Radius.circular(80.0)),
+        ),
+        child: Padding(
+          padding: EdgeInsets.all(3),
+          child: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(colors: [
+                Colors.lightGreenAccent,
+                Colors.lightGreenAccent[100],
+                Colors.tealAccent[100]
+              ]),
+              borderRadius: BorderRadius.all(Radius.circular(80.0)),
+            ),
+            height: MediaQuery.of(context).size.height * 0.05,
+            width: MediaQuery.of(context).size.height,
+            alignment: Alignment.center,
+            child: const Text(
+              'SIGN IN',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 17),
+            ),
+          ),
         ),
       ),
     );
@@ -62,12 +90,12 @@ class _SelectSportScreenState extends State<SelectSportScreen> {
           ),
           Row(
             children: [
-              Radio(
-                value: rating.Yes,
-                groupValue: _rate,
+              CustomRadioWidget(
+                value: q2Ans.Yes,
+                groupValue: _ans2,
                 onChanged: (value) {
                   setState(() {
-                    _rate = value;
+                    _ans2 = value;
                   });
                 },
               ),
@@ -75,12 +103,12 @@ class _SelectSportScreenState extends State<SelectSportScreen> {
                 'Yes',
                 style: TextStyle(fontSize: 16.0),
               ),
-              Radio(
-                  value: rating.No,
-                  groupValue: _rate,
+              CustomRadioWidget(
+                  value: q2Ans.No,
+                  groupValue: _ans2,
                   onChanged: (value) {
                     setState(() {
-                      _rate = value;
+                      _ans2 = value;
                     });
                   }),
               Text(

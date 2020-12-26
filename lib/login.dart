@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sport/bottomAppbar.dart';
@@ -33,33 +32,23 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             Column(
               children: [
-                TextField(
-                  decoration: InputDecoration(
-                      focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.green),
-                          borderRadius: BorderRadius.circular(5)),
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(5)),
-                      hintText: 'sarahkaramsi@gmail.com',
-                      hintStyle: TextStyle(
-                        fontSize: 18,
+                Container(
+                  decoration: BoxDecoration(
+                      border:
+                          Border(left: BorderSide(style: BorderStyle.solid)),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey[700],
+                            offset: Offset(0, 0),
+                            blurRadius: 1.0,
+                            spreadRadius: 1.0)
+                      ]
+                      //   gradient: LinearGradient(
+                      //     begin: Alignment.centerLeft,
+                      //     end: Alignment(1, 0.1),
+                      //     colors: [Colors.grey[700], Colors.transparent],
+                      //   ),
                       ),
-                      suffixIcon: Icon(
-                        Icons.mail_outline,
-                        size: 30,
-                      )),
-                ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.01,
-                ),
-                Neumorphic(
-                  style: NeumorphicStyle(
-                      shape: NeumorphicShape.concave,
-                      boxShape: NeumorphicBoxShape.roundRect(
-                          BorderRadius.circular(12)),
-                      depth: 8,
-                      lightSource: LightSource.topLeft,
-                      color: Colors.grey),
                   child: TextField(
                     decoration: InputDecoration(
                         focusedBorder: OutlineInputBorder(
@@ -67,14 +56,33 @@ class _LoginScreenState extends State<LoginScreen> {
                             borderRadius: BorderRadius.circular(5)),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5)),
-                        hintText: '********',
+                        hintText: 'sarahkaramsi@gmail.com',
                         hintStyle: TextStyle(
                           fontSize: 18,
                         ),
                         suffixIcon: Icon(
-                          FontAwesomeIcons.lockOpen,
+                          Icons.mail_outline,
+                          size: 30,
                         )),
                   ),
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.01,
+                ),
+                TextField(
+                  decoration: InputDecoration(
+                      focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.green),
+                          borderRadius: BorderRadius.circular(5)),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(5)),
+                      hintText: '********',
+                      hintStyle: TextStyle(
+                        fontSize: 18,
+                      ),
+                      suffixIcon: Icon(
+                        FontAwesomeIcons.lockOpen,
+                      )),
                 )
               ],
             ),

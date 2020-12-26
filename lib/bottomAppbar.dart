@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sport/player_profile.dart';
 import 'package:sport/select_sport.dart';
 
+import 'dart:ui' as ui;
 import 'booking.dart';
 import 'home.dart';
 import 'notifications.dart';
@@ -63,10 +64,25 @@ class _BottomAppbarScreenState extends State<BottomAppbarScreen> {
                             currentTab = 0;
                           });
                         },
-                        child: Icon(Icons.home,
+                        child: ShaderMask(
+                          blendMode: BlendMode.srcIn,
+                          shaderCallback: (Rect bounds) {
+                            return ui.Gradient.linear(
+                              Offset(4.0, 24.0),
+                              Offset(24.0, 4.0),
+                              currentTab == 0
+                                  ? [
+                                      Colors.tealAccent[100],
+                                      Colors.lightGreenAccent,
+                                    ]
+                                  : [Colors.grey, Colors.grey],
+                            );
+                          },
+                          child: Icon(
+                            Icons.home,
                             size: 32,
-                            color:
-                                currentTab == 0 ? Colors.green : Colors.grey),
+                          ),
+                        ),
                       ),
                     ),
                     Padding(
@@ -79,10 +95,25 @@ class _BottomAppbarScreenState extends State<BottomAppbarScreen> {
                             currentTab = 1;
                           });
                         },
-                        child: Icon(Icons.notifications_none_outlined,
+                        child: ShaderMask(
+                          blendMode: BlendMode.srcIn,
+                          shaderCallback: (Rect bounds) {
+                            return ui.Gradient.linear(
+                              Offset(4.0, 24.0),
+                              Offset(24.0, 4.0),
+                              currentTab == 1
+                                  ? [
+                                      Colors.tealAccent[100],
+                                      Colors.lightGreenAccent,
+                                    ]
+                                  : [Colors.grey, Colors.grey],
+                            );
+                          },
+                          child: Icon(
+                            Icons.notifications_none_outlined,
                             size: 32,
-                            color:
-                                currentTab == 1 ? Colors.green : Colors.grey),
+                          ),
+                        ),
                       ),
                     ),
                     Padding(
@@ -95,10 +126,25 @@ class _BottomAppbarScreenState extends State<BottomAppbarScreen> {
                             currentTab = 2;
                           });
                         },
-                        child: Icon(FontAwesomeIcons.calendarAlt,
+                        child: ShaderMask(
+                          blendMode: BlendMode.srcIn,
+                          shaderCallback: (Rect bounds) {
+                            return ui.Gradient.linear(
+                              Offset(4.0, 24.0),
+                              Offset(24.0, 4.0),
+                              currentTab == 2
+                                  ? [
+                                      Colors.tealAccent[100],
+                                      Colors.lightGreenAccent,
+                                    ]
+                                  : [Colors.grey, Colors.grey],
+                            );
+                          },
+                          child: Icon(
+                            FontAwesomeIcons.calendarAlt,
                             size: 32,
-                            color:
-                                currentTab == 2 ? Colors.green : Colors.grey),
+                          ),
+                        ),
                       ),
                     ),
                     Padding(
@@ -111,10 +157,25 @@ class _BottomAppbarScreenState extends State<BottomAppbarScreen> {
                             currentTab = 3;
                           });
                         },
-                        child: Icon(Icons.person_outline,
+                        child: ShaderMask(
+                          blendMode: BlendMode.srcIn,
+                          shaderCallback: (Rect bounds) {
+                            return ui.Gradient.linear(
+                              Offset(4.0, 24.0),
+                              Offset(24.0, 4.0),
+                              currentTab == 3
+                                  ? [
+                                      Colors.tealAccent[100],
+                                      Colors.lightGreenAccent,
+                                    ]
+                                  : [Colors.grey, Colors.grey],
+                            );
+                          },
+                          child: Icon(
+                            Icons.person_outline,
                             size: 32,
-                            color:
-                                currentTab == 3 ? Colors.green : Colors.grey),
+                          ),
+                        ),
                       ),
                     ),
                   ])),
