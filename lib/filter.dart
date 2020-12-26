@@ -115,7 +115,7 @@ class _FilterScreenState extends State<FilterScreen> {
                           width: MediaQuery.of(context).size.width,
                           height: MediaQuery.of(context).size.height * 0.07,
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10)),
+                              borderRadius: BorderRadius.circular(20)),
                           child: Row(
                             children: [
                               ButtonTheme(
@@ -152,7 +152,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                   child: Row(
                                     children: [
                                       Icon(
-                                        FontAwesomeIcons.male,
+                                        FontAwesomeIcons.mars,
                                       ),
                                       SizedBox(
                                         width: 5,
@@ -171,7 +171,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                   child: Row(
                                     children: [
                                       Icon(
-                                        FontAwesomeIcons.female,
+                                        FontAwesomeIcons.venus,
                                       ),
                                       SizedBox(
                                         width: 5,
@@ -259,7 +259,10 @@ class _FilterScreenState extends State<FilterScreen> {
                             onPressed: () {},
                             child: Text(
                               "APPLY",
-                              style: TextStyle(color: Colors.black),
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold),
                             )),
                       ),
                     ],
