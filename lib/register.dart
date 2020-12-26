@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import 'bottomAppbar.dart';
+
 class RegisterScreen extends StatefulWidget {
   @override
   _RegisterScreenState createState() => _RegisterScreenState();
@@ -116,7 +118,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 minWidth: MediaQuery.of(context).size.width * 0.4,
                 height: MediaQuery.of(context).size.height * 0.05,
                 child: RaisedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => BottomAppbarScreen()));
+                  },
                   color: Colors.tealAccent,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
