@@ -65,9 +65,8 @@ class _BottomAppbarScreenState extends State<BottomAppbarScreen> {
                         },
                         child: Icon(Icons.home,
                             size: 32,
-                            color: currentTab == 0
-                                ? Colors.tealAccent
-                                : Colors.grey),
+                            color:
+                                currentTab == 0 ? Colors.green : Colors.grey),
                       ),
                     ),
                     Padding(
@@ -82,9 +81,8 @@ class _BottomAppbarScreenState extends State<BottomAppbarScreen> {
                         },
                         child: Icon(Icons.notifications_none_outlined,
                             size: 32,
-                            color: currentTab == 1
-                                ? Colors.tealAccent
-                                : Colors.grey),
+                            color:
+                                currentTab == 1 ? Colors.green : Colors.grey),
                       ),
                     ),
                     Padding(
@@ -99,9 +97,8 @@ class _BottomAppbarScreenState extends State<BottomAppbarScreen> {
                         },
                         child: Icon(Icons.calendar_today_outlined,
                             size: 32,
-                            color: currentTab == 2
-                                ? Colors.tealAccent
-                                : Colors.grey),
+                            color:
+                                currentTab == 2 ? Colors.green : Colors.grey),
                       ),
                     ),
                     Padding(
@@ -116,9 +113,8 @@ class _BottomAppbarScreenState extends State<BottomAppbarScreen> {
                         },
                         child: Icon(Icons.person_outline,
                             size: 32,
-                            color: currentTab == 3
-                                ? Colors.tealAccent
-                                : Colors.grey),
+                            color:
+                                currentTab == 3 ? Colors.green : Colors.grey),
                       ),
                     ),
                   ])),

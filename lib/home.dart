@@ -71,7 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => VenueScreen()));
                   },
-                  color: Colors.tealAccent,
+                  color: Colors.green,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
                   child: Text(
@@ -130,7 +130,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         MaterialPageRoute(
                             builder: (context) => InviteFriendScreen()));
                   },
-                  color: Colors.tealAccent,
+                  color: Colors.green,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
                   child: Text(
@@ -174,7 +174,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: MediaQuery.of(context).size.height * 0.05,
                 child: RaisedButton(
                   onPressed: () {},
-                  color: Colors.tealAccent,
+                  color: Colors.green,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
                   child: Text(

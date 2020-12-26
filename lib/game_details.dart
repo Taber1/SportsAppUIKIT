@@ -70,7 +70,7 @@ class _EventDetailScreenState extends State<EventDetailScreen> {
               TextField(
                 decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.tealAccent),
+                        borderSide: BorderSide(color: Colors.green),
                         borderRadius: BorderRadius.circular(5)),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5)),
@@ -88,7 +88,7 @@ class _EventDetailScreenState extends State<EventDetailScreen> {
               TextField(
                 decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.tealAccent),
+                        borderSide: BorderSide(color: Colors.green),
                         borderRadius: BorderRadius.circular(5)),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5)),
@@ -106,7 +106,7 @@ class _EventDetailScreenState extends State<EventDetailScreen> {
               TextField(
                 decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.tealAccent),
+                        borderSide: BorderSide(color: Colors.green),
                         borderRadius: BorderRadius.circular(5)),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5)),
@@ -124,7 +124,7 @@ class _EventDetailScreenState extends State<EventDetailScreen> {
               TextField(
                 decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.tealAccent),
+                        borderSide: BorderSide(color: Colors.green),
                         borderRadius: BorderRadius.circular(5)),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5)),
@@ -142,7 +142,7 @@ class _EventDetailScreenState extends State<EventDetailScreen> {
               TextField(
                 decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.tealAccent),
+                        borderSide: BorderSide(color: Colors.green),
                         borderRadius: BorderRadius.circular(5)),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5)),
@@ -162,7 +162,7 @@ class _EventDetailScreenState extends State<EventDetailScreen> {
                 height: MediaQuery.of(context).size.height * 0.06,
                 child: RaisedButton(
                   onPressed: () {},
-                  color: Colors.tealAccent,
+                  color: Colors.green,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
                   child: Text(

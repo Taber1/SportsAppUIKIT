@@ -35,7 +35,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 TextField(
                   decoration: InputDecoration(
                       focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.tealAccent),
+                          borderSide: BorderSide(color: Colors.green),
                           borderRadius: BorderRadius.circular(5)),
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(5)),
@@ -54,7 +54,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 TextField(
                   decoration: InputDecoration(
                       focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.tealAccent),
+                          borderSide: BorderSide(color: Colors.green),
                           borderRadius: BorderRadius.circular(5)),
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(5)),
@@ -116,7 +116,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       MaterialPageRoute(
                           builder: (context) => BottomAppbarScreen()));
                 },
-                color: Colors.tealAccent,
+                color: Colors.green,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20)),
                 child: Text(
@@ -186,7 +186,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     "Register",
                     style: TextStyle(
                         fontSize: 16,
-                        color: Colors.tealAccent,
+                        color: Colors.green,
                         decoration: TextDecoration.underline),
                   ),
                 )

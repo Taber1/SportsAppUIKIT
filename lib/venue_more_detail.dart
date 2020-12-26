@@ -47,7 +47,7 @@ class ModalTrigger extends StatelessWidget {
                       TextField(
                         decoration: InputDecoration(
                           focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Colors.tealAccent),
+                              borderSide: BorderSide(color: Colors.green),
                               borderRadius: BorderRadius.circular(5)),
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(5)),
@@ -279,7 +279,7 @@ class ModalTrigger extends StatelessWidget {
               fontSize: 20,
               fontWeight: FontWeight.bold,
               decoration: TextDecoration.underline,
-              color: Colors.tealAccent),
+              color: Colors.green),
         ),
       ),
     );

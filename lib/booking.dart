@@ -74,7 +74,7 @@ class _BookingScreenState extends State<BookingScreen> {
                   VerticalCard(
                     date: "8th",
                     day: "Wed",
-                    color: Colors.tealAccent,
+                    color: Colors.green,
                   ),
                   SizedBox(
                     width: 20,
@@ -186,12 +186,12 @@ class _BookingScreenState extends State<BookingScreen> {
             TextField(
                 decoration: InputDecoration(
               focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.tealAccent),
+                  borderSide: BorderSide(color: Colors.green),
                   borderRadius: BorderRadius.circular(5)),
               border:
                   OutlineInputBorder(borderRadius: BorderRadius.circular(5)),
               hintText: 'Total Amount',
-              suffixStyle: TextStyle(color: Colors.tealAccent, fontSize: 22),
+              suffixStyle: TextStyle(color: Colors.green, fontSize: 22),
               suffix: Text('300 KES'),
               floatingLabelBehavior: FloatingLabelBehavior.always,
             )),
@@ -208,7 +208,7 @@ class _BookingScreenState extends State<BookingScreen> {
                       MaterialPageRoute(
                           builder: (context) => Booking2Screen()));
                 },
-                color: Colors.tealAccent,
+                color: Colors.green,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30)),
                 child: Text(
@@ -241,13 +241,13 @@ const List<Choice> choices = const <Choice>[
   const Choice(time1: '8am', time2: '9am', color: Colors.grey),
   const Choice(time1: '6am', time2: '7am', color: Colors.grey),
   const Choice(time1: '8am', time2: '9am', color: Colors.grey),
-  const Choice(time1: '8am', time2: '9am', color: Colors.tealAccent),
+  const Choice(time1: '8am', time2: '9am', color: Colors.green),
   const Choice(time1: '8am', time2: '9am', color: Colors.grey),
   const Choice(time1: '8am', time2: '9am', color: Colors.grey),
   const Choice(time1: '8am', time2: '9am', color: Colors.grey),
   const Choice(time1: '6am', time2: '7am', color: Colors.grey),
   const Choice(time1: '8am', time2: '9am', color: Colors.grey),
-  const Choice(time1: '8am', time2: '9am', color: Colors.tealAccent),
+  const Choice(time1: '8am', time2: '9am', color: Colors.green),
   const Choice(time1: '8am', time2: '9am', color: Colors.grey),
   const Choice(time1: '8am', time2: '9am', color: Colors.grey),
   const Choice(time1: '8am', time2: '9am', color: Colors.grey),

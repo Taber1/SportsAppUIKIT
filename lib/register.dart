@@ -32,7 +32,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   TextField(
                     decoration: InputDecoration(
                         focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.tealAccent),
+                            borderSide: BorderSide(color: Colors.green),
                             borderRadius: BorderRadius.circular(5)),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5)),
@@ -48,7 +48,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   TextField(
                     decoration: InputDecoration(
                         focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.tealAccent),
+                            borderSide: BorderSide(color: Colors.green),
                             borderRadius: BorderRadius.circular(5)),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5)),
@@ -64,7 +64,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   TextField(
                     decoration: InputDecoration(
                         focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.tealAccent),
+                            borderSide: BorderSide(color: Colors.green),
                             borderRadius: BorderRadius.circular(5)),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5)),
@@ -83,7 +83,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   TextField(
                     decoration: InputDecoration(
                         focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.tealAccent),
+                            borderSide: BorderSide(color: Colors.green),
                             borderRadius: BorderRadius.circular(5)),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5)),
@@ -99,7 +99,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   TextField(
                     decoration: InputDecoration(
                         focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.tealAccent),
+                            borderSide: BorderSide(color: Colors.green),
                             borderRadius: BorderRadius.circular(5)),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5)),
@@ -124,7 +124,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         MaterialPageRoute(
                             builder: (context) => BottomAppbarScreen()));
                   },
-                  color: Colors.tealAccent,
+                  color: Colors.green,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
                   child: Text(

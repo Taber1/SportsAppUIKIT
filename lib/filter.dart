@@ -58,7 +58,7 @@ class _FilterScreenState extends State<FilterScreen> {
                       TextField(
                         decoration: InputDecoration(
                           focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Colors.tealAccent),
+                              borderSide: BorderSide(color: Colors.green),
                               borderRadius: BorderRadius.circular(5)),
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(5)),
@@ -80,7 +80,7 @@ class _FilterScreenState extends State<FilterScreen> {
                         height: MediaQuery.of(context).size.height * 0.01,
                       ),
                       RangeSlider(
-                        activeColor: Colors.tealAccent,
+                        activeColor: Colors.green,
                         inactiveColor: Colors.grey,
                         values: _values,
                         min: 0,
@@ -122,7 +122,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                 minWidth:
                                     MediaQuery.of(context).size.width * 0.3,
                                 child: RaisedButton(
-                                  color: Colors.tealAccent,
+                                  color: Colors.green,
                                   onPressed: () {},
                                   child: Row(
                                     children: [
@@ -219,7 +219,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                 minWidth:
                                     MediaQuery.of(context).size.width * 0.21,
                                 child: RaisedButton(
-                                    color: Colors.tealAccent,
+                                    color: Colors.green,
                                     onPressed: () {},
                                     child: Text(
                                       "Beginner",
@@ -255,7 +255,7 @@ class _FilterScreenState extends State<FilterScreen> {
                         child: RaisedButton(
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30)),
-                            color: Colors.tealAccent,
+                            color: Colors.green,
                             onPressed: () {},
                             child: Text(
                               "APPLY",

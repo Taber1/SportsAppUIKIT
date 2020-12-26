@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData(
           fontFamily: 'Cabin',
           brightness: Brightness.dark,
-          primaryColor: Colors.tealAccent),
+          primaryColor: Colors.green),
       themeMode: ThemeMode.dark,
       home: LoginScreen(),
     );

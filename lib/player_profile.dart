@@ -117,8 +117,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       Text(
                         "johndoe123@gmail.com",
                         textAlign: TextAlign.left,
-                        style:
-                            TextStyle(fontSize: 16, color: Colors.tealAccent),
+                        style: TextStyle(fontSize: 16, color: Colors.green),
                       ),
                       SizedBox(
                         width: MediaQuery.of(context).size.width * 0.15,
@@ -296,7 +295,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                   EachSport(
                     icon: 'assets/icon/cricket.svg',
-                    color: Colors.tealAccent,
+                    color: Colors.green,
                     icolor: Colors.black,
                   ),
                   EachSport(
@@ -469,7 +468,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               TextField(
                 decoration: InputDecoration(
                   focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.tealAccent),
+                      borderSide: BorderSide(color: Colors.green),
                       borderRadius: BorderRadius.circular(20)),
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20)),
@@ -495,7 +494,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         height: MediaQuery.of(context).size.height * 0.05,
                         child: RaisedButton(
                           onPressed: () {},
-                          color: Colors.tealAccent,
+                          color: Colors.green,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20)),
                           child: Text(
@@ -525,7 +524,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 height: MediaQuery.of(context).size.height * 0.05,
                 child: RaisedButton(
                   onPressed: () {},
-                  color: Colors.tealAccent,
+                  color: Colors.green,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
                   child: Text(

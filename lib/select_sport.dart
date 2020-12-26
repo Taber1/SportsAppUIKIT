@@ -30,7 +30,7 @@ class _SelectSportScreenState extends State<SelectSportScreen> {
         onPressed: () {
           Navigator.pop(context);
         },
-        color: Colors.tealAccent,
+        color: Colors.green,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         child: Text(
           "NEXT",
@@ -42,7 +42,7 @@ class _SelectSportScreenState extends State<SelectSportScreen> {
     // Create AlertDialog
     AlertDialog alert = AlertDialog(
       shape: RoundedRectangleBorder(
-          side: BorderSide(color: Colors.tealAccent),
+          side: BorderSide(color: Colors.green),
           borderRadius: BorderRadius.circular(20)),
       title: Text("Level"),
       content: Column(
@@ -244,7 +244,7 @@ class _SelectSportScreenState extends State<SelectSportScreen> {
                   onPressed: () {
                     showAlertDialog(context);
                   },
-                  color: Colors.tealAccent,
+                  color: Colors.green,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
                   child: Text(
@@ -280,9 +280,8 @@ class _EachCardState extends State<EachCard> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: widget.icolor == Colors.black
-              ? Colors.tealAccent
-              : Colors.grey[900],
+          color:
+              widget.icolor == Colors.black ? Colors.green : Colors.grey[900],
           borderRadius: BorderRadius.circular(30)),
       height: MediaQuery.of(context).size.height * 0.17,
       width: MediaQuery.of(context).size.width * 0.42,
