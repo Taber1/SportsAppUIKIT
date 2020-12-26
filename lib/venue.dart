@@ -45,11 +45,11 @@ class _VenueScreenState extends State<VenueScreen> {
                     padding: const EdgeInsets.all(15.0),
                     child: CircleAvatar(
                       backgroundColor: Colors.grey[900],
-                      child: Icon(
-                        Icons.sports_soccer,
-                        color: Colors.blueAccent,
-                        size: 30,
-                      ),
+                      child: Container(
+                          height: 30,
+                          width: 30,
+                          child: SvgPicture.asset('assets/icon/basketball.svg',
+                              color: Colors.blueAccent)),
                       maxRadius: 30,
                     ),
                   )
@@ -84,7 +84,7 @@ class _EachCardState extends State<EachCard> {
       child: Container(
         padding: EdgeInsets.all(5),
         decoration: BoxDecoration(
-            color: Colors.grey, borderRadius: BorderRadius.circular(10)),
+            color: Colors.grey[800], borderRadius: BorderRadius.circular(10)),
         height: MediaQuery.of(context).size.height * 0.5,
         width: MediaQuery.of(context).size.width,
         child: Column(
@@ -95,9 +95,45 @@ class _EachCardState extends State<EachCard> {
             Container(
               decoration: BoxDecoration(
                   border: Border.all(width: 2.5, color: Colors.tealAccent),
-                  borderRadius: BorderRadius.all(Radius.circular(10))),
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                  image: DecorationImage(
+                      image: NetworkImage(
+                          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuSVTBf4OMQkB-dmhzeXtpiueWW-S9Qip6dQ&usqp=CAU'),
+                      fit: BoxFit.cover)),
               height: MediaQuery.of(context).size.height * 0.23,
               width: MediaQuery.of(context).size.width * 0.8,
+              child: Stack(
+                children: [
+                  Positioned(
+                    top: 30,
+                    left: 10,
+                    child: Text(
+                      "Minsk City Stadium",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Positioned(
+                    top: 50,
+                    left: 10,
+                    child: Row(
+                      children: [
+                        Icon(Icons.star),
+                        Icon(Icons.star),
+                        Icon(Icons.star),
+                        Icon(Icons.star),
+                        Icon(Icons.star),
+                        Text(
+                          "4.9",
+                          style: TextStyle(fontSize: 18),
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
             SizedBox(
               height: 10,
@@ -108,7 +144,7 @@ class _EachCardState extends State<EachCard> {
                   alignment: Alignment.centerLeft,
                   child: Text(
                     "Avg. per hour",
-                    style: TextStyle(fontSize: 20),
+                    style: TextStyle(fontSize: 17),
                   )),
             ),
             SizedBox(
@@ -133,41 +169,41 @@ class _EachCardState extends State<EachCard> {
                   padding: const EdgeInsets.only(left: 17.0),
                   child: CircleAvatar(
                     backgroundColor: Colors.grey[900],
-                    child: Icon(
-                      Icons.sports_soccer,
-                      color: Colors.blueAccent,
-                      size: 30,
-                    ),
+                    child: Container(
+                        height: 30,
+                        width: 30,
+                        child: SvgPicture.asset('assets/icon/basketball.svg',
+                            color: Colors.blueAccent)),
                     maxRadius: 30,
                   ),
                 ),
                 CircleAvatar(
                   backgroundColor: Colors.grey[900],
-                  child: Icon(
-                    Icons.sports_cricket,
-                    color: Colors.tealAccent,
-                    size: 30,
-                  ),
+                  child: Container(
+                      height: 30,
+                      width: 30,
+                      child: SvgPicture.asset('assets/icon/cricket.svg',
+                          color: Colors.tealAccent)),
                   maxRadius: 30,
                 ),
                 CircleAvatar(
                   backgroundColor: Colors.grey[900],
-                  child: Icon(
-                    FontAwesomeIcons.swimmer,
-                    color: Colors.redAccent,
-                    size: 30,
-                  ),
+                  child: Container(
+                      height: 30,
+                      width: 30,
+                      child: SvgPicture.asset('assets/icon/swimming.svg',
+                          color: Colors.redAccent)),
                   maxRadius: 30,
                 ),
                 Padding(
                   padding: const EdgeInsets.only(right: 17.0),
                   child: CircleAvatar(
                     backgroundColor: Colors.grey[900],
-                    child: Icon(
-                      FontAwesomeIcons.dumbbell,
-                      color: Colors.yellowAccent,
-                      size: 30,
-                    ),
+                    child: Container(
+                        height: 30,
+                        width: 30,
+                        child: SvgPicture.asset('assets/icon/gym.svg',
+                            color: Colors.yellowAccent)),
                     maxRadius: 30,
                   ),
                 ),
@@ -195,7 +231,8 @@ class _EachCardState extends State<EachCard> {
                           borderRadius: BorderRadius.circular(20)),
                       child: Text(
                         "BOOK",
-                        style: TextStyle(color: Colors.black),
+                        style: TextStyle(
+                            color: Colors.black, fontWeight: FontWeight.bold),
                       ),
                     ),
                   ),

@@ -279,7 +279,7 @@ class _FilterScreenState extends State<FilterScreen> {
       },
       child: Icon(
         FontAwesomeIcons.filter,
-        color: Colors.black,
+        color: Colors.grey,
         size: 30,
       ),
     );
