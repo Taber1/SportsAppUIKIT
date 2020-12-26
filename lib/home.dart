@@ -200,7 +200,7 @@ class EachCard extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(30)),
       height: MediaQuery.of(context).size.height * 0.1,
-      width: MediaQuery.of(context).size.width * 0.38,
+      width: MediaQuery.of(context).size.width * 0.4,
       child: Card(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
         child: Row(

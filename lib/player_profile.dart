@@ -120,7 +120,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         style: TextStyle(fontSize: 16, color: Colors.green),
                       ),
                       SizedBox(
-                        width: MediaQuery.of(context).size.width * 0.15,
+                        width: MediaQuery.of(context).size.width * 0.1,
                       ),
                       Icon(
                         FontAwesomeIcons.caretRight,

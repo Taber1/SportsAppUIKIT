@@ -209,7 +209,7 @@ class _FilterScreenState extends State<FilterScreen> {
                             children: [
                               ButtonTheme(
                                 minWidth:
-                                    MediaQuery.of(context).size.width * 0.21,
+                                    MediaQuery.of(context).size.width * 0.15,
                                 child: RaisedButton(
                                     color: Colors.grey[700],
                                     onPressed: () {},
@@ -217,7 +217,7 @@ class _FilterScreenState extends State<FilterScreen> {
                               ),
                               ButtonTheme(
                                 minWidth:
-                                    MediaQuery.of(context).size.width * 0.21,
+                                    MediaQuery.of(context).size.width * 0.15,
                                 child: RaisedButton(
                                     color: Colors.green,
                                     onPressed: () {},
@@ -228,7 +228,7 @@ class _FilterScreenState extends State<FilterScreen> {
                               ),
                               ButtonTheme(
                                 minWidth:
-                                    MediaQuery.of(context).size.width * 0.21,
+                                    MediaQuery.of(context).size.width * 0.15,
                                 child: RaisedButton(
                                     color: Colors.grey[700],
                                     onPressed: () {},
@@ -236,7 +236,7 @@ class _FilterScreenState extends State<FilterScreen> {
                               ),
                               ButtonTheme(
                                 minWidth:
-                                    MediaQuery.of(context).size.width * 0.21,
+                                    MediaQuery.of(context).size.width * 0.15,
                                 child: RaisedButton(
                                     color: Colors.grey[700],
                                     onPressed: () {},

@@ -62,7 +62,10 @@ class _VenueScreenState extends State<VenueScreen> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.03,
               ),
-              EachCard()
+              EachCard(),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.03,
+              ),
             ],
           ),
         ),
@@ -85,7 +88,7 @@ class _EachCardState extends State<EachCard> {
         padding: EdgeInsets.all(5),
         decoration: BoxDecoration(
             color: Colors.grey[800], borderRadius: BorderRadius.circular(10)),
-        height: MediaQuery.of(context).size.height * 0.5,
+        height: MediaQuery.of(context).size.height * 0.6,
         width: MediaQuery.of(context).size.width,
         child: Column(
           children: [

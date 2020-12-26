@@ -24,17 +24,14 @@ class _Booking2ScreenState extends State<Booking2Screen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(15.0),
-                    child: CircleAvatar(
-                      backgroundColor: Colors.grey[900],
-                      child: InkWell(
-                          onTap: () {
-                            Navigator.pop(context);
-                          },
-                          child: SvgPicture.asset('assets/icon/back.svg')),
-                      maxRadius: 30,
-                    ),
+                  CircleAvatar(
+                    backgroundColor: Colors.grey[900],
+                    child: InkWell(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: SvgPicture.asset('assets/icon/back.svg')),
+                    maxRadius: 30,
                   ),
                   Text(
                     "Your Bookings",
@@ -42,18 +39,14 @@ class _Booking2ScreenState extends State<Booking2Screen> {
                       fontSize: 28,
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(15.0),
-                    child: CircleAvatar(
-                      backgroundColor: Colors.grey[900],
-                      child: Container(
-                          height: 30,
-                          width: 30,
-                          child:
-                              SvgPicture.asset('assets/icon/basketball.svg')),
-                      maxRadius: 30,
-                    ),
-                  )
+                  CircleAvatar(
+                    backgroundColor: Colors.grey[900],
+                    child: Container(
+                        height: 30,
+                        width: 30,
+                        child: SvgPicture.asset('assets/icon/basketball.svg')),
+                    maxRadius: 30,
+                  ),
                 ],
               ),
               SizedBox(
@@ -94,7 +87,7 @@ class EachCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.27,
+      height: MediaQuery.of(context).size.height * 0.3,
       width: MediaQuery.of(context).size.width * 0.9,
       decoration: BoxDecoration(
           border: Border.all(width: 2.5, color: Colors.grey),

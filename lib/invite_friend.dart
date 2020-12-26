@@ -146,7 +146,7 @@ class EachCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.38,
+      height: MediaQuery.of(context).size.height * 0.48,
       width: MediaQuery.of(context).size.width * 0.87,
       decoration: BoxDecoration(
           border: Border.all(width: 2.5, color: Colors.grey),
