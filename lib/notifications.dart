@@ -121,7 +121,11 @@ class _NotificationScreenState extends State<NotificationScreen> {
                   'https://cdn.pixabay.com/photo/2016/03/09/15/10/man-1246508__340.jpg',
               name: 'John Doe',
               status: "IN",
-              color: Colors.green,
+              color: [
+                Colors.lightGreenAccent,
+                Colors.lightGreenAccent[100],
+                Colors.tealAccent[100]
+              ].toList(),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.015,
@@ -131,7 +135,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                   'https://cdn.pixabay.com/photo/2016/03/09/15/10/man-1246508__340.jpg',
               name: 'John Doe',
               status: "PENDING",
-              color: Colors.yellowAccent,
+              color: [Colors.yellowAccent[100], Colors.yellowAccent].toList(),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.015,
@@ -141,7 +145,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                   'https://cdn.pixabay.com/photo/2016/03/09/15/10/man-1246508__340.jpg',
               name: 'John Doe',
               status: "OUT",
-              color: Colors.redAccent,
+              color: [Colors.redAccent, Colors.red].toList(),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
@@ -157,7 +161,7 @@ class EachCard extends StatelessWidget {
   final String icon;
   final String name;
   final String status;
-  final Color color;
+  final List color;
   EachCard({this.icon, this.name, this.status, this.color});
   @override
   Widget build(BuildContext context) {
@@ -172,7 +176,6 @@ class EachCard extends StatelessWidget {
           Row(
             children: [
               CircleAvatar(
-                backgroundColor: color,
                 backgroundImage: NetworkImage(icon),
                 maxRadius: 25,
               ),
@@ -185,17 +188,38 @@ class EachCard extends StatelessWidget {
               ),
             ],
           ),
-          ButtonTheme(
-            minWidth: MediaQuery.of(context).size.width * 0.13,
-            height: MediaQuery.of(context).size.height * 0.03,
-            child: RaisedButton(
-              onPressed: () {},
-              color: color,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20)),
-              child: Text(
-                status,
-                style: TextStyle(color: Colors.black),
+          RaisedButton(
+            color: Colors.grey[900],
+            onPressed: () {},
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(50.0)),
+            padding: EdgeInsets.all(0.0),
+            child: Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                    colors: color,
+                    begin: Alignment.centerLeft,
+                    end: Alignment.centerRight),
+                borderRadius: BorderRadius.all(Radius.circular(80.0)),
+              ),
+              child: Padding(
+                padding: EdgeInsets.all(3),
+                child: Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(colors: color),
+                    borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                  ),
+                  height: MediaQuery.of(context).size.height * 0.035,
+                  width: MediaQuery.of(context).size.height * 0.095,
+                  alignment: Alignment.center,
+                  child: Text(
+                    status,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
               ),
             ),
           ),
