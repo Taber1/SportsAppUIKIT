@@ -80,7 +80,7 @@ class _FilterScreenState extends State<FilterScreen> {
                         height: MediaQuery.of(context).size.height * 0.01,
                       ),
                       RangeSlider(
-                        activeColor: Colors.green,
+                        activeColor: Colors.lightGreenAccent,
                         inactiveColor: Colors.grey,
                         values: _values,
                         min: 0,
@@ -117,67 +117,147 @@ class _FilterScreenState extends State<FilterScreen> {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20)),
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              ButtonTheme(
-                                minWidth:
-                                    MediaQuery.of(context).size.width * 0.3,
-                                child: RaisedButton(
-                                  color: Colors.green,
-                                  onPressed: () {},
-                                  child: Row(
-                                    children: [
-                                      Icon(
-                                        FontAwesomeIcons.transgender,
-                                        color: Colors.black,
+                              InkWell(
+                                onTap: () {},
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                        begin: Alignment.centerRight,
+                                        end: Alignment.centerLeft,
+                                        colors: [
+                                          Colors.lightGreenAccent,
+                                          Colors.lightGreenAccent[100],
+                                          Colors.tealAccent[100]
+                                        ]),
+                                    //borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(3.0),
+                                    child: Container(
+                                      height:
+                                          MediaQuery.of(context).size.height *
+                                              0.045,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.27,
+                                      decoration: BoxDecoration(
+                                        gradient: LinearGradient(colors: [
+                                          Colors.lightGreenAccent,
+                                          Colors.lightGreenAccent[100],
+                                          Colors.tealAccent[100]
+                                        ]),
+                                        //borderRadius: BorderRadius.all(Radius.circular(80.0)),
                                       ),
-                                      SizedBox(
-                                        width: 5,
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Icon(
+                                            FontAwesomeIcons.transgender,
+                                            color: Colors.black,
+                                          ),
+                                          SizedBox(
+                                            width: 5,
+                                          ),
+                                          Text(
+                                            "ANY",
+                                            style:
+                                                TextStyle(color: Colors.black),
+                                          )
+                                        ],
                                       ),
-                                      Text(
-                                        "Any",
-                                        style: TextStyle(
-                                          color: Colors.black,
-                                        ),
-                                      )
-                                    ],
+                                    ),
                                   ),
                                 ),
                               ),
-                              ButtonTheme(
-                                minWidth:
-                                    MediaQuery.of(context).size.width * 0.3,
-                                child: RaisedButton(
-                                  color: Colors.grey[700],
-                                  onPressed: () {},
-                                  child: Row(
-                                    children: [
-                                      Icon(
-                                        FontAwesomeIcons.mars,
+                              InkWell(
+                                onTap: () {},
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                        begin: Alignment.centerRight,
+                                        end: Alignment.centerLeft,
+                                        colors: [
+                                          Colors.grey[700],
+                                          Colors.grey[700],
+                                        ]),
+                                    //borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(3.0),
+                                    child: Container(
+                                      height:
+                                          MediaQuery.of(context).size.height *
+                                              0.045,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.3,
+                                      decoration: BoxDecoration(
+                                        gradient: LinearGradient(colors: [
+                                          Colors.grey[700],
+                                          Colors.grey[700],
+                                        ]),
+                                        //borderRadius: BorderRadius.all(Radius.circular(80.0)),
                                       ),
-                                      SizedBox(
-                                        width: 5,
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Icon(
+                                            FontAwesomeIcons.mars,
+                                          ),
+                                          SizedBox(
+                                            width: 5,
+                                          ),
+                                          Text("Male")
+                                        ],
                                       ),
-                                      Text("Male")
-                                    ],
+                                    ),
                                   ),
                                 ),
                               ),
-                              ButtonTheme(
-                                minWidth:
-                                    MediaQuery.of(context).size.width * 0.3,
-                                child: RaisedButton(
-                                  color: Colors.grey[700],
-                                  onPressed: () {},
-                                  child: Row(
-                                    children: [
-                                      Icon(
-                                        FontAwesomeIcons.venus,
+                              InkWell(
+                                onTap: () {},
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                        begin: Alignment.centerRight,
+                                        end: Alignment.centerLeft,
+                                        colors: [
+                                          Colors.grey[700],
+                                          Colors.grey[700],
+                                        ]),
+                                    //borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(3.0),
+                                    child: Container(
+                                      height:
+                                          MediaQuery.of(context).size.height *
+                                              0.045,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.3,
+                                      decoration: BoxDecoration(
+                                        gradient: LinearGradient(colors: [
+                                          Colors.grey[700],
+                                          Colors.grey[700],
+                                        ]),
+                                        //borderRadius: BorderRadius.all(Radius.circular(80.0)),
                                       ),
-                                      SizedBox(
-                                        width: 5,
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Icon(
+                                            FontAwesomeIcons.venus,
+                                          ),
+                                          SizedBox(
+                                            width: 5,
+                                          ),
+                                          Text("Female")
+                                        ],
                                       ),
-                                      Text("Female")
-                                    ],
+                                    ),
                                   ),
                                 ),
                               ),
@@ -206,41 +286,166 @@ class _FilterScreenState extends State<FilterScreen> {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10)),
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              ButtonTheme(
-                                minWidth:
-                                    MediaQuery.of(context).size.width * 0.15,
-                                child: RaisedButton(
-                                    color: Colors.grey[700],
-                                    onPressed: () {},
-                                    child: Text("Any")),
+                              InkWell(
+                                onTap: () {},
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                        begin: Alignment.centerRight,
+                                        end: Alignment.centerLeft,
+                                        colors: [
+                                          Colors.lightGreenAccent,
+                                          Colors.lightGreenAccent[100],
+                                          Colors.tealAccent[100]
+                                        ]),
+                                    //borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(3.0),
+                                    child: Container(
+                                        height:
+                                            MediaQuery.of(context).size.height *
+                                                0.045,
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.19,
+                                        decoration: BoxDecoration(
+                                          gradient: LinearGradient(colors: [
+                                            Colors.lightGreenAccent,
+                                            Colors.lightGreenAccent[100],
+                                            Colors.tealAccent[100]
+                                          ]),
+                                          //borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                                        ),
+                                        child: Center(
+                                          child: Text(
+                                            "ANY",
+                                            style:
+                                                TextStyle(color: Colors.black),
+                                          ),
+                                        )),
+                                  ),
+                                ),
                               ),
-                              ButtonTheme(
-                                minWidth:
-                                    MediaQuery.of(context).size.width * 0.15,
-                                child: RaisedButton(
-                                    color: Colors.green,
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Beginner",
-                                      style: TextStyle(color: Colors.black),
-                                    )),
+                              InkWell(
+                                onTap: () {},
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                        begin: Alignment.centerRight,
+                                        end: Alignment.centerLeft,
+                                        colors: [
+                                          Colors.grey[700],
+                                          Colors.grey[700],
+                                        ]),
+                                    //borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(3.0),
+                                    child: Container(
+                                        height:
+                                            MediaQuery.of(context).size.height *
+                                                0.045,
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.19,
+                                        decoration: BoxDecoration(
+                                          gradient: LinearGradient(colors: [
+                                            Colors.grey[700],
+                                            Colors.grey[700],
+                                          ]),
+                                          //borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                                        ),
+                                        child: Center(
+                                          child: Text(
+                                            "BEGINNER",
+                                            style:
+                                                TextStyle(color: Colors.black),
+                                          ),
+                                        )),
+                                  ),
+                                ),
                               ),
-                              ButtonTheme(
-                                minWidth:
-                                    MediaQuery.of(context).size.width * 0.15,
-                                child: RaisedButton(
-                                    color: Colors.grey[700],
-                                    onPressed: () {},
-                                    child: Text("Intermediate")),
+                              InkWell(
+                                onTap: () {},
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                        begin: Alignment.centerRight,
+                                        end: Alignment.centerLeft,
+                                        colors: [
+                                          Colors.grey[700],
+                                          Colors.grey[700],
+                                        ]),
+                                    //borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(3.0),
+                                    child: Container(
+                                        height:
+                                            MediaQuery.of(context).size.height *
+                                                0.045,
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.19,
+                                        decoration: BoxDecoration(
+                                          gradient: LinearGradient(colors: [
+                                            Colors.grey[700],
+                                            Colors.grey[700],
+                                          ]),
+                                          //borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                                        ),
+                                        child: Center(
+                                          child: Text(
+                                            "INTERMEDIATE",
+                                            style: TextStyle(
+                                                color: Colors.black,
+                                                letterSpacing: -1.5),
+                                          ),
+                                        )),
+                                  ),
+                                ),
                               ),
-                              ButtonTheme(
-                                minWidth:
-                                    MediaQuery.of(context).size.width * 0.15,
-                                child: RaisedButton(
-                                    color: Colors.grey[700],
-                                    onPressed: () {},
-                                    child: Text("Expert")),
+                              InkWell(
+                                onTap: () {},
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                        begin: Alignment.centerRight,
+                                        end: Alignment.centerLeft,
+                                        colors: [
+                                          Colors.grey[700],
+                                          Colors.grey[700],
+                                        ]),
+                                    //borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(3.0),
+                                    child: Container(
+                                        height:
+                                            MediaQuery.of(context).size.height *
+                                                0.045,
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.19,
+                                        decoration: BoxDecoration(
+                                          gradient: LinearGradient(colors: [
+                                            Colors.grey[700],
+                                            Colors.grey[700],
+                                          ]),
+                                          //borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                                        ),
+                                        child: Center(
+                                          child: Text(
+                                            "EXPERT",
+                                            style:
+                                                TextStyle(color: Colors.black),
+                                          ),
+                                        )),
+                                  ),
+                                ),
                               ),
                             ],
                           ),
@@ -249,21 +454,47 @@ class _FilterScreenState extends State<FilterScreen> {
                       SizedBox(
                         height: MediaQuery.of(context).size.height * 0.03,
                       ),
-                      ButtonTheme(
-                        height: MediaQuery.of(context).size.height * 0.07,
-                        minWidth: MediaQuery.of(context).size.width,
-                        child: RaisedButton(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30)),
-                            color: Colors.green,
-                            onPressed: () {},
-                            child: Text(
-                              "APPLY",
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold),
-                            )),
+                      RaisedButton(
+                        onPressed: () {},
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(50.0)),
+                        padding: EdgeInsets.all(0.0),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(colors: [
+                              Colors.tealAccent[100],
+                              Colors.lightGreenAccent[100],
+                              Colors.lightGreenAccent,
+                            ]),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(80.0)),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsets.all(3),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                gradient: LinearGradient(colors: [
+                                  Colors.lightGreenAccent,
+                                  Colors.lightGreenAccent[100],
+                                  Colors.tealAccent[100]
+                                ]),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(80.0)),
+                              ),
+                              height: MediaQuery.of(context).size.height * 0.06,
+                              width: MediaQuery.of(context).size.height,
+                              alignment: Alignment.center,
+                              child: const Text(
+                                'APPLY',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 17),
+                              ),
+                            ),
+                          ),
+                        ),
                       ),
                     ],
                   ),
