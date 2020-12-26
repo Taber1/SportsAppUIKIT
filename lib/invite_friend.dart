@@ -112,7 +112,7 @@ class _InviteFriendScreenState extends State<InviteFriendScreen> {
                       MaterialPageRoute(
                           builder: (context) => EventDetailScreen()));
                 },
-                color: Colors.tealAccent,
+                color: Colors.green,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20)),
                 child: Text(
@@ -310,7 +310,7 @@ class EachCard extends StatelessWidget {
                 Icon(
                   Icons.check,
                   size: 35,
-                  color: Colors.tealAccent,
+                  color: Colors.green,
                 ),
                 SizedBox(
                   width: 5,
@@ -318,7 +318,7 @@ class EachCard extends StatelessWidget {
                 Text(
                   "Invited",
                   style: TextStyle(
-                      color: Colors.tealAccent,
+                      color: Colors.green,
                       fontSize: 30,
                       fontWeight: FontWeight.w200),
                 )

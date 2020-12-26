@@ -61,7 +61,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
             TextField(
               decoration: InputDecoration(
                   focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.tealAccent),
+                      borderSide: BorderSide(color: Colors.green),
                       borderRadius: BorderRadius.circular(5)),
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5)),
@@ -79,7 +79,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
             TextField(
               decoration: InputDecoration(
                   focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.tealAccent),
+                      borderSide: BorderSide(color: Colors.green),
                       borderRadius: BorderRadius.circular(5)),
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5)),
@@ -97,7 +97,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
             TextField(
               decoration: InputDecoration(
                   focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.tealAccent),
+                      borderSide: BorderSide(color: Colors.green),
                       borderRadius: BorderRadius.circular(5)),
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5)),
@@ -128,7 +128,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                   'https://cdn.pixabay.com/photo/2016/03/09/15/10/man-1246508__340.jpg',
               name: 'John Doe',
               status: "IN",
-              color: Colors.tealAccent,
+              color: Colors.green,
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.015,

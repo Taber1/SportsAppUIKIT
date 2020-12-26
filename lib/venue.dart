@@ -94,7 +94,7 @@ class _EachCardState extends State<EachCard> {
             ),
             Container(
               decoration: BoxDecoration(
-                  border: Border.all(width: 2.5, color: Colors.tealAccent),
+                  border: Border.all(width: 2.5, color: Colors.green),
                   borderRadius: BorderRadius.all(Radius.circular(10)),
                   image: DecorationImage(
                       image: NetworkImage(
@@ -183,7 +183,7 @@ class _EachCardState extends State<EachCard> {
                       height: 30,
                       width: 30,
                       child: SvgPicture.asset('assets/icon/cricket.svg',
-                          color: Colors.tealAccent)),
+                          color: Colors.green)),
                   maxRadius: 30,
                 ),
                 CircleAvatar(
@@ -226,7 +226,7 @@ class _EachCardState extends State<EachCard> {
                     height: MediaQuery.of(context).size.height * 0.05,
                     child: RaisedButton(
                       onPressed: () {},
-                      color: Colors.tealAccent,
+                      color: Colors.green,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20)),
                       child: Text(
