@@ -157,20 +157,43 @@ class _EventDetailScreenState extends State<EventDetailScreen> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.08,
               ),
-              ButtonTheme(
-                minWidth: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height * 0.06,
-                child: RaisedButton(
-                  onPressed: () {},
-                  color: Colors.green,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)),
-                  child: Text(
-                    "CREATE EVENT",
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18),
+              RaisedButton(
+                onPressed: () {},
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50.0)),
+                padding: EdgeInsets.all(0.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(colors: [
+                      Colors.tealAccent[100],
+                      Colors.lightGreenAccent[100],
+                      Colors.lightGreenAccent,
+                    ]),
+                    borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.all(3),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(colors: [
+                          Colors.lightGreenAccent,
+                          Colors.lightGreenAccent[100],
+                          Colors.tealAccent[100]
+                        ]),
+                        borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                      ),
+                      height: MediaQuery.of(context).size.height * 0.06,
+                      width: MediaQuery.of(context).size.height,
+                      alignment: Alignment.center,
+                      child: const Text(
+                        'CREATE EVENT',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18),
+                      ),
+                    ),
                   ),
                 ),
               ),
