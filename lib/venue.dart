@@ -187,7 +187,7 @@ class _EachCardState extends State<EachCard> {
                       height: 30,
                       width: 30,
                       child: SvgPicture.asset('assets/icon/cricket.svg',
-                          color: Colors.green)),
+                          color: Colors.lightGreenAccent)),
                   maxRadius: 30,
                 ),
                 CircleAvatar(
@@ -225,23 +225,49 @@ class _EachCardState extends State<EachCard> {
                     child: ModalTrigger()),
                 Padding(
                   padding: const EdgeInsets.only(right: 17.0),
-                  child: ButtonTheme(
-                    minWidth: MediaQuery.of(context).size.width * 0.4,
-                    height: MediaQuery.of(context).size.height * 0.05,
-                    child: RaisedButton(
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => BookingScreen()));
-                      },
-                      color: Colors.green,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20)),
-                      child: Text(
-                        "BOOK",
-                        style: TextStyle(
-                            color: Colors.black, fontWeight: FontWeight.bold),
+                  child: RaisedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => BookingScreen()));
+                    },
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(50.0)),
+                    padding: EdgeInsets.all(0.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(colors: [
+                          Colors.tealAccent[100],
+                          Colors.lightGreenAccent[100],
+                          Colors.lightGreenAccent,
+                        ]),
+                        borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.all(3),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(colors: [
+                              Colors.lightGreenAccent,
+                              Colors.lightGreenAccent[100],
+                              Colors.tealAccent[100]
+                            ]),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(80.0)),
+                          ),
+                          height: MediaQuery.of(context).size.height * 0.05,
+                          width: MediaQuery.of(context).size.height * 0.17,
+                          alignment: Alignment.center,
+                          child: const Text(
+                            'BOOK',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
                       ),
                     ),
                   ),
