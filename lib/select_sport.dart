@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sport/player_profile.dart';
 
 enum q2Ans { Yes, No }
@@ -308,16 +307,37 @@ class _EachCardState extends State<EachCard> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color:
-              widget.icolor == Colors.black ? Colors.green : Colors.grey[900],
+          gradient: LinearGradient(
+              colors: widget.icolor == Colors.black
+                  ? [
+                      Colors.lightGreenAccent,
+                      Colors.lightGreenAccent[100],
+                      Colors.tealAccent[100]
+                    ]
+                  : [Colors.grey[900], Colors.grey[900]]),
           borderRadius: BorderRadius.circular(30)),
-      height: MediaQuery.of(context).size.height * 0.17,
-      width: MediaQuery.of(context).size.width * 0.42,
-      child: Center(
-          child: Container(
-              height: 50,
-              width: 50,
-              child: SvgPicture.asset(widget.icon, color: widget.icolor))),
+      child: Padding(
+        padding: const EdgeInsets.all(3.0),
+        child: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  colors: widget.icolor == Colors.black
+                      ? [
+                          Colors.tealAccent[100],
+                          Colors.lightGreenAccent[100],
+                          Colors.lightGreenAccent,
+                        ]
+                      : [Colors.grey[900], Colors.grey[900]]),
+              borderRadius: BorderRadius.circular(30)),
+          height: MediaQuery.of(context).size.height * 0.17,
+          width: MediaQuery.of(context).size.width * 0.42,
+          child: Center(
+              child: Container(
+                  height: 50,
+                  width: 50,
+                  child: SvgPicture.asset(widget.icon, color: widget.icolor))),
+        ),
+      ),
     );
   }
 }
