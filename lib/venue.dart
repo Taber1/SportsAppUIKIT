@@ -86,9 +86,8 @@ class _EachCardState extends State<EachCard> {
       padding: const EdgeInsets.only(left: 8.0, right: 8.0),
       child: Container(
         padding: EdgeInsets.all(5),
-        decoration: BoxDecoration(boxShadow: [
-          BoxShadow(color: Colors.black, blurRadius: 10, spreadRadius: 10)
-        ], color: Colors.grey[800], borderRadius: BorderRadius.circular(10)),
+        decoration: BoxDecoration(
+            color: Colors.grey[800], borderRadius: BorderRadius.circular(10)),
         height: MediaQuery.of(context).size.height * 0.6,
         width: MediaQuery.of(context).size.width,
         child: Column(
