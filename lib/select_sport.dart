@@ -160,9 +160,13 @@ class _SelectSportScreenState extends State<SelectSportScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  EachCard(icon: Icons.sports_cricket),
                   EachCard(
-                    icon: Icons.sports_football,
+                    icon: 'assets/icon/football.svg',
+                    icolor: Colors.grey,
+                  ),
+                  EachCard(
+                    icon: 'assets/icon/cricket.svg',
+                    icolor: Colors.black,
                   )
                 ],
               ),
@@ -173,10 +177,12 @@ class _SelectSportScreenState extends State<SelectSportScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   EachCard(
-                    icon: FontAwesomeIcons.futbol,
+                    icon: 'assets/icon/badminton.svg',
+                    icolor: Colors.grey,
                   ),
                   EachCard(
-                    icon: Icons.sports_tennis,
+                    icon: 'assets/icon/basketball.svg',
+                    icolor: Colors.grey,
                   )
                 ],
               ),
@@ -187,10 +193,12 @@ class _SelectSportScreenState extends State<SelectSportScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   EachCard(
-                    icon: Icons.sports_basketball,
+                    icon: 'assets/icon/gym.svg',
+                    icolor: Colors.grey,
                   ),
                   EachCard(
-                    icon: FontAwesomeIcons.dumbbell,
+                    icon: 'assets/icon/swimming.svg',
+                    icolor: Colors.grey,
                   )
                 ],
               ),
@@ -201,10 +209,12 @@ class _SelectSportScreenState extends State<SelectSportScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   EachCard(
-                    icon: FontAwesomeIcons.swimmer,
+                    icon: 'assets/icon/rugby.svg',
+                    icolor: Colors.grey,
                   ),
                   EachCard(
-                    icon: Icons.sports_golf,
+                    icon: 'assets/icon/squash.svg',
+                    icolor: Colors.grey,
                   )
                 ],
               ),
@@ -215,10 +225,12 @@ class _SelectSportScreenState extends State<SelectSportScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   EachCard(
-                    icon: Icons.sports_handball,
+                    icon: 'assets/icon/tennis.svg',
+                    icolor: Colors.grey,
                   ),
                   EachCard(
-                    icon: Icons.sports_rugby,
+                    icon: 'assets/icon/netball.svg',
+                    icolor: Colors.grey,
                   )
                 ],
               ),
@@ -237,7 +249,10 @@ class _SelectSportScreenState extends State<SelectSportScreen> {
                       borderRadius: BorderRadius.circular(20)),
                   child: Text(
                     "NEXT",
-                    style: TextStyle(color: Colors.black),
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18),
                   ),
                 ),
               ),
@@ -253,8 +268,9 @@ class _SelectSportScreenState extends State<SelectSportScreen> {
 }
 
 class EachCard extends StatefulWidget {
-  final IconData icon;
-  EachCard({this.icon});
+  final Color icolor;
+  final String icon;
+  EachCard({this.icon, this.icolor});
   @override
   _EachCardState createState() => _EachCardState();
 }
@@ -264,16 +280,17 @@ class _EachCardState extends State<EachCard> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: Colors.grey[900], borderRadius: BorderRadius.circular(30)),
+          color: widget.icolor == Colors.black
+              ? Colors.tealAccent
+              : Colors.grey[900],
+          borderRadius: BorderRadius.circular(30)),
       height: MediaQuery.of(context).size.height * 0.17,
       width: MediaQuery.of(context).size.width * 0.42,
       child: Center(
-        child: Icon(
-          widget.icon,
-          color: Colors.grey,
-          size: 60,
-        ),
-      ),
+          child: Container(
+              height: 50,
+              width: 50,
+              child: SvgPicture.asset(widget.icon, color: widget.icolor))),
     );
   }
 }
