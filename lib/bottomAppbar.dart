@@ -95,7 +95,7 @@ class _BottomAppbarScreenState extends State<BottomAppbarScreen> {
                             currentTab = 2;
                           });
                         },
-                        child: Icon(Icons.calendar_today_outlined,
+                        child: Icon(FontAwesomeIcons.calendarAlt,
                             size: 32,
                             color:
                                 currentTab == 2 ? Colors.green : Colors.grey),

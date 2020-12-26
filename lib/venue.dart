@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:sport/booking.dart';
 import 'package:sport/venue_more_detail.dart';
 
 class VenueScreen extends StatefulWidget {
@@ -228,7 +229,12 @@ class _EachCardState extends State<EachCard> {
                     minWidth: MediaQuery.of(context).size.width * 0.4,
                     height: MediaQuery.of(context).size.height * 0.05,
                     child: RaisedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => BookingScreen()));
+                      },
                       color: Colors.green,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20)),
