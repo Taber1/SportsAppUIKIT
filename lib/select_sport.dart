@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sport/player_profile.dart';
 
@@ -75,17 +76,28 @@ class _SelectSportScreenState extends State<SelectSportScreen> {
       content: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          DropdownButtonFormField(
-            decoration: InputDecoration(
-                border:
-                    OutlineInputBorder(borderRadius: BorderRadius.circular(5))),
-            value: levelselected,
-            items: level,
-            hint: Text("Beginner"),
-            onChanged: (value) {
-              levelselected = value;
-              setState(() {});
-            },
+          Neumorphic(
+            style: NeumorphicStyle(
+                color: Colors.transparent,
+                depth: -10,
+                shadowDarkColorEmboss: Colors.black,
+                shadowLightColorEmboss: Colors.white38,
+                border: NeumorphicBorder(width: 2),
+                intensity: 0.8,
+                boxShape:
+                    NeumorphicBoxShape.roundRect(BorderRadius.circular(10))),
+            child: DropdownButtonFormField(
+              decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5))),
+              value: levelselected,
+              items: level,
+              hint: Text("Beginner"),
+              onChanged: (value) {
+                levelselected = value;
+                setState(() {});
+              },
+            ),
           ),
           Row(
             children: [
