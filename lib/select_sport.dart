@@ -362,9 +362,8 @@ class _EachCardState extends State<EachCard> {
                     end: Alignment(1, 1),
                     colors: widget.icolor == Colors.black
                         ? [
-                            Colors.tealAccent[100],
-                            Colors.lightGreenAccent[100],
-                            Colors.lightGreenAccent,
+                            Color(0xffD2FF66),
+                            Color(0xff9AFAA8),
                           ]
                         : [
                             Colors.grey[900],
