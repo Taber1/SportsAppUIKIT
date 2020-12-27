@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sport/filter.dart';
@@ -269,67 +270,96 @@ class _HomeScreenState extends State<HomeScreen> {
 class EachCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(30)),
-      height: MediaQuery.of(context).size.height * 0.1,
-      width: MediaQuery.of(context).size.width * 0.4,
-      child: Card(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-        child: Row(
-          children: [
-            SizedBox(
-              width: 5,
-            ),
-            CircleAvatar(
-              backgroundImage: NetworkImage(
-                  'https://cdn.pixabay.com/photo/2016/03/09/15/10/man-1246508__340.jpg'),
-              maxRadius: 27,
-            ),
-            SizedBox(
-              width: 5,
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text("John Doe"),
-                Row(
-                  children: [
-                    Container(
-                        height: 20,
-                        width: 20,
-                        child: SvgPicture.asset(
-                          'assets/icon/cricket.svg',
-                          color: Colors.yellow,
-                        )),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Container(
-                        height: 20,
-                        width: 20,
-                        child: SvgPicture.asset(
-                          'assets/icon/basketball.svg',
-                          color: Colors.blueAccent,
-                        )),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Container(
-                        height: 20,
-                        width: 20,
-                        child: SvgPicture.asset(
-                          'assets/icon/swimming.svg',
-                          color: Colors.redAccent[100],
-                        ))
-                  ],
-                ),
-                Text('20 - 25 Age',
-                    style: TextStyle(
-                        color: Colors.grey, letterSpacing: 0, fontSize: 13))
-              ],
-            )
-          ],
+    return Neumorphic(
+      style: NeumorphicStyle(
+        depth: 3,
+        shadowLightColorEmboss: Colors.white,
+        shadowDarkColorEmboss: Colors.black,
+        border: NeumorphicBorder(
+          width: 2,
+        ),
+        boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(30)),
+        intensity: 0.3,
+        disableDepth: false,
+        shape: NeumorphicShape.flat,
+        lightSource: LightSource.bottomRight,
+        shadowLightColor: Colors.white,
+        shadowDarkColor: Colors.black,
+        oppositeShadowLightSource: true,
+        surfaceIntensity: 0.9,
+      ),
+      child: Container(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment(-1, -1),
+                end: Alignment(1, 1),
+                colors: [
+                  Colors.grey[900],
+                  Colors.grey[900],
+                  Colors.grey[850],
+                  Colors.grey[800]
+                ]),
+            borderRadius: BorderRadius.circular(30)),
+        height: MediaQuery.of(context).size.height * 0.086,
+        width: MediaQuery.of(context).size.width * 0.4,
+        child: Container(
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(30)),
+          child: Row(
+            children: [
+              SizedBox(
+                width: 5,
+              ),
+              CircleAvatar(
+                backgroundImage: NetworkImage(
+                    'https://cdn.pixabay.com/photo/2016/03/09/15/10/man-1246508__340.jpg'),
+                maxRadius: 27,
+              ),
+              SizedBox(
+                width: 5,
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("John Doe"),
+                  Row(
+                    children: [
+                      Container(
+                          height: 20,
+                          width: 20,
+                          child: SvgPicture.asset(
+                            'assets/icon/cricket.svg',
+                            color: Colors.yellow,
+                          )),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Container(
+                          height: 20,
+                          width: 20,
+                          child: SvgPicture.asset(
+                            'assets/icon/basketball.svg',
+                            color: Colors.blueAccent,
+                          )),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Container(
+                          height: 20,
+                          width: 20,
+                          child: SvgPicture.asset(
+                            'assets/icon/swimming.svg',
+                            color: Colors.redAccent[100],
+                          ))
+                    ],
+                  ),
+                  Text('20 - 25 Age',
+                      style: TextStyle(
+                          color: Colors.grey, letterSpacing: 0, fontSize: 13))
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );

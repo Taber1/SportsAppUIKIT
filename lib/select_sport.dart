@@ -340,37 +340,69 @@ class EachCard extends StatefulWidget {
 class _EachCardState extends State<EachCard> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-          gradient: LinearGradient(
-              colors: widget.icolor == Colors.black
-                  ? [
-                      Colors.lightGreenAccent,
-                      Colors.lightGreenAccent[100],
-                      Colors.tealAccent[100]
-                    ]
-                  : [Colors.grey[900], Colors.grey[900]]),
-          borderRadius: BorderRadius.circular(30)),
-      child: Padding(
-        padding: const EdgeInsets.all(3.0),
-        child: Container(
-          decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  colors: widget.icolor == Colors.black
-                      ? [
-                          Colors.tealAccent[100],
-                          Colors.lightGreenAccent[100],
-                          Colors.lightGreenAccent,
-                        ]
-                      : [Colors.grey[900], Colors.grey[900]]),
-              borderRadius: BorderRadius.circular(30)),
-          height: MediaQuery.of(context).size.height * 0.17,
-          width: MediaQuery.of(context).size.width * 0.42,
-          child: Center(
-              child: Container(
-                  height: 50,
-                  width: 50,
-                  child: SvgPicture.asset(widget.icon, color: widget.icolor))),
+    return Neumorphic(
+      style: NeumorphicStyle(
+        depth: 3,
+        shadowLightColorEmboss: Colors.white,
+        shadowDarkColorEmboss: Colors.black,
+        border: NeumorphicBorder(
+          width: 2,
+        ),
+        boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(30)),
+        intensity: 0.3,
+        disableDepth: false,
+        shape: NeumorphicShape.flat,
+        lightSource: LightSource.bottomRight,
+        shadowLightColor: Colors.white,
+        shadowDarkColor: Colors.black,
+        oppositeShadowLightSource: true,
+        surfaceIntensity: 0.9,
+      ),
+      child: Container(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+                colors: widget.icolor == Colors.black
+                    ? [
+                        Colors.lightGreenAccent,
+                        Colors.lightGreenAccent[100],
+                        Colors.tealAccent[100]
+                      ]
+                    : [
+                        Colors.grey[900],
+                        Colors.grey[900],
+                        Colors.grey[850],
+                        Colors.grey[800]
+                      ]),
+            borderRadius: BorderRadius.circular(30)),
+        child: Padding(
+          padding: const EdgeInsets.all(3.0),
+          child: Container(
+            decoration: BoxDecoration(
+                gradient: LinearGradient(
+                    begin: Alignment(-1, -1),
+                    end: Alignment(1, 1),
+                    colors: widget.icolor == Colors.black
+                        ? [
+                            Colors.tealAccent[100],
+                            Colors.lightGreenAccent[100],
+                            Colors.lightGreenAccent,
+                          ]
+                        : [
+                            Colors.grey[900],
+                            Colors.grey[900],
+                            Colors.grey[850],
+                            Colors.grey[800]
+                          ]),
+                borderRadius: BorderRadius.circular(30)),
+            height: MediaQuery.of(context).size.height * 0.17,
+            width: MediaQuery.of(context).size.width * 0.42,
+            child: Center(
+                child: Container(
+                    height: 50,
+                    width: 50,
+                    child:
+                        SvgPicture.asset(widget.icon, color: widget.icolor))),
+          ),
         ),
       ),
     );

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sport/login.dart';
 
 void main() {
+  Paint.enableDithering = true;
   return runApp(MyApp());
 }
 

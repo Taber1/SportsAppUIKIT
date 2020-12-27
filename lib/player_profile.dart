@@ -340,17 +340,27 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                   EachSport(
                     icon: 'assets/icon/badminton.svg',
-                    color: [Colors.grey[900], Colors.grey[900]].toList(),
+                    color: [
+                      Colors.grey[900],
+                      Colors.grey[900],
+                      Colors.grey[850],
+                      Colors.grey[800]
+                    ].toList(),
                     icolor: Colors.grey,
                   ),
                   EachSport(
                     icon: 'assets/icon/basketball.svg',
-                    color: [Colors.grey[900], Colors.grey[900]].toList(),
+                    color: [
+                      Colors.grey[900],
+                      Colors.grey[900],
+                      Colors.grey[850],
+                      Colors.grey[800]
+                    ].toList(),
                     icolor: Colors.grey,
                   ),
                   EachSport(
                     icon: 'assets/icon/swimming.svg',
-                    color: [Colors.yellowAccent, Colors.yellow[300]].toList(),
+                    color: [Colors.yellowAccent, Colors.yellow[200]].toList(),
                     icolor: Colors.black,
                   )
                 ],
@@ -363,17 +373,32 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 children: [
                   EachSport(
                     icon: 'assets/icon/gym.svg',
-                    color: [Colors.grey[900], Colors.grey[900]].toList(),
+                    color: [
+                      Colors.grey[900],
+                      Colors.grey[900],
+                      Colors.grey[850],
+                      Colors.grey[800]
+                    ].toList(),
                     icolor: Colors.grey,
                   ),
                   EachSport(
                     icon: 'assets/icon/rugby.svg',
-                    color: [Colors.grey[900], Colors.grey[900]].toList(),
+                    color: [
+                      Colors.grey[900],
+                      Colors.grey[900],
+                      Colors.grey[850],
+                      Colors.grey[800]
+                    ].toList(),
                     icolor: Colors.grey,
                   ),
                   EachSport(
                     icon: 'assets/icon/squash.svg',
-                    color: [Colors.grey[900], Colors.grey[900]].toList(),
+                    color: [
+                      Colors.grey[900],
+                      Colors.grey[900],
+                      Colors.grey[850],
+                      Colors.grey[800]
+                    ].toList(),
                     icolor: Colors.grey,
                   ),
                   EachSport(
@@ -383,7 +408,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                   EachSport(
                     icon: 'assets/icon/netball.svg',
-                    color: [Colors.grey[900], Colors.grey[900]].toList(),
+                    color: [
+                      Colors.grey[900],
+                      Colors.grey[900],
+                      Colors.grey[850],
+                      Colors.grey[800]
+                    ].toList(),
                     icolor: Colors.grey,
                   )
                 ],
@@ -659,17 +689,39 @@ class EachSport extends StatefulWidget {
 class _EachSportState extends State<EachSport> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-          gradient: LinearGradient(colors: widget.color),
-          borderRadius: BorderRadius.circular(30)),
-      height: MediaQuery.of(context).size.height * 0.085,
-      width: MediaQuery.of(context).size.width * 0.18,
-      child: Center(
-          child: Container(
-              height: 30,
-              width: 30,
-              child: SvgPicture.asset(widget.icon, color: widget.icolor))),
+    return Neumorphic(
+      style: NeumorphicStyle(
+        depth: 3,
+        shadowLightColorEmboss: Colors.white,
+        shadowDarkColorEmboss: Colors.black,
+        border: NeumorphicBorder(
+          width: 2,
+        ),
+        boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(30)),
+        intensity: 0.3,
+        disableDepth: false,
+        shape: NeumorphicShape.flat,
+        lightSource: LightSource.bottomRight,
+        shadowLightColor: Colors.white,
+        shadowDarkColor: Colors.black,
+        oppositeShadowLightSource: true,
+        surfaceIntensity: 0.9,
+      ),
+      child: Container(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment(-1, -1),
+                end: Alignment(1, 1),
+                colors: widget.color),
+            borderRadius: BorderRadius.circular(30)),
+        height: MediaQuery.of(context).size.height * 0.085,
+        width: MediaQuery.of(context).size.width * 0.18,
+        child: Center(
+            child: Container(
+                height: 30,
+                width: 30,
+                child: SvgPicture.asset(widget.icon, color: widget.icolor))),
+      ),
     );
   }
 }

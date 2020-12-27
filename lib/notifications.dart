@@ -201,30 +201,35 @@ class EachCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Neumorphic(
       style: NeumorphicStyle(
-        depth: 10,
+        depth: 3,
         shadowLightColorEmboss: Colors.white,
         shadowDarkColorEmboss: Colors.black,
         border: NeumorphicBorder(
           width: 2,
         ),
         boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(20)),
-        intensity: 0.7,
-        disableDepth: true,
+        intensity: 0.3,
+        disableDepth: false,
         shape: NeumorphicShape.flat,
-        lightSource: LightSource.bottomLeft,
+        lightSource: LightSource.bottomRight,
         shadowLightColor: Colors.white,
         shadowDarkColor: Colors.black,
         oppositeShadowLightSource: true,
-        surfaceIntensity: 0.5,
+        surfaceIntensity: 0.9,
       ),
       child: Container(
         padding: EdgeInsets.only(left: 15, right: 15),
         height: MediaQuery.of(context).size.height * 0.09,
         decoration: BoxDecoration(
             gradient: LinearGradient(
-                begin: const FractionalOffset(0.0, 0.0),
-                end: const FractionalOffset(0.5, 0.0),
-                colors: [Colors.grey[900], Colors.grey[850], Colors.grey[800]]),
+                begin: Alignment(-1, -1),
+                end: Alignment(1, 1),
+                colors: [
+                  Colors.grey[900],
+                  Colors.grey[900],
+                  Colors.grey[850],
+                  Colors.grey[800]
+                ]),
             color: Colors.grey[900],
             borderRadius: BorderRadius.circular(20)),
         child: Row(
