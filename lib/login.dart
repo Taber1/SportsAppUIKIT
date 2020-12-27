@@ -4,6 +4,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sport/bottomAppbar.dart';
 import 'package:sport/register.dart';
 
+import 'innerShadow.dart';
+
 class LoginScreen extends StatefulWidget {
   @override
   _LoginScreenState createState() => _LoginScreenState();
@@ -32,39 +34,19 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             Column(
               children: [
-                Container(
-                  decoration: BoxDecoration(
-                      border:
-                          Border(left: BorderSide(style: BorderStyle.solid)),
-                      boxShadow: [
-                        BoxShadow(
-                            color: Colors.grey[700],
-                            offset: Offset(0, 0),
-                            blurRadius: 1.0,
-                            spreadRadius: 1.0)
-                      ]
-                      //   gradient: LinearGradient(
-                      //     begin: Alignment.centerLeft,
-                      //     end: Alignment(1, 0.1),
-                      //     colors: [Colors.grey[700], Colors.transparent],
-                      //   ),
-                      ),
+                CustomContainer(
                   child: TextField(
-                    decoration: InputDecoration(
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.green),
-                            borderRadius: BorderRadius.circular(5)),
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(5)),
-                        hintText: 'sarahkaramsi@gmail.com',
-                        hintStyle: TextStyle(
-                          fontSize: 18,
-                        ),
-                        suffixIcon: Icon(
-                          Icons.mail_outline,
-                          size: 30,
-                        )),
-                  ),
+                      decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.green),
+                        borderRadius: BorderRadius.circular(5)),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(5)),
+                    hintText: 'sarahkaramsi@gmail.com',
+                    hintStyle: TextStyle(
+                      fontSize: 18,
+                    ),
+                  )),
                 ),
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.01,
