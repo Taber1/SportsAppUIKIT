@@ -184,29 +184,19 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 child: Container(
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
-                        colors: [Color(0xff9AFAA8), Color(0xffD2FF66)]),
+                        colors: [Color(0xffD2FF66), Color(0xff9AFAA8)]),
                     borderRadius: BorderRadius.all(Radius.circular(80.0)),
                   ),
-                  child: Padding(
-                    padding: EdgeInsets.all(3),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                            colors: [Color(0xffD2FF66), Color(0xff9AFAA8)]),
-                        borderRadius: BorderRadius.all(Radius.circular(80.0)),
-                      ),
-                      height: MediaQuery.of(context).size.height * 0.06,
-                      width: MediaQuery.of(context).size.height * 0.2,
-                      alignment: Alignment.center,
-                      child: const Text(
-                        'REGISTER',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 17),
-                      ),
-                    ),
+                  height: MediaQuery.of(context).size.height * 0.06,
+                  width: MediaQuery.of(context).size.height * 0.2,
+                  alignment: Alignment.center,
+                  child: const Text(
+                    'REGISTER',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 17),
                   ),
                 ),
               ),

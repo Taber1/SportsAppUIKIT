@@ -34,29 +34,17 @@ class _SelectSportScreenState extends State<SelectSportScreen> {
       child: Container(
         decoration: BoxDecoration(
           gradient:
-              LinearGradient(colors: [Color(0xff9AFAA8), Color(0xffD2FF66)]),
+              LinearGradient(colors: [Color(0xffD2FF66), Color(0xff9AFAA8)]),
           borderRadius: BorderRadius.all(Radius.circular(80.0)),
         ),
-        child: Padding(
-          padding: EdgeInsets.all(3),
-          child: Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  colors: [Color(0xffD2FF66), Color(0xff9AFAA8)]),
-              borderRadius: BorderRadius.all(Radius.circular(80.0)),
-            ),
-            height: MediaQuery.of(context).size.height * 0.05,
-            width: MediaQuery.of(context).size.height,
-            alignment: Alignment.center,
-            child: const Text(
-              'NEXT',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 17),
-            ),
-          ),
+        height: MediaQuery.of(context).size.height * 0.05,
+        width: MediaQuery.of(context).size.height,
+        alignment: Alignment.center,
+        child: const Text(
+          'NEXT',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 17),
         ),
       ),
     );

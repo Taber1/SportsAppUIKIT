@@ -248,34 +248,19 @@ class _EachCardState extends State<EachCard> {
                       padding: EdgeInsets.all(0.0),
                       child: Container(
                         decoration: BoxDecoration(
-                          gradient: LinearGradient(colors: [
-                            Color(0xff9AFAA8),
-                            Color(0xffD2FF66),
-                          ]),
+                          gradient: LinearGradient(
+                              colors: [Color(0xffD2FF66), Color(0xff9AFAA8)]),
                           borderRadius: BorderRadius.all(Radius.circular(80.0)),
                         ),
-                        child: Padding(
-                          padding: EdgeInsets.all(3),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              gradient: LinearGradient(colors: [
-                                Color(0xffD2FF66),
-                                Color(0xff9AFAA8)
-                              ]),
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(80.0)),
-                            ),
-                            height: MediaQuery.of(context).size.height * 0.05,
-                            width: MediaQuery.of(context).size.height * 0.17,
-                            alignment: Alignment.center,
-                            child: const Text(
-                              'BOOK',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
+                        height: MediaQuery.of(context).size.height * 0.05,
+                        width: MediaQuery.of(context).size.height * 0.17,
+                        alignment: Alignment.center,
+                        child: const Text(
+                          'BOOK',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),

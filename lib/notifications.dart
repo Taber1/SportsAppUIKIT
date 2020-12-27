@@ -252,29 +252,17 @@ class EachCard extends StatelessWidget {
               padding: EdgeInsets.all(0.0),
               child: Container(
                 decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                      colors: color,
-                      begin: Alignment.centerLeft,
-                      end: Alignment.centerRight),
+                  gradient: LinearGradient(colors: color),
                   borderRadius: BorderRadius.all(Radius.circular(80.0)),
                 ),
-                child: Padding(
-                  padding: EdgeInsets.all(3),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(colors: color),
-                      borderRadius: BorderRadius.all(Radius.circular(80.0)),
-                    ),
-                    height: MediaQuery.of(context).size.height * 0.035,
-                    width: MediaQuery.of(context).size.height * 0.12,
-                    alignment: Alignment.center,
-                    child: Text(
-                      status,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Colors.black,
-                      ),
-                    ),
+                height: MediaQuery.of(context).size.height * 0.035,
+                width: MediaQuery.of(context).size.height * 0.12,
+                alignment: Alignment.center,
+                child: Text(
+                  status,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.black,
                   ),
                 ),
               ),

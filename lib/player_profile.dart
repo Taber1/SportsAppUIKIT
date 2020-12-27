@@ -545,34 +545,20 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         child: Container(
                           decoration: BoxDecoration(
                             gradient: LinearGradient(
-                                colors: [Color(0xff9AFAA8), Color(0xffD2FF66)]),
+                                colors: [Color(0xffD2FF66), Color(0xff9AFAA8)]),
                             borderRadius:
                                 BorderRadius.all(Radius.circular(80.0)),
                           ),
-                          child: Padding(
-                            padding: EdgeInsets.all(3),
-                            child: Container(
-                              decoration: BoxDecoration(
-                                gradient: LinearGradient(colors: [
-                                  Color(0xffD2FF66),
-                                  Color(0xff9AFAA8)
-                                ]),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(80.0)),
-                              ),
-                              height:
-                                  MediaQuery.of(context).size.height * 0.045,
-                              width: MediaQuery.of(context).size.height * 0.17,
-                              alignment: Alignment.center,
-                              child: const Text(
-                                'UPLOAD',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 15.5),
-                              ),
-                            ),
+                          height: MediaQuery.of(context).size.height * 0.045,
+                          width: MediaQuery.of(context).size.height * 0.17,
+                          alignment: Alignment.center,
+                          child: const Text(
+                            'UPLOAD',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 15.5),
                           ),
                         ),
                       ),
@@ -596,36 +582,20 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 padding: EdgeInsets.all(0.0),
                 child: Container(
                   decoration: BoxDecoration(
-                    gradient: LinearGradient(colors: [
-                      Colors.tealAccent[100],
-                      Colors.lightGreenAccent[100],
-                      Colors.lightGreenAccent,
-                    ]),
+                    gradient: LinearGradient(
+                        colors: [Color(0xffD2FF66), Color(0xff9AFAA8)]),
                     borderRadius: BorderRadius.all(Radius.circular(80.0)),
                   ),
-                  child: Padding(
-                    padding: EdgeInsets.all(3),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(colors: [
-                          Colors.lightGreenAccent,
-                          Colors.lightGreenAccent[100],
-                          Colors.tealAccent[100]
-                        ]),
-                        borderRadius: BorderRadius.all(Radius.circular(80.0)),
-                      ),
-                      height: MediaQuery.of(context).size.height * 0.045,
-                      width: MediaQuery.of(context).size.height * 0.17,
-                      alignment: Alignment.center,
-                      child: const Text(
-                        'NEXT',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15.5),
-                      ),
-                    ),
+                  height: MediaQuery.of(context).size.height * 0.05,
+                  width: MediaQuery.of(context).size.height * 0.19,
+                  alignment: Alignment.center,
+                  child: const Text(
+                    'NEXT',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15.5),
                   ),
                 ),
               ),
