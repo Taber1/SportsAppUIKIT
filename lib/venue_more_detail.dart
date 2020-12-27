@@ -91,7 +91,7 @@ class ModalTrigger extends StatelessWidget {
                             style: NeumorphicStyle(
                                 color: Colors.transparent,
                                 depth: -10,
-                                shadowDarkColorEmboss: Colors.black,
+                                shadowDarkColorEmboss: Colors.black87,
                                 shadowLightColorEmboss: Colors.white38,
                                 border: NeumorphicBorder(width: 2),
                                 intensity: 0.8,
@@ -121,7 +121,7 @@ class ModalTrigger extends StatelessWidget {
                             style: NeumorphicStyle(
                                 color: Colors.transparent,
                                 depth: -10,
-                                shadowDarkColorEmboss: Colors.black,
+                                shadowDarkColorEmboss: Colors.black87,
                                 shadowLightColorEmboss: Colors.white38,
                                 border: NeumorphicBorder(width: 2),
                                 intensity: 0.8,
@@ -151,7 +151,7 @@ class ModalTrigger extends StatelessWidget {
                             style: NeumorphicStyle(
                                 color: Colors.transparent,
                                 depth: -10,
-                                shadowDarkColorEmboss: Colors.black,
+                                shadowDarkColorEmboss: Colors.black87,
                                 shadowLightColorEmboss: Colors.white38,
                                 border: NeumorphicBorder(width: 2),
                                 intensity: 0.8,
@@ -188,7 +188,7 @@ class ModalTrigger extends StatelessWidget {
                             style: NeumorphicStyle(
                                 color: Colors.transparent,
                                 depth: -10,
-                                shadowDarkColorEmboss: Colors.black,
+                                shadowDarkColorEmboss: Colors.black87,
                                 shadowLightColorEmboss: Colors.white38,
                                 border: NeumorphicBorder(width: 2),
                                 intensity: 0.8,
@@ -218,7 +218,7 @@ class ModalTrigger extends StatelessWidget {
                             style: NeumorphicStyle(
                                 color: Colors.transparent,
                                 depth: -10,
-                                shadowDarkColorEmboss: Colors.black,
+                                shadowDarkColorEmboss: Colors.black87,
                                 shadowLightColorEmboss: Colors.white38,
                                 border: NeumorphicBorder(width: 2),
                                 intensity: 0.8,
