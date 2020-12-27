@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -51,56 +52,89 @@ class _NotificationScreenState extends State<NotificationScreen> {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
             ),
-            TextField(
-              decoration: InputDecoration(
-                  focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.green),
-                      borderRadius: BorderRadius.circular(5)),
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5)),
-                  hintText: 'Event Name',
-                  hintStyle: TextStyle(
-                    fontSize: 18,
-                  ),
-                  suffixIcon: Icon(
-                    FontAwesomeIcons.caretDown,
-                  )),
+            Neumorphic(
+              style: NeumorphicStyle(
+                  color: Colors.transparent,
+                  depth: -10,
+                  shadowDarkColorEmboss: Colors.black,
+                  shadowLightColorEmboss: Colors.white38,
+                  border: NeumorphicBorder(width: 2),
+                  intensity: 0.8,
+                  boxShape:
+                      NeumorphicBoxShape.roundRect(BorderRadius.circular(10))),
+              child: TextField(
+                decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.green),
+                        borderRadius: BorderRadius.circular(5)),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(5)),
+                    hintText: 'Event Name',
+                    hintStyle: TextStyle(
+                      fontSize: 18,
+                    ),
+                    suffixIcon: Icon(
+                      FontAwesomeIcons.caretDown,
+                    )),
+              ),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.03,
             ),
-            TextField(
-              decoration: InputDecoration(
-                  focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.green),
-                      borderRadius: BorderRadius.circular(5)),
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5)),
-                  hintText: 'Day',
-                  hintStyle: TextStyle(
-                    fontSize: 18,
-                  ),
-                  suffixIcon: Icon(
-                    FontAwesomeIcons.caretDown,
-                  )),
+            Neumorphic(
+              style: NeumorphicStyle(
+                  color: Colors.transparent,
+                  depth: -10,
+                  shadowDarkColorEmboss: Colors.black,
+                  shadowLightColorEmboss: Colors.white38,
+                  border: NeumorphicBorder(width: 2),
+                  intensity: 0.8,
+                  boxShape:
+                      NeumorphicBoxShape.roundRect(BorderRadius.circular(10))),
+              child: TextField(
+                decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.green),
+                        borderRadius: BorderRadius.circular(5)),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(5)),
+                    hintText: 'Day',
+                    hintStyle: TextStyle(
+                      fontSize: 18,
+                    ),
+                    suffixIcon: Icon(
+                      FontAwesomeIcons.caretDown,
+                    )),
+              ),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.03,
             ),
-            TextField(
-              decoration: InputDecoration(
-                  focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.green),
-                      borderRadius: BorderRadius.circular(5)),
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5)),
-                  hintText: 'Time',
-                  hintStyle: TextStyle(
-                    fontSize: 18,
-                  ),
-                  suffixIcon: Icon(
-                    FontAwesomeIcons.caretDown,
-                  )),
+            Neumorphic(
+              style: NeumorphicStyle(
+                  color: Colors.transparent,
+                  depth: -10,
+                  shadowDarkColorEmboss: Colors.black,
+                  shadowLightColorEmboss: Colors.white38,
+                  border: NeumorphicBorder(width: 2),
+                  intensity: 0.8,
+                  boxShape:
+                      NeumorphicBoxShape.roundRect(BorderRadius.circular(10))),
+              child: TextField(
+                decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.green),
+                        borderRadius: BorderRadius.circular(5)),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(5)),
+                    hintText: 'Time',
+                    hintStyle: TextStyle(
+                      fontSize: 18,
+                    ),
+                    suffixIcon: Icon(
+                      FontAwesomeIcons.caretDown,
+                    )),
+              ),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.04,
