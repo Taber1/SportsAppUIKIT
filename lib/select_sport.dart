@@ -279,22 +279,16 @@ class _SelectSportScreenState extends State<SelectSportScreen> {
                 padding: EdgeInsets.all(0.0),
                 child: Container(
                   decoration: BoxDecoration(
-                    gradient: LinearGradient(colors: [
-                      Colors.tealAccent[100],
-                      Colors.lightGreenAccent[100],
-                      Colors.lightGreenAccent,
-                    ]),
+                    gradient: LinearGradient(
+                        colors: [Color(0xff9AFAA8), Color(0xffD2FF66)]),
                     borderRadius: BorderRadius.all(Radius.circular(80.0)),
                   ),
                   child: Padding(
                     padding: EdgeInsets.all(3),
                     child: Container(
                       decoration: BoxDecoration(
-                        gradient: LinearGradient(colors: [
-                          Colors.lightGreenAccent,
-                          Colors.lightGreenAccent[100],
-                          Colors.tealAccent[100]
-                        ]),
+                        gradient: LinearGradient(
+                            colors: [Color(0xffD2FF66), Color(0xff9AFAA8)]),
                         borderRadius: BorderRadius.all(Radius.circular(80.0)),
                       ),
                       height: MediaQuery.of(context).size.height * 0.05,
@@ -356,17 +350,8 @@ class _EachCardState extends State<EachCard> {
         decoration: BoxDecoration(
             gradient: LinearGradient(
                 colors: widget.icolor == Colors.black
-                    ? [
-                        Colors.lightGreenAccent,
-                        Colors.lightGreenAccent[100],
-                        Colors.tealAccent[100]
-                      ]
-                    : [
-                        Colors.grey[900],
-                        Colors.grey[900],
-                        Colors.grey[850],
-                        Colors.grey[800]
-                      ]),
+                    ? [Color(0xff9AFAA8), Color(0xffD2FF66)]
+                    : [Color(0xff151618), Color(0xff262729)]),
             borderRadius: BorderRadius.circular(30)),
         child: Padding(
           padding: const EdgeInsets.all(3.0),

@@ -74,11 +74,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: EdgeInsets.all(0.0),
                 child: Container(
                   decoration: BoxDecoration(
-                    gradient: LinearGradient(colors: [
-                      Colors.tealAccent[100],
-                      Colors.lightGreenAccent[100],
-                      Colors.lightGreenAccent,
-                    ]),
+                    gradient: LinearGradient(
+                        colors: [Color(0xff9AFAA8), Color(0xffD2FF66)]),
                     borderRadius: BorderRadius.all(Radius.circular(80.0)),
                   ),
                   child: Padding(
@@ -157,22 +154,16 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: EdgeInsets.all(0.0),
                 child: Container(
                   decoration: BoxDecoration(
-                    gradient: LinearGradient(colors: [
-                      Colors.tealAccent[100],
-                      Colors.lightGreenAccent[100],
-                      Colors.lightGreenAccent,
-                    ]),
+                    gradient: LinearGradient(
+                        colors: [Color(0xff9AFAA8), Color(0xffD2FF66)]),
                     borderRadius: BorderRadius.all(Radius.circular(80.0)),
                   ),
                   child: Padding(
                     padding: EdgeInsets.all(3),
                     child: Container(
                       decoration: BoxDecoration(
-                        gradient: LinearGradient(colors: [
-                          Colors.lightGreenAccent,
-                          Colors.lightGreenAccent[100],
-                          Colors.tealAccent[100]
-                        ]),
+                        gradient: LinearGradient(
+                            colors: [Color(0xffD2FF66), Color(0xff9AFAA8)]),
                         borderRadius: BorderRadius.all(Radius.circular(80.0)),
                       ),
                       height: MediaQuery.of(context).size.height * 0.05,
@@ -225,22 +216,16 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: EdgeInsets.all(0.0),
                 child: Container(
                   decoration: BoxDecoration(
-                    gradient: LinearGradient(colors: [
-                      Colors.tealAccent[100],
-                      Colors.lightGreenAccent[100],
-                      Colors.lightGreenAccent,
-                    ]),
+                    gradient: LinearGradient(
+                        colors: [Color(0xff9AFAA8), Color(0xffD2FF66)]),
                     borderRadius: BorderRadius.all(Radius.circular(80.0)),
                   ),
                   child: Padding(
                     padding: EdgeInsets.all(3),
                     child: Container(
                       decoration: BoxDecoration(
-                        gradient: LinearGradient(colors: [
-                          Colors.lightGreenAccent,
-                          Colors.lightGreenAccent[100],
-                          Colors.tealAccent[100]
-                        ]),
+                        gradient: LinearGradient(
+                            colors: [Color(0xffD2FF66), Color(0xff9AFAA8)]),
                         borderRadius: BorderRadius.all(Radius.circular(80.0)),
                       ),
                       height: MediaQuery.of(context).size.height * 0.05,
@@ -329,7 +314,7 @@ class EachCard extends StatelessWidget {
                           width: 20,
                           child: SvgPicture.asset(
                             'assets/icon/cricket.svg',
-                            color: Colors.yellow,
+                            color: Color(0xffD2FF66),
                           )),
                       SizedBox(
                         width: 5,
@@ -339,7 +324,7 @@ class EachCard extends StatelessWidget {
                           width: 20,
                           child: SvgPicture.asset(
                             'assets/icon/basketball.svg',
-                            color: Colors.blueAccent,
+                            color: Color(0xff56C2D6),
                           )),
                       SizedBox(
                         width: 5,
@@ -349,7 +334,7 @@ class EachCard extends StatelessWidget {
                           width: 20,
                           child: SvgPicture.asset(
                             'assets/icon/swimming.svg',
-                            color: Colors.redAccent[100],
+                            color: Color(0xffDC6A54),
                           ))
                     ],
                   ),

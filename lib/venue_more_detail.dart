@@ -350,7 +350,7 @@ class ModalTrigger extends StatelessWidget {
               fontSize: 20,
               fontWeight: FontWeight.bold,
               decoration: TextDecoration.underline,
-              color: Colors.lightGreenAccent),
+              color: Color(0xffACFB92)),
         ),
       ),
     );

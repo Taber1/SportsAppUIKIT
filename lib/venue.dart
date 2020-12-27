@@ -51,7 +51,7 @@ class _VenueScreenState extends State<VenueScreen> {
                           height: 30,
                           width: 30,
                           child: SvgPicture.asset('assets/icon/basketball.svg',
-                              color: Colors.blueAccent)),
+                              color: Color(0xff56C2D6))),
                       maxRadius: 30,
                     ),
                   )
@@ -188,7 +188,7 @@ class _EachCardState extends State<EachCard> {
                           height: 30,
                           width: 30,
                           child: SvgPicture.asset('assets/icon/basketball.svg',
-                              color: Colors.blueAccent)),
+                              color: Color(0xff56C2D6))),
                       maxRadius: 30,
                     ),
                   ),
@@ -198,7 +198,7 @@ class _EachCardState extends State<EachCard> {
                         height: 30,
                         width: 30,
                         child: SvgPicture.asset('assets/icon/cricket.svg',
-                            color: Colors.lightGreenAccent)),
+                            color: Color(0xffD2FF66))),
                     maxRadius: 30,
                   ),
                   CircleAvatar(
@@ -207,7 +207,7 @@ class _EachCardState extends State<EachCard> {
                         height: 30,
                         width: 30,
                         child: SvgPicture.asset('assets/icon/swimming.svg',
-                            color: Colors.redAccent)),
+                            color: Color(0xffDC6A54))),
                     maxRadius: 30,
                   ),
                   Padding(
@@ -218,7 +218,7 @@ class _EachCardState extends State<EachCard> {
                           height: 30,
                           width: 30,
                           child: SvgPicture.asset('assets/icon/gym.svg',
-                              color: Colors.yellowAccent)),
+                              color: Color(0xffF6FCB3))),
                       maxRadius: 30,
                     ),
                   ),
@@ -249,9 +249,8 @@ class _EachCardState extends State<EachCard> {
                       child: Container(
                         decoration: BoxDecoration(
                           gradient: LinearGradient(colors: [
-                            Colors.tealAccent[100],
-                            Colors.lightGreenAccent[100],
-                            Colors.lightGreenAccent,
+                            Color(0xff9AFAA8),
+                            Color(0xffD2FF66),
                           ]),
                           borderRadius: BorderRadius.all(Radius.circular(80.0)),
                         ),
@@ -260,9 +259,8 @@ class _EachCardState extends State<EachCard> {
                           child: Container(
                             decoration: BoxDecoration(
                               gradient: LinearGradient(colors: [
-                                Colors.lightGreenAccent,
-                                Colors.lightGreenAccent[100],
-                                Colors.tealAccent[100]
+                                Color(0xffD2FF66),
+                                Color(0xff9AFAA8)
                               ]),
                               borderRadius:
                                   BorderRadius.all(Radius.circular(80.0)),
