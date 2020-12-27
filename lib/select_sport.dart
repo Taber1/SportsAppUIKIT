@@ -33,8 +33,13 @@ class _SelectSportScreenState extends State<SelectSportScreen> {
       padding: EdgeInsets.all(0.0),
       child: Container(
         decoration: BoxDecoration(
-          gradient:
-              LinearGradient(colors: [Color(0xffD2FF66), Color(0xff9AFAA8)]),
+          gradient: LinearGradient(colors: [
+            Color(0xff9AFF6A),
+            Color(0xff98FC69),
+            Color(0xff95F667),
+            Color(0xff7FC65D),
+            Color(0xff598246),
+          ]),
           borderRadius: BorderRadius.all(Radius.circular(80.0)),
         ),
         height: MediaQuery.of(context).size.height * 0.05,
@@ -267,30 +272,25 @@ class _SelectSportScreenState extends State<SelectSportScreen> {
                 padding: EdgeInsets.all(0.0),
                 child: Container(
                   decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                        colors: [Color(0xff9AFAA8), Color(0xffD2FF66)]),
+                    gradient: LinearGradient(colors: [
+                      Color(0xff9AFF6A),
+                      Color(0xff98FC69),
+                      Color(0xff95F667),
+                      Color(0xff7FC65D),
+                      Color(0xff598246),
+                    ]),
                     borderRadius: BorderRadius.all(Radius.circular(80.0)),
                   ),
-                  child: Padding(
-                    padding: EdgeInsets.all(3),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                            colors: [Color(0xffD2FF66), Color(0xff9AFAA8)]),
-                        borderRadius: BorderRadius.all(Radius.circular(80.0)),
-                      ),
-                      height: MediaQuery.of(context).size.height * 0.05,
-                      width: MediaQuery.of(context).size.height,
-                      alignment: Alignment.center,
-                      child: const Text(
-                        'NEXT',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18),
-                      ),
-                    ),
+                  height: MediaQuery.of(context).size.height * 0.05,
+                  width: MediaQuery.of(context).size.height,
+                  alignment: Alignment.center,
+                  child: const Text(
+                    'NEXT',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18),
                   ),
                 ),
               ),

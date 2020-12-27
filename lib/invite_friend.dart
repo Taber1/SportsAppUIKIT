@@ -115,8 +115,13 @@ class _InviteFriendScreenState extends State<InviteFriendScreen> {
               padding: EdgeInsets.all(0.0),
               child: Container(
                 decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                      colors: [Color(0xffD2FF66), Color(0xff9AFAA8)]),
+                  gradient: LinearGradient(colors: [
+                    Color(0xff9AFF6A),
+                    Color(0xff98FC69),
+                    Color(0xff95F667),
+                    Color(0xff7FC65D),
+                    Color(0xff598246),
+                  ]),
                   borderRadius: BorderRadius.all(Radius.circular(80.0)),
                 ),
                 height: MediaQuery.of(context).size.height * 0.06,
