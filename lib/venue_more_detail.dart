@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 class ModalTrigger extends StatelessWidget {
   moreDeatilBottomSheet(context) {
@@ -44,14 +45,25 @@ class ModalTrigger extends StatelessWidget {
                       SizedBox(
                         height: MediaQuery.of(context).size.height * 0.035,
                       ),
-                      TextField(
-                        decoration: InputDecoration(
-                          focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Colors.green),
-                              borderRadius: BorderRadius.circular(5)),
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(5)),
-                          hintText: '10 Am -10 Pm',
+                      Neumorphic(
+                        style: NeumorphicStyle(
+                            color: Colors.transparent,
+                            depth: -10,
+                            shadowDarkColorEmboss: Colors.black,
+                            shadowLightColorEmboss: Colors.white38,
+                            border: NeumorphicBorder(width: 2),
+                            intensity: 0.8,
+                            boxShape: NeumorphicBoxShape.roundRect(
+                                BorderRadius.circular(10))),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.green),
+                                borderRadius: BorderRadius.circular(5)),
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(5)),
+                            hintText: '10 Am -10 Pm',
+                          ),
                         ),
                       ),
                       SizedBox(
@@ -75,54 +87,90 @@ class ModalTrigger extends StatelessWidget {
                           SizedBox(
                             width: 30,
                           ),
-                          ButtonTheme(
-                            minWidth: MediaQuery.of(context).size.width * 0.25,
-                            height: MediaQuery.of(context).size.height * 0.05,
-                            child: RaisedButton(
-                              onPressed: () {},
-                              color: Colors.grey[800],
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Text(
-                                "Parking",
-                                style:
-                                    TextStyle(color: Colors.grey, fontSize: 18),
+                          Neumorphic(
+                            style: NeumorphicStyle(
+                                color: Colors.transparent,
+                                depth: -10,
+                                shadowDarkColorEmboss: Colors.black,
+                                shadowLightColorEmboss: Colors.white38,
+                                border: NeumorphicBorder(width: 2),
+                                intensity: 0.8,
+                                boxShape: NeumorphicBoxShape.roundRect(
+                                    BorderRadius.circular(10))),
+                            child: ButtonTheme(
+                              minWidth:
+                                  MediaQuery.of(context).size.width * 0.25,
+                              height: MediaQuery.of(context).size.height * 0.05,
+                              child: RaisedButton(
+                                onPressed: () {},
+                                color: Colors.grey[800],
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10)),
+                                child: Text(
+                                  "Parking",
+                                  style: TextStyle(
+                                      color: Colors.grey, fontSize: 18),
+                                ),
                               ),
                             ),
                           ),
                           SizedBox(
                             width: 30,
                           ),
-                          ButtonTheme(
-                            minWidth: MediaQuery.of(context).size.width * 0.15,
-                            height: MediaQuery.of(context).size.height * 0.05,
-                            child: RaisedButton(
-                              onPressed: () {},
-                              color: Colors.grey[800],
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Text(
-                                "Wifi",
-                                style:
-                                    TextStyle(color: Colors.grey, fontSize: 18),
+                          Neumorphic(
+                            style: NeumorphicStyle(
+                                color: Colors.transparent,
+                                depth: -10,
+                                shadowDarkColorEmboss: Colors.black,
+                                shadowLightColorEmboss: Colors.white38,
+                                border: NeumorphicBorder(width: 2),
+                                intensity: 0.8,
+                                boxShape: NeumorphicBoxShape.roundRect(
+                                    BorderRadius.circular(10))),
+                            child: ButtonTheme(
+                              minWidth:
+                                  MediaQuery.of(context).size.width * 0.15,
+                              height: MediaQuery.of(context).size.height * 0.05,
+                              child: RaisedButton(
+                                onPressed: () {},
+                                color: Colors.grey[800],
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10)),
+                                child: Text(
+                                  "Wifi",
+                                  style: TextStyle(
+                                      color: Colors.grey, fontSize: 18),
+                                ),
                               ),
                             ),
                           ),
                           SizedBox(
                             width: 30,
                           ),
-                          ButtonTheme(
-                            minWidth: MediaQuery.of(context).size.width * 0.25,
-                            height: MediaQuery.of(context).size.height * 0.05,
-                            child: RaisedButton(
-                              onPressed: () {},
-                              color: Colors.grey[800],
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Text(
-                                "Security",
-                                style:
-                                    TextStyle(color: Colors.grey, fontSize: 18),
+                          Neumorphic(
+                            style: NeumorphicStyle(
+                                color: Colors.transparent,
+                                depth: -10,
+                                shadowDarkColorEmboss: Colors.black,
+                                shadowLightColorEmboss: Colors.white38,
+                                border: NeumorphicBorder(width: 2),
+                                intensity: 0.8,
+                                boxShape: NeumorphicBoxShape.roundRect(
+                                    BorderRadius.circular(10))),
+                            child: ButtonTheme(
+                              minWidth:
+                                  MediaQuery.of(context).size.width * 0.25,
+                              height: MediaQuery.of(context).size.height * 0.05,
+                              child: RaisedButton(
+                                onPressed: () {},
+                                color: Colors.grey[800],
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10)),
+                                child: Text(
+                                  "Security",
+                                  style: TextStyle(
+                                      color: Colors.grey, fontSize: 18),
+                                ),
                               ),
                             ),
                           ),
@@ -136,36 +184,59 @@ class ModalTrigger extends StatelessWidget {
                           SizedBox(
                             width: 30,
                           ),
-                          ButtonTheme(
-                            minWidth: MediaQuery.of(context).size.width * 0.45,
-                            height: MediaQuery.of(context).size.height * 0.05,
-                            child: RaisedButton(
-                              onPressed: () {},
-                              color: Colors.grey[800],
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Text(
-                                "Changing Room",
-                                style:
-                                    TextStyle(color: Colors.grey, fontSize: 18),
+                          Neumorphic(
+                            style: NeumorphicStyle(
+                                color: Colors.transparent,
+                                depth: -10,
+                                shadowDarkColorEmboss: Colors.black,
+                                shadowLightColorEmboss: Colors.white38,
+                                border: NeumorphicBorder(width: 2),
+                                intensity: 0.8,
+                                boxShape: NeumorphicBoxShape.roundRect(
+                                    BorderRadius.circular(10))),
+                            child: ButtonTheme(
+                              minWidth:
+                                  MediaQuery.of(context).size.width * 0.45,
+                              height: MediaQuery.of(context).size.height * 0.05,
+                              child: RaisedButton(
+                                onPressed: () {},
+                                color: Colors.grey[800],
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10)),
+                                child: Text(
+                                  "Changing Room",
+                                  style: TextStyle(
+                                      color: Colors.grey, fontSize: 18),
+                                ),
                               ),
                             ),
                           ),
                           SizedBox(
                             width: 30,
                           ),
-                          ButtonTheme(
-                            minWidth: MediaQuery.of(context).size.width * 0.3,
-                            height: MediaQuery.of(context).size.height * 0.05,
-                            child: RaisedButton(
-                              onPressed: () {},
-                              color: Colors.grey[800],
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Text(
-                                "Restaurant",
-                                style:
-                                    TextStyle(color: Colors.grey, fontSize: 18),
+                          Neumorphic(
+                            style: NeumorphicStyle(
+                                color: Colors.transparent,
+                                depth: -10,
+                                shadowDarkColorEmboss: Colors.black,
+                                shadowLightColorEmboss: Colors.white38,
+                                border: NeumorphicBorder(width: 2),
+                                intensity: 0.8,
+                                boxShape: NeumorphicBoxShape.roundRect(
+                                    BorderRadius.circular(10))),
+                            child: ButtonTheme(
+                              minWidth: MediaQuery.of(context).size.width * 0.3,
+                              height: MediaQuery.of(context).size.height * 0.05,
+                              child: RaisedButton(
+                                onPressed: () {},
+                                color: Colors.grey[800],
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10)),
+                                child: Text(
+                                  "Restaurant",
+                                  style: TextStyle(
+                                      color: Colors.grey, fontSize: 18),
+                                ),
                               ),
                             ),
                           ),
