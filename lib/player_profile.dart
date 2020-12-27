@@ -120,8 +120,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       Text(
                         "johndoe123@gmail.com",
                         textAlign: TextAlign.left,
-                        style: TextStyle(
-                            fontSize: 16, color: Colors.lightGreenAccent),
+                        style:
+                            TextStyle(fontSize: 16, color: Color(0xff9FFAA2)),
                       ),
                       SizedBox(
                         width: MediaQuery.of(context).size.width * 0.1,
@@ -129,7 +129,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       Icon(
                         FontAwesomeIcons.caretRight,
                         size: 15,
-                        color: Colors.yellow,
+                        color: Color(0xffDCBC50),
                       )
                     ],
                   )
@@ -327,41 +327,27 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 children: [
                   EachSport(
                     icon: 'assets/icon/football.svg',
-                    color: [Colors.red, Colors.redAccent[100]].toList(),
+                    color: [Color(0xffD95255), Color(0xffEE865C)].toList(),
                     icolor: Colors.black,
                   ),
                   EachSport(
                     icon: 'assets/icon/cricket.svg',
-                    color: [
-                      Colors.lightGreenAccent,
-                      Colors.lightGreenAccent[100],
-                      Colors.tealAccent[100]
-                    ].toList(),
+                    color: [Color(0xffD2FF66), Color(0xff9AFAA8)].toList(),
                     icolor: Colors.black,
                   ),
                   EachSport(
                     icon: 'assets/icon/badminton.svg',
-                    color: [
-                      Colors.grey[900],
-                      Colors.grey[900],
-                      Colors.grey[850],
-                      Colors.grey[800]
-                    ].toList(),
+                    color: [Color(0xff151618), Color(0xff262729)].toList(),
                     icolor: Colors.grey,
                   ),
                   EachSport(
                     icon: 'assets/icon/basketball.svg',
-                    color: [
-                      Colors.grey[900],
-                      Colors.grey[900],
-                      Colors.grey[850],
-                      Colors.grey[800]
-                    ].toList(),
+                    color: [Color(0xff151618), Color(0xff262729)].toList(),
                     icolor: Colors.grey,
                   ),
                   EachSport(
                     icon: 'assets/icon/swimming.svg',
-                    color: [Colors.yellowAccent, Colors.yellow[200]].toList(),
+                    color: [Color(0xffCA872C), Color(0xffFBEE45)].toList(),
                     icolor: Colors.black,
                   )
                 ],
@@ -374,32 +360,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 children: [
                   EachSport(
                     icon: 'assets/icon/gym.svg',
-                    color: [
-                      Colors.grey[900],
-                      Colors.grey[900],
-                      Colors.grey[850],
-                      Colors.grey[800]
-                    ].toList(),
+                    color: [Color(0xff151618), Color(0xff262729)].toList(),
                     icolor: Colors.grey,
                   ),
                   EachSport(
                     icon: 'assets/icon/rugby.svg',
-                    color: [
-                      Colors.grey[900],
-                      Colors.grey[900],
-                      Colors.grey[850],
-                      Colors.grey[800]
-                    ].toList(),
+                    color: [Color(0xff151618), Color(0xff262729)].toList(),
                     icolor: Colors.grey,
                   ),
                   EachSport(
                     icon: 'assets/icon/squash.svg',
-                    color: [
-                      Colors.grey[900],
-                      Colors.grey[900],
-                      Colors.grey[850],
-                      Colors.grey[800]
-                    ].toList(),
+                    color: [Color(0xff151618), Color(0xff262729)].toList(),
                     icolor: Colors.grey,
                   ),
                   EachSport(
@@ -409,12 +380,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                   EachSport(
                     icon: 'assets/icon/netball.svg',
-                    color: [
-                      Colors.grey[900],
-                      Colors.grey[900],
-                      Colors.grey[850],
-                      Colors.grey[800]
-                    ].toList(),
+                    color: [Color(0xff151618), Color(0xff262729)].toList(),
                     icolor: Colors.grey,
                   )
                 ],
@@ -578,11 +544,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         padding: EdgeInsets.all(0.0),
                         child: Container(
                           decoration: BoxDecoration(
-                            gradient: LinearGradient(colors: [
-                              Colors.tealAccent[100],
-                              Colors.lightGreenAccent[100],
-                              Colors.lightGreenAccent,
-                            ]),
+                            gradient: LinearGradient(
+                                colors: [Color(0xff9AFAA8), Color(0xffD2FF66)]),
                             borderRadius:
                                 BorderRadius.all(Radius.circular(80.0)),
                           ),
@@ -591,9 +554,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             child: Container(
                               decoration: BoxDecoration(
                                 gradient: LinearGradient(colors: [
-                                  Colors.lightGreenAccent,
-                                  Colors.lightGreenAccent[100],
-                                  Colors.tealAccent[100]
+                                  Color(0xffD2FF66),
+                                  Color(0xff9AFAA8)
                                 ]),
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(80.0)),
