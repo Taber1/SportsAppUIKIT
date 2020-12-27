@@ -162,7 +162,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
               ].toList(),
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.015,
+              height: MediaQuery.of(context).size.height * 0.02,
             ),
             EachCard(
               icon:
@@ -172,7 +172,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
               color: [Colors.yellowAccent[100], Colors.yellowAccent].toList(),
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.015,
+              height: MediaQuery.of(context).size.height * 0.02,
             ),
             EachCard(
               icon:
@@ -199,65 +199,89 @@ class EachCard extends StatelessWidget {
   EachCard({this.icon, this.name, this.status, this.color});
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.only(left: 15, right: 15),
-      height: MediaQuery.of(context).size.height * 0.09,
-      decoration: BoxDecoration(
-          color: Colors.grey[900], borderRadius: BorderRadius.circular(20)),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Row(
-            children: [
-              CircleAvatar(
-                backgroundImage: NetworkImage(icon),
-                maxRadius: 25,
-              ),
-              SizedBox(
-                width: 20,
-              ),
-              Text(
-                name,
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-            ],
-          ),
-          RaisedButton(
+    return Neumorphic(
+      style: NeumorphicStyle(
+        depth: 10,
+        shadowLightColorEmboss: Colors.white,
+        shadowDarkColorEmboss: Colors.black,
+        border: NeumorphicBorder(
+          width: 2,
+        ),
+        boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(20)),
+        intensity: 0.7,
+        disableDepth: true,
+        shape: NeumorphicShape.flat,
+        lightSource: LightSource.bottomLeft,
+        shadowLightColor: Colors.white,
+        shadowDarkColor: Colors.black,
+        oppositeShadowLightSource: true,
+        surfaceIntensity: 0.5,
+      ),
+      child: Container(
+        padding: EdgeInsets.only(left: 15, right: 15),
+        height: MediaQuery.of(context).size.height * 0.09,
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+                begin: const FractionalOffset(0.0, 0.0),
+                end: const FractionalOffset(0.5, 0.0),
+                colors: [Colors.grey[900], Colors.grey[850], Colors.grey[800]]),
             color: Colors.grey[900],
-            onPressed: () {},
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(50.0)),
-            padding: EdgeInsets.all(0.0),
-            child: Container(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    colors: color,
-                    begin: Alignment.centerLeft,
-                    end: Alignment.centerRight),
-                borderRadius: BorderRadius.all(Radius.circular(80.0)),
-              ),
-              child: Padding(
-                padding: EdgeInsets.all(3),
-                child: Container(
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(colors: color),
-                    borderRadius: BorderRadius.all(Radius.circular(80.0)),
-                  ),
-                  height: MediaQuery.of(context).size.height * 0.035,
-                  width: MediaQuery.of(context).size.height * 0.095,
-                  alignment: Alignment.center,
-                  child: Text(
-                    status,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.black,
+            borderRadius: BorderRadius.circular(20)),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(
+              children: [
+                CircleAvatar(
+                  backgroundImage: NetworkImage(icon),
+                  maxRadius: 25,
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                Text(
+                  name,
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+            RaisedButton(
+              color: Colors.grey[900],
+              onPressed: () {},
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50.0)),
+              padding: EdgeInsets.all(0.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                      colors: color,
+                      begin: Alignment.centerLeft,
+                      end: Alignment.centerRight),
+                  borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.all(3),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(colors: color),
+                      borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                    ),
+                    height: MediaQuery.of(context).size.height * 0.035,
+                    width: MediaQuery.of(context).size.height * 0.095,
+                    alignment: Alignment.center,
+                    child: Text(
+                      status,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
                     ),
                   ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
