@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'bottomAppbar.dart';
@@ -30,85 +31,140 @@ class _RegisterScreenState extends State<RegisterScreen> {
               ),
               Column(
                 children: [
-                  TextField(
-                    decoration: InputDecoration(
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.green),
-                            borderRadius: BorderRadius.circular(5)),
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(5)),
-                        hintText: 'First Name',
-                        hintStyle: TextStyle(
-                          fontSize: 18,
-                        ),
-                        suffixIcon: Icon(Icons.person_outline, size: 30)),
+                  Neumorphic(
+                    style: NeumorphicStyle(
+                        color: Colors.transparent,
+                        depth: -10,
+                        shadowDarkColorEmboss: Colors.black,
+                        shadowLightColorEmboss: Colors.white38,
+                        border: NeumorphicBorder(width: 2),
+                        intensity: 0.8,
+                        boxShape: NeumorphicBoxShape.roundRect(
+                            BorderRadius.circular(10))),
+                    child: TextField(
+                      decoration: InputDecoration(
+                          focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.green),
+                              borderRadius: BorderRadius.circular(5)),
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5)),
+                          hintText: 'First Name',
+                          hintStyle: TextStyle(
+                            fontSize: 18,
+                          ),
+                          suffixIcon: Icon(Icons.person_outline, size: 30)),
+                    ),
                   ),
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.01,
                   ),
-                  TextField(
-                    decoration: InputDecoration(
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.green),
-                            borderRadius: BorderRadius.circular(5)),
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(5)),
-                        hintText: 'Last Name',
-                        hintStyle: TextStyle(
-                          fontSize: 18,
-                        ),
-                        suffixIcon: Icon(Icons.person_outline, size: 30)),
+                  Neumorphic(
+                    style: NeumorphicStyle(
+                        color: Colors.transparent,
+                        depth: -10,
+                        shadowDarkColorEmboss: Colors.black,
+                        shadowLightColorEmboss: Colors.white38,
+                        border: NeumorphicBorder(width: 2),
+                        intensity: 0.8,
+                        boxShape: NeumorphicBoxShape.roundRect(
+                            BorderRadius.circular(10))),
+                    child: TextField(
+                      decoration: InputDecoration(
+                          focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.green),
+                              borderRadius: BorderRadius.circular(5)),
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5)),
+                          hintText: 'Last Name',
+                          hintStyle: TextStyle(
+                            fontSize: 18,
+                          ),
+                          suffixIcon: Icon(Icons.person_outline, size: 30)),
+                    ),
                   ),
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.01,
                   ),
-                  TextField(
-                    decoration: InputDecoration(
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.green),
-                            borderRadius: BorderRadius.circular(5)),
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(5)),
-                        hintText: 'Email',
-                        hintStyle: TextStyle(
-                          fontSize: 18,
-                        ),
-                        suffixIcon: Icon(
-                          Icons.mail_outline,
-                          size: 30,
-                        )),
+                  Neumorphic(
+                    style: NeumorphicStyle(
+                        color: Colors.transparent,
+                        depth: -10,
+                        shadowDarkColorEmboss: Colors.black,
+                        shadowLightColorEmboss: Colors.white38,
+                        border: NeumorphicBorder(width: 2),
+                        intensity: 0.8,
+                        boxShape: NeumorphicBoxShape.roundRect(
+                            BorderRadius.circular(10))),
+                    child: TextField(
+                      decoration: InputDecoration(
+                          focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.green),
+                              borderRadius: BorderRadius.circular(5)),
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5)),
+                          hintText: 'Email',
+                          hintStyle: TextStyle(
+                            fontSize: 18,
+                          ),
+                          suffixIcon: Icon(
+                            Icons.mail_outline,
+                            size: 30,
+                          )),
+                    ),
                   ),
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.01,
                   ),
-                  TextField(
-                    decoration: InputDecoration(
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.green),
-                            borderRadius: BorderRadius.circular(5)),
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(5)),
-                        hintText: 'Password',
-                        hintStyle: TextStyle(
-                          fontSize: 18,
-                        ),
-                        suffixIcon: Icon(FontAwesomeIcons.lockOpen)),
+                  Neumorphic(
+                    style: NeumorphicStyle(
+                        color: Colors.transparent,
+                        depth: -10,
+                        shadowDarkColorEmboss: Colors.black,
+                        shadowLightColorEmboss: Colors.white38,
+                        border: NeumorphicBorder(width: 2),
+                        intensity: 0.8,
+                        boxShape: NeumorphicBoxShape.roundRect(
+                            BorderRadius.circular(10))),
+                    child: TextField(
+                      decoration: InputDecoration(
+                          focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.green),
+                              borderRadius: BorderRadius.circular(5)),
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5)),
+                          hintText: 'Password',
+                          hintStyle: TextStyle(
+                            fontSize: 18,
+                          ),
+                          suffixIcon: Icon(FontAwesomeIcons.lockOpen)),
+                    ),
                   ),
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.01,
                   ),
-                  TextField(
-                    decoration: InputDecoration(
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.green),
-                            borderRadius: BorderRadius.circular(5)),
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(5)),
-                        hintText: 'Confirm Password',
-                        hintStyle: TextStyle(
-                          fontSize: 18,
-                        ),
-                        suffixIcon: Icon(FontAwesomeIcons.lockOpen)),
+                  Neumorphic(
+                    style: NeumorphicStyle(
+                        color: Colors.transparent,
+                        depth: -10,
+                        shadowDarkColorEmboss: Colors.black,
+                        shadowLightColorEmboss: Colors.white38,
+                        border: NeumorphicBorder(width: 2),
+                        intensity: 0.8,
+                        boxShape: NeumorphicBoxShape.roundRect(
+                            BorderRadius.circular(10))),
+                    child: TextField(
+                      decoration: InputDecoration(
+                          focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.green),
+                              borderRadius: BorderRadius.circular(5)),
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5)),
+                          hintText: 'Confirm Password',
+                          hintStyle: TextStyle(
+                            fontSize: 18,
+                          ),
+                          suffixIcon: Icon(FontAwesomeIcons.lockOpen)),
+                    ),
                   ),
                 ],
               ),
