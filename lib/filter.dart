@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class FilterScreen extends StatefulWidget {
@@ -55,15 +56,26 @@ class _FilterScreenState extends State<FilterScreen> {
                       SizedBox(
                         height: MediaQuery.of(context).size.height * 0.035,
                       ),
-                      TextField(
-                        decoration: InputDecoration(
-                          focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Colors.green),
-                              borderRadius: BorderRadius.circular(5)),
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(5)),
-                          hintText:
-                              'Football, Cricket, Swimming, Fitness, Tennis, Badminton, Rugby, Gymming',
+                      Neumorphic(
+                        style: NeumorphicStyle(
+                            color: Colors.transparent,
+                            depth: -10,
+                            shadowDarkColorEmboss: Colors.black,
+                            shadowLightColorEmboss: Colors.white38,
+                            border: NeumorphicBorder(width: 2),
+                            intensity: 0.8,
+                            boxShape: NeumorphicBoxShape.roundRect(
+                                BorderRadius.circular(10))),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.green),
+                                borderRadius: BorderRadius.circular(5)),
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(5)),
+                            hintText:
+                                'Football, Cricket, Swimming, Fitness, Tennis, Badminton, Rugby, Gymming',
+                          ),
                         ),
                       ),
                       SizedBox(
@@ -119,143 +131,185 @@ class _FilterScreenState extends State<FilterScreen> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              InkWell(
-                                onTap: () {},
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    gradient: LinearGradient(
-                                        begin: Alignment.centerRight,
-                                        end: Alignment.centerLeft,
-                                        colors: [
-                                          Colors.lightGreenAccent,
-                                          Colors.lightGreenAccent[100],
-                                          Colors.tealAccent[100]
-                                        ]),
-                                    //borderRadius: BorderRadius.all(Radius.circular(80.0)),
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(3.0),
-                                    child: Container(
-                                      height:
-                                          MediaQuery.of(context).size.height *
-                                              0.045,
-                                      width: MediaQuery.of(context).size.width *
-                                          0.27,
-                                      decoration: BoxDecoration(
-                                        gradient: LinearGradient(colors: [
-                                          Colors.lightGreenAccent,
-                                          Colors.lightGreenAccent[100],
-                                          Colors.tealAccent[100]
-                                        ]),
-                                        //borderRadius: BorderRadius.all(Radius.circular(80.0)),
-                                      ),
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Icon(
-                                            FontAwesomeIcons.transgender,
-                                            color: Colors.black,
-                                          ),
-                                          SizedBox(
-                                            width: 5,
-                                          ),
-                                          Text(
-                                            "ANY",
-                                            style:
-                                                TextStyle(color: Colors.black),
-                                          )
-                                        ],
+                              Neumorphic(
+                                style: NeumorphicStyle(
+                                    color: Colors.transparent,
+                                    depth: -10,
+                                    shadowDarkColorEmboss: Colors.black,
+                                    shadowLightColorEmboss: Colors.white38,
+                                    border: NeumorphicBorder(width: 2),
+                                    intensity: 0.8,
+                                    boxShape: NeumorphicBoxShape.roundRect(
+                                        BorderRadius.circular(10))),
+                                child: InkWell(
+                                  onTap: () {},
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      gradient: LinearGradient(
+                                          begin: Alignment.centerRight,
+                                          end: Alignment.centerLeft,
+                                          colors: [
+                                            Colors.lightGreenAccent,
+                                            Colors.lightGreenAccent[100],
+                                            Colors.tealAccent[100]
+                                          ]),
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(10.0)),
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(3.0),
+                                      child: Container(
+                                        height:
+                                            MediaQuery.of(context).size.height *
+                                                0.045,
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.27,
+                                        decoration: BoxDecoration(
+                                          gradient: LinearGradient(colors: [
+                                            Colors.lightGreenAccent,
+                                            Colors.lightGreenAccent[100],
+                                            Colors.tealAccent[100]
+                                          ]),
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(10.0)),
+                                        ),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Icon(
+                                              FontAwesomeIcons.transgender,
+                                              color: Colors.black,
+                                            ),
+                                            SizedBox(
+                                              width: 5,
+                                            ),
+                                            Text(
+                                              "ANY",
+                                              style: TextStyle(
+                                                  color: Colors.black),
+                                            )
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ),
                                 ),
                               ),
-                              InkWell(
-                                onTap: () {},
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    gradient: LinearGradient(
-                                        begin: Alignment.centerRight,
-                                        end: Alignment.centerLeft,
-                                        colors: [
-                                          Colors.grey[700],
-                                          Colors.grey[700],
-                                        ]),
-                                    //borderRadius: BorderRadius.all(Radius.circular(80.0)),
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(3.0),
-                                    child: Container(
-                                      height:
-                                          MediaQuery.of(context).size.height *
-                                              0.045,
-                                      width: MediaQuery.of(context).size.width *
-                                          0.3,
-                                      decoration: BoxDecoration(
-                                        gradient: LinearGradient(colors: [
-                                          Colors.grey[700],
-                                          Colors.grey[700],
-                                        ]),
-                                        //borderRadius: BorderRadius.all(Radius.circular(80.0)),
-                                      ),
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Icon(
-                                            FontAwesomeIcons.mars,
-                                          ),
-                                          SizedBox(
-                                            width: 5,
-                                          ),
-                                          Text("Male")
-                                        ],
+                              Neumorphic(
+                                style: NeumorphicStyle(
+                                    color: Colors.transparent,
+                                    depth: -10,
+                                    shadowDarkColorEmboss: Colors.black,
+                                    shadowLightColorEmboss: Colors.white38,
+                                    border: NeumorphicBorder(width: 2),
+                                    intensity: 0.8,
+                                    boxShape: NeumorphicBoxShape.roundRect(
+                                        BorderRadius.circular(10))),
+                                child: InkWell(
+                                  onTap: () {},
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      gradient: LinearGradient(
+                                          begin: Alignment.centerRight,
+                                          end: Alignment.centerLeft,
+                                          colors: [
+                                            Colors.grey[700],
+                                            Colors.grey[700],
+                                          ]),
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(10.0)),
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(3.0),
+                                      child: Container(
+                                        height:
+                                            MediaQuery.of(context).size.height *
+                                                0.045,
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.3,
+                                        decoration: BoxDecoration(
+                                          gradient: LinearGradient(colors: [
+                                            Colors.grey[700],
+                                            Colors.grey[700],
+                                          ]),
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(10.0)),
+                                        ),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Icon(
+                                              FontAwesomeIcons.mars,
+                                            ),
+                                            SizedBox(
+                                              width: 5,
+                                            ),
+                                            Text("Male")
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ),
                                 ),
                               ),
-                              InkWell(
-                                onTap: () {},
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    gradient: LinearGradient(
-                                        begin: Alignment.centerRight,
-                                        end: Alignment.centerLeft,
-                                        colors: [
-                                          Colors.grey[700],
-                                          Colors.grey[700],
-                                        ]),
-                                    //borderRadius: BorderRadius.all(Radius.circular(80.0)),
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(3.0),
-                                    child: Container(
-                                      height:
-                                          MediaQuery.of(context).size.height *
-                                              0.045,
-                                      width: MediaQuery.of(context).size.width *
-                                          0.3,
-                                      decoration: BoxDecoration(
-                                        gradient: LinearGradient(colors: [
-                                          Colors.grey[700],
-                                          Colors.grey[700],
-                                        ]),
-                                        //borderRadius: BorderRadius.all(Radius.circular(80.0)),
-                                      ),
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Icon(
-                                            FontAwesomeIcons.venus,
-                                          ),
-                                          SizedBox(
-                                            width: 5,
-                                          ),
-                                          Text("Female")
-                                        ],
+                              Neumorphic(
+                                style: NeumorphicStyle(
+                                    color: Colors.transparent,
+                                    depth: -10,
+                                    shadowDarkColorEmboss: Colors.black,
+                                    shadowLightColorEmboss: Colors.white38,
+                                    border: NeumorphicBorder(width: 2),
+                                    intensity: 0.8,
+                                    boxShape: NeumorphicBoxShape.roundRect(
+                                        BorderRadius.circular(10))),
+                                child: InkWell(
+                                  onTap: () {},
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      gradient: LinearGradient(
+                                          begin: Alignment.centerRight,
+                                          end: Alignment.centerLeft,
+                                          colors: [
+                                            Colors.grey[700],
+                                            Colors.grey[700],
+                                          ]),
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(10.0)),
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(3.0),
+                                      child: Container(
+                                        height:
+                                            MediaQuery.of(context).size.height *
+                                                0.045,
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.3,
+                                        decoration: BoxDecoration(
+                                          gradient: LinearGradient(colors: [
+                                            Colors.grey[700],
+                                            Colors.grey[700],
+                                          ]),
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(10.0)),
+                                        ),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Icon(
+                                              FontAwesomeIcons.venus,
+                                            ),
+                                            SizedBox(
+                                              width: 5,
+                                            ),
+                                            Text("Female")
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -288,162 +342,222 @@ class _FilterScreenState extends State<FilterScreen> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              InkWell(
-                                onTap: () {},
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    gradient: LinearGradient(
-                                        begin: Alignment.centerRight,
-                                        end: Alignment.centerLeft,
-                                        colors: [
-                                          Colors.lightGreenAccent,
-                                          Colors.lightGreenAccent[100],
-                                          Colors.tealAccent[100]
-                                        ]),
-                                    //borderRadius: BorderRadius.all(Radius.circular(80.0)),
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(3.0),
-                                    child: Container(
-                                        height:
-                                            MediaQuery.of(context).size.height *
-                                                0.045,
-                                        width:
-                                            MediaQuery.of(context).size.width *
-                                                0.19,
-                                        decoration: BoxDecoration(
-                                          gradient: LinearGradient(colors: [
+                              Neumorphic(
+                                style: NeumorphicStyle(
+                                    color: Colors.transparent,
+                                    depth: -10,
+                                    shadowDarkColorEmboss: Colors.black,
+                                    shadowLightColorEmboss: Colors.white38,
+                                    border: NeumorphicBorder(width: 2),
+                                    intensity: 0.8,
+                                    boxShape: NeumorphicBoxShape.roundRect(
+                                        BorderRadius.circular(10))),
+                                child: InkWell(
+                                  onTap: () {},
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      gradient: LinearGradient(
+                                          begin: Alignment.centerRight,
+                                          end: Alignment.centerLeft,
+                                          colors: [
                                             Colors.lightGreenAccent,
                                             Colors.lightGreenAccent[100],
                                             Colors.tealAccent[100]
                                           ]),
-                                          //borderRadius: BorderRadius.all(Radius.circular(80.0)),
-                                        ),
-                                        child: Center(
-                                          child: Text(
-                                            "ANY",
-                                            style:
-                                                TextStyle(color: Colors.black),
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(10.0)),
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(3.0),
+                                      child: Container(
+                                          height: MediaQuery.of(context)
+                                                  .size
+                                                  .height *
+                                              0.045,
+                                          width: MediaQuery.of(context)
+                                                  .size
+                                                  .width *
+                                              0.19,
+                                          decoration: BoxDecoration(
+                                            gradient: LinearGradient(colors: [
+                                              Colors.lightGreenAccent,
+                                              Colors.lightGreenAccent[100],
+                                              Colors.tealAccent[100]
+                                            ]),
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(10.0)),
                                           ),
-                                        )),
+                                          child: Center(
+                                            child: Text(
+                                              "ANY",
+                                              style: TextStyle(
+                                                  color: Colors.black),
+                                            ),
+                                          )),
+                                    ),
                                   ),
                                 ),
                               ),
-                              InkWell(
-                                onTap: () {},
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    gradient: LinearGradient(
-                                        begin: Alignment.centerRight,
-                                        end: Alignment.centerLeft,
-                                        colors: [
-                                          Colors.grey[700],
-                                          Colors.grey[700],
-                                        ]),
-                                    //borderRadius: BorderRadius.all(Radius.circular(80.0)),
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(3.0),
-                                    child: Container(
-                                        height:
-                                            MediaQuery.of(context).size.height *
-                                                0.045,
-                                        width:
-                                            MediaQuery.of(context).size.width *
-                                                0.19,
-                                        decoration: BoxDecoration(
-                                          gradient: LinearGradient(colors: [
+                              Neumorphic(
+                                style: NeumorphicStyle(
+                                    color: Colors.transparent,
+                                    depth: -10,
+                                    shadowDarkColorEmboss: Colors.black,
+                                    shadowLightColorEmboss: Colors.white38,
+                                    border: NeumorphicBorder(width: 2),
+                                    intensity: 0.8,
+                                    boxShape: NeumorphicBoxShape.roundRect(
+                                        BorderRadius.circular(10))),
+                                child: InkWell(
+                                  onTap: () {},
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      gradient: LinearGradient(
+                                          begin: Alignment.centerRight,
+                                          end: Alignment.centerLeft,
+                                          colors: [
                                             Colors.grey[700],
                                             Colors.grey[700],
                                           ]),
-                                          //borderRadius: BorderRadius.all(Radius.circular(80.0)),
-                                        ),
-                                        child: Center(
-                                          child: Text(
-                                            "BEGINNER",
-                                            style:
-                                                TextStyle(color: Colors.black),
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(10.0)),
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(3.0),
+                                      child: Container(
+                                          height: MediaQuery.of(context)
+                                                  .size
+                                                  .height *
+                                              0.045,
+                                          width: MediaQuery.of(context)
+                                                  .size
+                                                  .width *
+                                              0.19,
+                                          decoration: BoxDecoration(
+                                            gradient: LinearGradient(colors: [
+                                              Colors.grey[700],
+                                              Colors.grey[700],
+                                            ]),
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(10.0)),
                                           ),
-                                        )),
+                                          child: Center(
+                                            child: Text(
+                                              "BEGINNER",
+                                              style: TextStyle(
+                                                  color: Colors.black),
+                                            ),
+                                          )),
+                                    ),
                                   ),
                                 ),
                               ),
-                              InkWell(
-                                onTap: () {},
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    gradient: LinearGradient(
-                                        begin: Alignment.centerRight,
-                                        end: Alignment.centerLeft,
-                                        colors: [
-                                          Colors.grey[700],
-                                          Colors.grey[700],
-                                        ]),
-                                    //borderRadius: BorderRadius.all(Radius.circular(80.0)),
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(3.0),
-                                    child: Container(
-                                        height:
-                                            MediaQuery.of(context).size.height *
-                                                0.045,
-                                        width:
-                                            MediaQuery.of(context).size.width *
-                                                0.19,
-                                        decoration: BoxDecoration(
-                                          gradient: LinearGradient(colors: [
+                              Neumorphic(
+                                style: NeumorphicStyle(
+                                    color: Colors.transparent,
+                                    depth: -10,
+                                    shadowDarkColorEmboss: Colors.black,
+                                    shadowLightColorEmboss: Colors.white38,
+                                    border: NeumorphicBorder(width: 2),
+                                    intensity: 0.8,
+                                    boxShape: NeumorphicBoxShape.roundRect(
+                                        BorderRadius.circular(10))),
+                                child: InkWell(
+                                  onTap: () {},
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      gradient: LinearGradient(
+                                          begin: Alignment.centerRight,
+                                          end: Alignment.centerLeft,
+                                          colors: [
                                             Colors.grey[700],
                                             Colors.grey[700],
                                           ]),
-                                          //borderRadius: BorderRadius.all(Radius.circular(80.0)),
-                                        ),
-                                        child: Center(
-                                          child: Text(
-                                            "INTERMEDIATE",
-                                            style: TextStyle(
-                                                color: Colors.black,
-                                                letterSpacing: -1.5),
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(10.0)),
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(3.0),
+                                      child: Container(
+                                          height: MediaQuery.of(context)
+                                                  .size
+                                                  .height *
+                                              0.045,
+                                          width: MediaQuery.of(context)
+                                                  .size
+                                                  .width *
+                                              0.19,
+                                          decoration: BoxDecoration(
+                                            gradient: LinearGradient(colors: [
+                                              Colors.grey[700],
+                                              Colors.grey[700],
+                                            ]),
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(10.0)),
                                           ),
-                                        )),
+                                          child: Center(
+                                            child: Text(
+                                              "INTERMEDIATE",
+                                              style: TextStyle(
+                                                  color: Colors.black,
+                                                  letterSpacing: -1.5),
+                                            ),
+                                          )),
+                                    ),
                                   ),
                                 ),
                               ),
-                              InkWell(
-                                onTap: () {},
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    gradient: LinearGradient(
-                                        begin: Alignment.centerRight,
-                                        end: Alignment.centerLeft,
-                                        colors: [
-                                          Colors.grey[700],
-                                          Colors.grey[700],
-                                        ]),
-                                    //borderRadius: BorderRadius.all(Radius.circular(80.0)),
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(3.0),
-                                    child: Container(
-                                        height:
-                                            MediaQuery.of(context).size.height *
-                                                0.045,
-                                        width:
-                                            MediaQuery.of(context).size.width *
-                                                0.19,
-                                        decoration: BoxDecoration(
-                                          gradient: LinearGradient(colors: [
+                              Neumorphic(
+                                style: NeumorphicStyle(
+                                    color: Colors.transparent,
+                                    depth: -10,
+                                    shadowDarkColorEmboss: Colors.black,
+                                    shadowLightColorEmboss: Colors.white38,
+                                    border: NeumorphicBorder(width: 2),
+                                    intensity: 0.8,
+                                    boxShape: NeumorphicBoxShape.roundRect(
+                                        BorderRadius.circular(10))),
+                                child: InkWell(
+                                  onTap: () {},
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      gradient: LinearGradient(
+                                          begin: Alignment.centerRight,
+                                          end: Alignment.centerLeft,
+                                          colors: [
                                             Colors.grey[700],
                                             Colors.grey[700],
                                           ]),
-                                          //borderRadius: BorderRadius.all(Radius.circular(80.0)),
-                                        ),
-                                        child: Center(
-                                          child: Text(
-                                            "EXPERT",
-                                            style:
-                                                TextStyle(color: Colors.black),
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(10.0)),
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(3.0),
+                                      child: Container(
+                                          height: MediaQuery.of(context)
+                                                  .size
+                                                  .height *
+                                              0.045,
+                                          width: MediaQuery.of(context)
+                                                  .size
+                                                  .width *
+                                              0.19,
+                                          decoration: BoxDecoration(
+                                            gradient: LinearGradient(colors: [
+                                              Colors.grey[700],
+                                              Colors.grey[700],
+                                            ]),
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(10.0)),
                                           ),
-                                        )),
+                                          child: Center(
+                                            child: Text(
+                                              "EXPERT",
+                                              style: TextStyle(
+                                                  color: Colors.black),
+                                            ),
+                                          )),
+                                    ),
                                   ),
                                 ),
                               ),
