@@ -34,22 +34,22 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             Column(
               children: [
-                CustomContainer(
-                  child: TextField(
-                      decoration: InputDecoration(
-                    focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.green),
-                        borderRadius: BorderRadius.circular(5)),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(5)),
-                    hintText: 'sarahkaramsi@gmail.com',
-                    hintStyle: TextStyle(
-                      fontSize: 18,
-                    ),
-                  )),
-                ),
+                TextField(
+                    decoration: InputDecoration(
+                        focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: Colors.green),
+                            borderRadius: BorderRadius.circular(5)),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(5)),
+                        hintText: 'sarahkaramsi@gmail.com',
+                        hintStyle: TextStyle(
+                          fontSize: 18,
+                        ),
+                        suffixIcon: Icon(
+                          Icons.mail,
+                        ))),
                 SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.01,
+                  height: MediaQuery.of(context).size.height * 0.015,
                 ),
                 TextField(
                   decoration: InputDecoration(
@@ -69,7 +69,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ],
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.01,
+              height: MediaQuery.of(context).size.height * 0.015,
             ),
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
               Row(
