@@ -652,38 +652,32 @@ class EachSport extends StatefulWidget {
 class _EachSportState extends State<EachSport> {
   @override
   Widget build(BuildContext context) {
-    return Neumorphic(
-      style: NeumorphicStyle(
-        depth: 3,
-        shadowLightColorEmboss: Colors.white,
-        shadowDarkColorEmboss: Colors.black,
-        border: NeumorphicBorder(
-          width: 2,
+    return Container(
+      height: MediaQuery.of(context).size.height * 0.085,
+      width: MediaQuery.of(context).size.width * 0.18,
+      decoration: BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment(1, 1),
+              end: Alignment(-1, -1),
+              colors: widget.color),
+          borderRadius: BorderRadius.circular(30)),
+      child: Padding(
+        padding: const EdgeInsets.all(3.0),
+        child: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment(-1, -1),
+                  end: Alignment(1, 1),
+                  colors: widget.color),
+              borderRadius: BorderRadius.circular(30)),
+          height: MediaQuery.of(context).size.height * 0.085,
+          width: MediaQuery.of(context).size.width * 0.18,
+          child: Center(
+              child: Container(
+                  height: 30,
+                  width: 30,
+                  child: SvgPicture.asset(widget.icon, color: widget.icolor))),
         ),
-        boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(30)),
-        intensity: 0.3,
-        disableDepth: false,
-        shape: NeumorphicShape.flat,
-        lightSource: LightSource.bottomRight,
-        shadowLightColor: Colors.white,
-        shadowDarkColor: Colors.black,
-        oppositeShadowLightSource: true,
-        surfaceIntensity: 0.9,
-      ),
-      child: Container(
-        decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment(-1, -1),
-                end: Alignment(1, 1),
-                colors: widget.color),
-            borderRadius: BorderRadius.circular(30)),
-        height: MediaQuery.of(context).size.height * 0.085,
-        width: MediaQuery.of(context).size.width * 0.18,
-        child: Center(
-            child: Container(
-                height: 30,
-                width: 30,
-                child: SvgPicture.asset(widget.icon, color: widget.icolor))),
       ),
     );
   }

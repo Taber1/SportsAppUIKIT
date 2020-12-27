@@ -223,12 +223,7 @@ class EachCard extends StatelessWidget {
             gradient: LinearGradient(
                 begin: Alignment(-1, -1),
                 end: Alignment(1, 1),
-                colors: [
-                  Colors.grey[900],
-                  Colors.grey[900],
-                  Colors.grey[850],
-                  Colors.grey[800]
-                ]),
+                colors: [Color(0xff151618), Color(0xff262729)]),
             color: Colors.grey[900],
             borderRadius: BorderRadius.circular(20)),
         child: Row(

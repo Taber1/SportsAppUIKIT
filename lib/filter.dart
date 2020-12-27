@@ -399,8 +399,8 @@ class _FilterScreenState extends State<FilterScreen> {
                                           begin: Alignment.centerRight,
                                           end: Alignment.centerLeft,
                                           colors: [
-                                            Colors.grey[700],
-                                            Colors.grey[700],
+                                            Color(0xff232426),
+                                            Color(0xff232426)
                                           ]),
                                       borderRadius: BorderRadius.all(
                                           Radius.circular(10.0)),
@@ -418,8 +418,8 @@ class _FilterScreenState extends State<FilterScreen> {
                                               0.20,
                                           decoration: BoxDecoration(
                                             gradient: LinearGradient(colors: [
-                                              Colors.grey[700],
-                                              Colors.grey[700],
+                                              Color(0xff232426),
+                                              Color(0xff232426)
                                             ]),
                                             borderRadius: BorderRadius.all(
                                                 Radius.circular(10.0)),
@@ -453,8 +453,8 @@ class _FilterScreenState extends State<FilterScreen> {
                                           begin: Alignment.centerRight,
                                           end: Alignment.centerLeft,
                                           colors: [
-                                            Colors.grey[700],
-                                            Colors.grey[700],
+                                            Color(0xff232426),
+                                            Color(0xff232426)
                                           ]),
                                       borderRadius: BorderRadius.all(
                                           Radius.circular(10.0)),
@@ -472,8 +472,8 @@ class _FilterScreenState extends State<FilterScreen> {
                                               0.20,
                                           decoration: BoxDecoration(
                                             gradient: LinearGradient(colors: [
-                                              Colors.grey[700],
-                                              Colors.grey[700],
+                                              Color(0xff232426),
+                                              Color(0xff232426)
                                             ]),
                                             borderRadius: BorderRadius.all(
                                                 Radius.circular(10.0)),
@@ -508,8 +508,8 @@ class _FilterScreenState extends State<FilterScreen> {
                                           begin: Alignment.centerRight,
                                           end: Alignment.centerLeft,
                                           colors: [
-                                            Colors.grey[700],
-                                            Colors.grey[700],
+                                            Color(0xff232426),
+                                            Color(0xff232426)
                                           ]),
                                       borderRadius: BorderRadius.all(
                                           Radius.circular(10.0)),
@@ -558,11 +558,8 @@ class _FilterScreenState extends State<FilterScreen> {
                         padding: EdgeInsets.all(0.0),
                         child: Container(
                           decoration: BoxDecoration(
-                            gradient: LinearGradient(colors: [
-                              Colors.tealAccent[100],
-                              Colors.lightGreenAccent[100],
-                              Colors.lightGreenAccent,
-                            ]),
+                            gradient: LinearGradient(
+                                colors: [Color(0xff9AFAA8), Color(0xffD2FF66)]),
                             borderRadius:
                                 BorderRadius.all(Radius.circular(80.0)),
                           ),
@@ -571,9 +568,8 @@ class _FilterScreenState extends State<FilterScreen> {
                             child: Container(
                               decoration: BoxDecoration(
                                 gradient: LinearGradient(colors: [
-                                  Colors.lightGreenAccent,
-                                  Colors.lightGreenAccent[100],
-                                  Colors.tealAccent[100]
+                                  Color(0xffD2FF66),
+                                  Color(0xff9AFAA8)
                                 ]),
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(80.0)),
