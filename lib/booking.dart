@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:collection/collection.dart';
 import 'package:sport/booking_2.dart';
+
+Function eq = const ListEquality().equals;
 
 class BookingScreen extends StatefulWidget {
   @override
@@ -339,7 +341,10 @@ class HorizontalCard extends StatelessWidget {
         // width: MediaQuery.of(context).size.width*0.1,
         // height: MediaQuery.of(context).size.height*0.2,
         decoration: BoxDecoration(
-            gradient: LinearGradient(colors: choice.color),
+            gradient: LinearGradient(
+                colors: eq(choice.color, [Colors.grey, Colors.grey].toList())
+                    ? [Colors.transparent, Colors.transparent]
+                    : choice.color),
             borderRadius: BorderRadius.circular(15)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -347,10 +352,9 @@ class HorizontalCard extends StatelessWidget {
             Text(
               choice.time1 + "-" + choice.time2,
               style: TextStyle(
-                  color: choice.color.toList() ==
-                          [Colors.grey, Colors.grey].toList()
-                      ? Colors.black
-                      : Colors.white,
+                  color: eq(choice.color, [Colors.grey, Colors.grey])
+                      ? Colors.white
+                      : Colors.black,
                   fontSize: 16,
                   fontWeight: FontWeight.bold),
             )
@@ -398,19 +402,20 @@ class VerticalCard extends StatelessWidget {
                   date,
                   style: TextStyle(
                       fontSize: 22,
-                      color:
-                          color.toList() == [Colors.grey[900], Colors.grey[900]]
-                              ? Colors.white
-                              : Colors.white,
+                      color: eq(color,
+                              [Colors.grey[900], Colors.grey[900]].toList())
+                          ? Colors.white
+                          : Colors.black,
                       fontWeight: FontWeight.bold),
                 ),
                 Text(
                   day,
                   style: TextStyle(
                       fontSize: 22,
-                      color: color == [Colors.grey[900], Colors.grey[900]]
+                      color: eq(color,
+                              [Colors.grey[900], Colors.grey[900]].toList())
                           ? Colors.white
-                          : Colors.white,
+                          : Colors.black,
                       fontWeight: FontWeight.bold),
                 )
               ],

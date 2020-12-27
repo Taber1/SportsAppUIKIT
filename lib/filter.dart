@@ -131,67 +131,48 @@ class _FilterScreenState extends State<FilterScreen> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Neumorphic(
-                                style: NeumorphicStyle(
-                                    color: Colors.transparent,
-                                    depth: -10,
-                                    shadowDarkColorEmboss: Colors.black,
-                                    shadowLightColorEmboss: Colors.white38,
-                                    border: NeumorphicBorder(width: 2),
-                                    intensity: 0.8,
-                                    boxShape: NeumorphicBoxShape.roundRect(
-                                        BorderRadius.circular(10))),
-                                child: InkWell(
-                                  onTap: () {},
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      gradient: LinearGradient(
-                                          begin: Alignment.centerRight,
-                                          end: Alignment.centerLeft,
-                                          colors: [
-                                            Colors.lightGreenAccent,
-                                            Colors.lightGreenAccent[100],
-                                            Colors.tealAccent[100]
-                                          ]),
-                                      borderRadius: BorderRadius.all(
-                                          Radius.circular(10.0)),
-                                    ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(3.0),
-                                      child: Container(
-                                        height:
-                                            MediaQuery.of(context).size.height *
-                                                0.045,
-                                        width:
-                                            MediaQuery.of(context).size.width *
-                                                0.27,
-                                        decoration: BoxDecoration(
-                                          gradient: LinearGradient(colors: [
-                                            Colors.lightGreenAccent,
-                                            Colors.lightGreenAccent[100],
-                                            Colors.tealAccent[100]
-                                          ]),
-                                          borderRadius: BorderRadius.all(
-                                              Radius.circular(10.0)),
-                                        ),
-                                        child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Icon(
-                                              FontAwesomeIcons.transgender,
-                                              color: Colors.black,
-                                            ),
-                                            SizedBox(
-                                              width: 5,
-                                            ),
-                                            Text(
-                                              "ANY",
-                                              style: TextStyle(
-                                                  color: Colors.black),
-                                            )
-                                          ],
-                                        ),
+                              InkWell(
+                                onTap: () {},
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                        begin: Alignment.centerRight,
+                                        end: Alignment.centerLeft,
+                                        colors: [
+                                          Colors.grey[700],
+                                          Colors.grey[700],
+                                        ]),
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(10.0)),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(3.0),
+                                    child: Container(
+                                      height:
+                                          MediaQuery.of(context).size.height *
+                                              0.045,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.27,
+                                      decoration: BoxDecoration(
+                                        gradient: LinearGradient(colors: [
+                                          Colors.grey[700],
+                                          Colors.grey[700],
+                                        ]),
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(10.0)),
+                                      ),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Icon(
+                                            FontAwesomeIcons.venus,
+                                          ),
+                                          SizedBox(
+                                            width: 5,
+                                          ),
+                                          Text("Female")
+                                        ],
                                       ),
                                     ),
                                   ),
@@ -359,9 +340,8 @@ class _FilterScreenState extends State<FilterScreen> {
                                           begin: Alignment.centerRight,
                                           end: Alignment.centerLeft,
                                           colors: [
-                                            Colors.lightGreenAccent,
-                                            Colors.lightGreenAccent[100],
-                                            Colors.tealAccent[100]
+                                            Color(0xffD2FF66),
+                                            Color(0xff9AFAA8)
                                           ]),
                                       borderRadius: BorderRadius.all(
                                           Radius.circular(10.0)),
@@ -379,9 +359,8 @@ class _FilterScreenState extends State<FilterScreen> {
                                               0.20,
                                           decoration: BoxDecoration(
                                             gradient: LinearGradient(colors: [
-                                              Colors.lightGreenAccent,
-                                              Colors.lightGreenAccent[100],
-                                              Colors.tealAccent[100]
+                                              Color(0xffD2FF66),
+                                              Color(0xff9AFAA8)
                                             ]),
                                             borderRadius: BorderRadius.all(
                                                 Radius.circular(10.0)),

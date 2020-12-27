@@ -1,9 +1,7 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Booking2Screen extends StatefulWidget {
   @override
@@ -55,7 +53,7 @@ class _Booking2ScreenState extends State<Booking2Screen> {
               ),
               EachCard(
                 icon: 'assets/icon/cricket.svg',
-                color: Colors.yellowAccent,
+                color: Color(0xffD2FF66),
                 sport: "Cricket",
                 date: "Oct 26, Mon",
                 time: "8 - 9 Am, 9-10 Am",
@@ -65,7 +63,7 @@ class _Booking2ScreenState extends State<Booking2Screen> {
               ),
               EachCard(
                 icon: 'assets/icon/football.svg',
-                color: Colors.blueAccent,
+                color: Colors.white,
                 sport: "Football",
                 date: "Oct 27, Tue",
                 time: "9 - 10 Am, 10-11 Am",
