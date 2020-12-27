@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:collection/collection.dart';
 
 enum q1Ans { Yes, No }
 enum q2Ans { Yes, No }
+Function eq = const ListEquality().equals;
 
 class ProfileScreen extends StatefulWidget {
   @override
@@ -623,32 +625,19 @@ class _EachSportState extends State<EachSport> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.085,
-      width: MediaQuery.of(context).size.width * 0.18,
       decoration: BoxDecoration(
           gradient: LinearGradient(
-              begin: Alignment(1, 1),
-              end: Alignment(-1, -1),
+              begin: Alignment(-1, -1),
+              end: Alignment(1, 1),
               colors: widget.color),
           borderRadius: BorderRadius.circular(30)),
-      child: Padding(
-        padding: const EdgeInsets.all(3.0),
-        child: Container(
-          decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment(-1, -1),
-                  end: Alignment(1, 1),
-                  colors: widget.color),
-              borderRadius: BorderRadius.circular(30)),
-          height: MediaQuery.of(context).size.height * 0.085,
-          width: MediaQuery.of(context).size.width * 0.18,
-          child: Center(
-              child: Container(
-                  height: 30,
-                  width: 30,
-                  child: SvgPicture.asset(widget.icon, color: widget.icolor))),
-        ),
-      ),
+      height: MediaQuery.of(context).size.height * 0.085,
+      width: MediaQuery.of(context).size.width * 0.18,
+      child: Center(
+          child: Container(
+              height: 30,
+              width: 30,
+              child: SvgPicture.asset(widget.icon, color: widget.icolor))),
     );
   }
 }
