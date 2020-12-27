@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -86,86 +87,96 @@ class EachCard extends StatelessWidget {
   EachCard({this.icon, this.color, this.sport, this.date, this.time});
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: MediaQuery.of(context).size.height * 0.3,
-      width: MediaQuery.of(context).size.width * 0.9,
-      decoration: BoxDecoration(
-          border: Border.all(width: 2.5, color: Colors.grey),
-          borderRadius: BorderRadius.circular(10)),
-      child: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Column(
-          children: [
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.01,
-            ),
-            Row(
-              children: [
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.05,
-                ),
-                CircleAvatar(
-                    maxRadius: 30,
-                    backgroundColor: Colors.grey[900],
-                    child: Container(
-                        height: 35,
-                        width: 35,
-                        child: SvgPicture.asset(
-                          icon,
-                          color: color,
-                        ))),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.07,
-                ),
-                Text(
-                  sport,
-                  style: TextStyle(fontSize: 20),
-                )
-              ],
-            ),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.03,
-            ),
-            Row(
-              children: [
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.08,
-                ),
-                Text(
-                  "Date",
-                  style: TextStyle(color: Colors.grey, fontSize: 20),
-                ),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.1,
-                ),
-                Text(
-                  date,
-                  style: TextStyle(fontSize: 18),
-                )
-              ],
-            ),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.03,
-            ),
-            Row(
-              children: [
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.08,
-                ),
-                Text(
-                  "Time",
-                  style: TextStyle(color: Colors.grey, fontSize: 20),
-                ),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.1,
-                ),
-                Text(
-                  time,
-                  style: TextStyle(fontSize: 18),
-                )
-              ],
-            ),
-          ],
+    return Neumorphic(
+      style: NeumorphicStyle(
+          color: Colors.transparent,
+          depth: -10,
+          shadowDarkColorEmboss: Colors.black,
+          shadowLightColorEmboss: Colors.white38,
+          border: NeumorphicBorder(width: 2),
+          intensity: 0.8,
+          boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(10))),
+      child: Container(
+        height: MediaQuery.of(context).size.height * 0.3,
+        width: MediaQuery.of(context).size.width * 0.9,
+        decoration: BoxDecoration(
+            border: Border.all(width: 2.5, color: Colors.grey),
+            borderRadius: BorderRadius.circular(10)),
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+            children: [
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.01,
+              ),
+              Row(
+                children: [
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.05,
+                  ),
+                  CircleAvatar(
+                      maxRadius: 30,
+                      backgroundColor: Colors.grey[900],
+                      child: Container(
+                          height: 35,
+                          width: 35,
+                          child: SvgPicture.asset(
+                            icon,
+                            color: color,
+                          ))),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.07,
+                  ),
+                  Text(
+                    sport,
+                    style: TextStyle(fontSize: 20),
+                  )
+                ],
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.03,
+              ),
+              Row(
+                children: [
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.08,
+                  ),
+                  Text(
+                    "Date",
+                    style: TextStyle(color: Colors.grey, fontSize: 20),
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.1,
+                  ),
+                  Text(
+                    date,
+                    style: TextStyle(fontSize: 18),
+                  )
+                ],
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.03,
+              ),
+              Row(
+                children: [
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.08,
+                  ),
+                  Text(
+                    "Time",
+                    style: TextStyle(color: Colors.grey, fontSize: 20),
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.1,
+                  ),
+                  Text(
+                    time,
+                    style: TextStyle(fontSize: 18),
+                  )
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

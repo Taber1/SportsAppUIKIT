@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sport/booking_2.dart';
@@ -187,18 +188,29 @@ class _BookingScreenState extends State<BookingScreen> {
                     );
                   })),
             ),
-            TextField(
-                decoration: InputDecoration(
-              focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.green),
-                  borderRadius: BorderRadius.circular(5)),
-              border:
-                  OutlineInputBorder(borderRadius: BorderRadius.circular(5)),
-              hintText: 'Total Amount',
-              suffixStyle: TextStyle(color: Colors.green, fontSize: 22),
-              suffix: Text('300 KES'),
-              floatingLabelBehavior: FloatingLabelBehavior.always,
-            )),
+            Neumorphic(
+              style: NeumorphicStyle(
+                  color: Colors.transparent,
+                  depth: -10,
+                  shadowDarkColorEmboss: Colors.black,
+                  shadowLightColorEmboss: Colors.white38,
+                  border: NeumorphicBorder(width: 2),
+                  intensity: 0.8,
+                  boxShape:
+                      NeumorphicBoxShape.roundRect(BorderRadius.circular(10))),
+              child: TextField(
+                  decoration: InputDecoration(
+                focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.green),
+                    borderRadius: BorderRadius.circular(5)),
+                border:
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+                hintText: 'Total Amount',
+                suffixStyle: TextStyle(color: Colors.green, fontSize: 22),
+                suffix: Text('300 KES'),
+                floatingLabelBehavior: FloatingLabelBehavior.always,
+              )),
+            ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
             ),
@@ -314,21 +326,36 @@ class HorizontalCard extends StatelessWidget {
   const HorizontalCard({Key key, this.choice}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Container(
-      // width: MediaQuery.of(context).size.width*0.1,
-      // height: MediaQuery.of(context).size.height*0.2,
-      decoration: BoxDecoration(
-          gradient: LinearGradient(colors: choice.color),
-          borderRadius: BorderRadius.circular(15)),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            choice.time1 + "-" + choice.time2,
-            style: TextStyle(
-                color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold),
-          )
-        ],
+    return Neumorphic(
+      style: NeumorphicStyle(
+          color: Colors.transparent,
+          depth: -10,
+          shadowDarkColorEmboss: Colors.black,
+          shadowLightColorEmboss: Colors.white38,
+          border: NeumorphicBorder(width: 2),
+          intensity: 0.8,
+          boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(15))),
+      child: Container(
+        // width: MediaQuery.of(context).size.width*0.1,
+        // height: MediaQuery.of(context).size.height*0.2,
+        decoration: BoxDecoration(
+            gradient: LinearGradient(colors: choice.color),
+            borderRadius: BorderRadius.circular(15)),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              choice.time1 + "-" + choice.time2,
+              style: TextStyle(
+                  color: choice.color.toList() ==
+                          [Colors.grey, Colors.grey].toList()
+                      ? Colors.black
+                      : Colors.white,
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold),
+            )
+          ],
+        ),
       ),
     );
   }
@@ -341,40 +368,53 @@ class VerticalCard extends StatelessWidget {
   VerticalCard({this.date, this.day, this.color});
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.centerRight,
-              end: Alignment.centerLeft,
-              colors: color),
-          borderRadius: BorderRadius.circular(50)),
-      child: Padding(
-        padding: EdgeInsets.all(3),
-        child: Container(
-          decoration: BoxDecoration(
-              gradient: LinearGradient(colors: color),
-              borderRadius: BorderRadius.circular(50)),
-          width: MediaQuery.of(context).size.width * 0.19,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Text(
-                date,
-                style: TextStyle(
-                    fontSize: 22,
-                    color:
-                        color == Colors.grey[900] ? Colors.white : Colors.black,
-                    fontWeight: FontWeight.bold),
-              ),
-              Text(
-                day,
-                style: TextStyle(
-                    fontSize: 22,
-                    color:
-                        color == Colors.grey[900] ? Colors.white : Colors.black,
-                    fontWeight: FontWeight.bold),
-              )
-            ],
+    return Neumorphic(
+      style: NeumorphicStyle(
+          color: Colors.transparent,
+          depth: -10,
+          shadowDarkColorEmboss: Colors.black,
+          shadowLightColorEmboss: Colors.white38,
+          border: NeumorphicBorder(width: 2),
+          intensity: 0.8,
+          boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(50))),
+      child: Container(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.centerRight,
+                end: Alignment.centerLeft,
+                colors: color),
+            borderRadius: BorderRadius.circular(50)),
+        child: Padding(
+          padding: EdgeInsets.all(3),
+          child: Container(
+            decoration: BoxDecoration(
+                gradient: LinearGradient(colors: color),
+                borderRadius: BorderRadius.circular(50)),
+            width: MediaQuery.of(context).size.width * 0.19,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text(
+                  date,
+                  style: TextStyle(
+                      fontSize: 22,
+                      color:
+                          color.toList() == [Colors.grey[900], Colors.grey[900]]
+                              ? Colors.white
+                              : Colors.black,
+                      fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  day,
+                  style: TextStyle(
+                      fontSize: 22,
+                      color: color == [Colors.grey[900], Colors.grey[900]]
+                          ? Colors.white
+                          : Colors.black,
+                      fontWeight: FontWeight.bold),
+                )
+              ],
+            ),
           ),
         ),
       ),
