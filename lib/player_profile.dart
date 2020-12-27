@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -176,20 +177,31 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                   Flexible(
                     fit: FlexFit.loose,
-                    child: DropdownButtonFormField(
-                      decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(20))),
-                      value: ageselected,
-                      items: age,
-                      hint: Text(
-                        "25-30",
-                        style: TextStyle(fontSize: 17),
+                    child: Neumorphic(
+                      style: NeumorphicStyle(
+                          color: Colors.transparent,
+                          depth: -10,
+                          shadowDarkColorEmboss: Colors.black,
+                          shadowLightColorEmboss: Colors.white38,
+                          border: NeumorphicBorder(width: 2),
+                          intensity: 0.8,
+                          boxShape: NeumorphicBoxShape.roundRect(
+                              BorderRadius.circular(20))),
+                      child: DropdownButtonFormField(
+                        decoration: InputDecoration(
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(20))),
+                        value: ageselected,
+                        items: age,
+                        hint: Text(
+                          "25-30",
+                          style: TextStyle(fontSize: 17),
+                        ),
+                        onChanged: (value) {
+                          ageselected = value;
+                          setState(() {});
+                        },
                       ),
-                      onChanged: (value) {
-                        ageselected = value;
-                        setState(() {});
-                      },
                     ),
                   )
                 ],
@@ -213,20 +225,31 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                   Flexible(
                     fit: FlexFit.loose,
-                    child: DropdownButtonFormField(
-                      decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(20))),
-                      value: genderselected,
-                      items: gender,
-                      hint: Text(
-                        "Male",
-                        style: TextStyle(fontSize: 17),
+                    child: Neumorphic(
+                      style: NeumorphicStyle(
+                          color: Colors.transparent,
+                          depth: -10,
+                          shadowDarkColorEmboss: Colors.black,
+                          shadowLightColorEmboss: Colors.white38,
+                          border: NeumorphicBorder(width: 2),
+                          intensity: 0.8,
+                          boxShape: NeumorphicBoxShape.roundRect(
+                              BorderRadius.circular(20))),
+                      child: DropdownButtonFormField(
+                        decoration: InputDecoration(
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(20))),
+                        value: genderselected,
+                        items: gender,
+                        hint: Text(
+                          "Male",
+                          style: TextStyle(fontSize: 17),
+                        ),
+                        onChanged: (value) {
+                          genderselected = value;
+                          setState(() {});
+                        },
                       ),
-                      onChanged: (value) {
-                        genderselected = value;
-                        setState(() {});
-                      },
                     ),
                   )
                 ],
@@ -254,16 +277,27 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
               Flexible(
                 fit: FlexFit.loose,
-                child: DropdownButtonFormField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20))),
-                  value: aNS,
-                  items: ans,
-                  onChanged: (value) {
-                    aNS = value;
-                    setState(() {});
-                  },
+                child: Neumorphic(
+                  style: NeumorphicStyle(
+                      color: Colors.transparent,
+                      depth: -10,
+                      shadowDarkColorEmboss: Colors.black,
+                      shadowLightColorEmboss: Colors.white38,
+                      border: NeumorphicBorder(width: 2),
+                      intensity: 0.8,
+                      boxShape: NeumorphicBoxShape.roundRect(
+                          BorderRadius.circular(20))),
+                  child: DropdownButtonFormField(
+                    decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20))),
+                    value: aNS,
+                    items: ans,
+                    onChanged: (value) {
+                      aNS = value;
+                      setState(() {});
+                    },
+                  ),
                 ),
               ),
               SizedBox(
@@ -471,13 +505,24 @@ class _ProfileScreenState extends State<ProfileScreen> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
-              TextField(
-                decoration: InputDecoration(
-                  focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.green),
-                      borderRadius: BorderRadius.circular(20)),
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20)),
+              Neumorphic(
+                style: NeumorphicStyle(
+                    color: Colors.transparent,
+                    depth: -10,
+                    shadowDarkColorEmboss: Colors.black,
+                    shadowLightColorEmboss: Colors.white38,
+                    border: NeumorphicBorder(width: 2),
+                    intensity: 0.8,
+                    boxShape: NeumorphicBoxShape.roundRect(
+                        BorderRadius.circular(20))),
+                child: TextField(
+                  decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.green),
+                        borderRadius: BorderRadius.circular(20)),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                  ),
                 ),
               ),
               SizedBox(
