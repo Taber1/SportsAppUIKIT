@@ -169,7 +169,11 @@ class _NotificationScreenState extends State<NotificationScreen> {
                   'https://cdn.pixabay.com/photo/2016/03/09/15/10/man-1246508__340.jpg',
               name: 'John Doe',
               status: "PENDING",
-              color: [Colors.yellowAccent[100], Colors.yellowAccent].toList(),
+              color: [
+                Colors.yellowAccent[100],
+                Colors.yellowAccent,
+                Colors.yellow
+              ].toList(),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.02,
@@ -179,7 +183,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                   'https://cdn.pixabay.com/photo/2016/03/09/15/10/man-1246508__340.jpg',
               name: 'John Doe',
               status: "OUT",
-              color: [Colors.redAccent, Colors.red].toList(),
+              color: [Colors.redAccent, Colors.redAccent[100]].toList(),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
@@ -272,7 +276,7 @@ class EachCard extends StatelessWidget {
                       borderRadius: BorderRadius.all(Radius.circular(80.0)),
                     ),
                     height: MediaQuery.of(context).size.height * 0.035,
-                    width: MediaQuery.of(context).size.height * 0.095,
+                    width: MediaQuery.of(context).size.height * 0.12,
                     alignment: Alignment.center,
                     child: Text(
                       status,

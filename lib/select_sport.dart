@@ -55,7 +55,7 @@ class _SelectSportScreenState extends State<SelectSportScreen> {
             width: MediaQuery.of(context).size.height,
             alignment: Alignment.center,
             child: const Text(
-              'SIGN IN',
+              'NEXT',
               textAlign: TextAlign.center,
               style: TextStyle(
                   color: Colors.black,

@@ -401,7 +401,7 @@ class VerticalCard extends StatelessWidget {
                       color:
                           color.toList() == [Colors.grey[900], Colors.grey[900]]
                               ? Colors.white
-                              : Colors.black,
+                              : Colors.white,
                       fontWeight: FontWeight.bold),
                 ),
                 Text(
@@ -410,7 +410,7 @@ class VerticalCard extends StatelessWidget {
                       fontSize: 22,
                       color: color == [Colors.grey[900], Colors.grey[900]]
                           ? Colors.white
-                          : Colors.black,
+                          : Colors.white,
                       fontWeight: FontWeight.bold),
                 )
               ],

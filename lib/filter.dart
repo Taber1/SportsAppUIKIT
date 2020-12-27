@@ -229,7 +229,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                                 0.045,
                                         width:
                                             MediaQuery.of(context).size.width *
-                                                0.3,
+                                                0.27,
                                         decoration: BoxDecoration(
                                           gradient: LinearGradient(colors: [
                                             Colors.grey[700],
@@ -288,7 +288,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                                 0.045,
                                         width:
                                             MediaQuery.of(context).size.width *
-                                                0.3,
+                                                0.27,
                                         decoration: BoxDecoration(
                                           gradient: LinearGradient(colors: [
                                             Colors.grey[700],
@@ -340,7 +340,6 @@ class _FilterScreenState extends State<FilterScreen> {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10)),
                           child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Neumorphic(
                                 style: NeumorphicStyle(
@@ -377,7 +376,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                           width: MediaQuery.of(context)
                                                   .size
                                                   .width *
-                                              0.19,
+                                              0.20,
                                           decoration: BoxDecoration(
                                             gradient: LinearGradient(colors: [
                                               Colors.lightGreenAccent,
@@ -432,7 +431,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                           width: MediaQuery.of(context)
                                                   .size
                                                   .width *
-                                              0.19,
+                                              0.20,
                                           decoration: BoxDecoration(
                                             gradient: LinearGradient(colors: [
                                               Colors.grey[700],
@@ -486,7 +485,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                           width: MediaQuery.of(context)
                                                   .size
                                                   .width *
-                                              0.19,
+                                              0.20,
                                           decoration: BoxDecoration(
                                             gradient: LinearGradient(colors: [
                                               Colors.grey[700],
@@ -541,7 +540,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                           width: MediaQuery.of(context)
                                                   .size
                                                   .width *
-                                              0.19,
+                                              0.20,
                                           decoration: BoxDecoration(
                                             gradient: LinearGradient(colors: [
                                               Colors.grey[700],

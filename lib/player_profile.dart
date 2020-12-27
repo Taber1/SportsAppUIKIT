@@ -120,7 +120,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       Text(
                         "johndoe123@gmail.com",
                         textAlign: TextAlign.left,
-                        style: TextStyle(fontSize: 16, color: Colors.green),
+                        style: TextStyle(
+                            fontSize: 16, color: Colors.lightGreenAccent),
                       ),
                       SizedBox(
                         width: MediaQuery.of(context).size.width * 0.1,
