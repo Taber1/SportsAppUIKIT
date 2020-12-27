@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sport/bottomAppbar.dart';
@@ -34,37 +35,57 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             Column(
               children: [
-                TextField(
+                Neumorphic(
+                  style: NeumorphicStyle(
+                      color: Colors.transparent,
+                      depth: -10,
+                      shadowDarkColorEmboss: Colors.black,
+                      shadowLightColorEmboss: Colors.white38,
+                      border: NeumorphicBorder(width: 2),
+                      intensity: 0.8,
+                      boxShape: NeumorphicBoxShape.roundRect(
+                          BorderRadius.circular(10))),
+                  child: TextField(
+                      decoration: InputDecoration(
+                          focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.green),
+                              borderRadius: BorderRadius.circular(5)),
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5)),
+                          hintText: 'sarahkaramsi@gmail.com',
+                          hintStyle: TextStyle(fontSize: 18),
+                          suffixIcon: Icon(
+                            Icons.mail,
+                          ))),
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.015,
+                ),
+                Neumorphic(
+                  style: NeumorphicStyle(
+                      color: Colors.transparent,
+                      depth: -10,
+                      shadowDarkColorEmboss: Colors.black,
+                      shadowLightColorEmboss: Colors.white38,
+                      border: NeumorphicBorder(width: 2),
+                      intensity: 0.8,
+                      boxShape: NeumorphicBoxShape.roundRect(
+                          BorderRadius.circular(10))),
+                  child: TextField(
                     decoration: InputDecoration(
                         focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(color: Colors.green),
                             borderRadius: BorderRadius.circular(5)),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5)),
-                        hintText: 'sarahkaramsi@gmail.com',
+                        hintText: '********',
                         hintStyle: TextStyle(
                           fontSize: 18,
                         ),
                         suffixIcon: Icon(
-                          Icons.mail,
-                        ))),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.015,
-                ),
-                TextField(
-                  decoration: InputDecoration(
-                      focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.green),
-                          borderRadius: BorderRadius.circular(5)),
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(5)),
-                      hintText: '********',
-                      hintStyle: TextStyle(
-                        fontSize: 18,
-                      ),
-                      suffixIcon: Icon(
-                        FontAwesomeIcons.lockOpen,
-                      )),
+                          FontAwesomeIcons.lockOpen,
+                        )),
+                  ),
                 )
               ],
             ),
