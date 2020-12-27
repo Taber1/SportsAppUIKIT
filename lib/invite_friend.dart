@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sport/filter.dart';
@@ -168,186 +169,196 @@ class EachCard extends StatelessWidget {
       {this.icon, this.image, this.name, this.gender, this.age, this.level});
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: MediaQuery.of(context).size.height * 0.48,
-      width: MediaQuery.of(context).size.width * 0.87,
-      decoration: BoxDecoration(
-          border: Border.all(width: 2.5, color: Colors.grey),
-          borderRadius: BorderRadius.circular(10)),
-      child: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Column(
-          children: [
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.01,
-            ),
-            Row(
-              children: [
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.05,
-                ),
-                CircleAvatar(
-                  maxRadius: 30,
-                  backgroundColor: Colors.grey[900],
-                  backgroundImage: NetworkImage(image),
-                ),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.05,
-                ),
-                Text(
-                  name,
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                )
-              ],
-            ),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.01,
-            ),
-            Row(
-              children: [
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.08,
-                ),
-                Text(
-                  "Gender",
-                  style: TextStyle(color: Colors.grey, fontSize: 20),
-                ),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.1,
-                ),
-                Text(
-                  gender,
-                  style: TextStyle(fontSize: 18),
-                )
-              ],
-            ),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.01,
-            ),
-            Row(
-              children: [
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.08,
-                ),
-                Text(
-                  "Age",
-                  style: TextStyle(color: Colors.grey, fontSize: 20),
-                ),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.17,
-                ),
-                Text(
-                  age,
-                  style: TextStyle(fontSize: 18),
-                )
-              ],
-            ),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.01,
-            ),
-            Row(
-              children: [
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.08,
-                ),
-                Text(
-                  "Level",
-                  style: TextStyle(color: Colors.grey, fontSize: 20),
-                ),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.14,
-                ),
-                Text(
-                  level,
-                  style: TextStyle(fontSize: 18),
-                )
-              ],
-            ),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.01,
-            ),
-            Row(
-              children: [
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.08,
-                ),
-                Text(
-                  "Sports",
-                  style: TextStyle(color: Colors.grey, fontSize: 20),
-                ),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.12,
-                ),
-                CircleAvatar(
-                  backgroundColor: Colors.grey[900],
-                  child: Container(
-                      height: 20,
-                      width: 20,
-                      child: SvgPicture.asset(
-                        'assets/icon/basketball.svg',
-                        color: Colors.grey,
-                      )),
-                ),
-                SizedBox(
-                  width: 5,
-                ),
-                CircleAvatar(
-                  backgroundColor: Colors.grey[900],
-                  child: Container(
-                      height: 20,
-                      width: 20,
-                      child: SvgPicture.asset(
-                        'assets/icon/cricket.svg',
-                        color: Colors.grey,
-                      )),
-                ),
-                SizedBox(
-                  width: 5,
-                ),
-                CircleAvatar(
-                  backgroundColor: Colors.grey[900],
-                  child: Container(
-                      height: 20,
-                      width: 20,
-                      child: SvgPicture.asset(
-                        'assets/icon/gym.svg',
-                        color: Colors.grey,
-                      )),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.01,
-            ),
-            Divider(
-              thickness: 3,
-              indent: 20,
-              endIndent: 20,
-            ),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.01,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  Icons.check,
-                  size: 35,
-                  color: Colors.green,
-                ),
-                SizedBox(
-                  width: 5,
-                ),
-                Text(
-                  "Invited",
-                  style: TextStyle(
-                      color: Colors.green,
-                      fontSize: 30,
-                      fontWeight: FontWeight.w200),
-                )
-              ],
-            )
-          ],
+    return Neumorphic(
+      style: NeumorphicStyle(
+          color: Colors.transparent,
+          depth: -10,
+          shadowDarkColorEmboss: Colors.black,
+          shadowLightColorEmboss: Colors.white38,
+          border: NeumorphicBorder(width: 2),
+          intensity: 0.8,
+          boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(10))),
+      child: Container(
+        height: MediaQuery.of(context).size.height * 0.48,
+        width: MediaQuery.of(context).size.width * 0.87,
+        decoration: BoxDecoration(
+            border: Border.all(width: 2.5, color: Colors.grey),
+            borderRadius: BorderRadius.circular(10)),
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+            children: [
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.01,
+              ),
+              Row(
+                children: [
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.05,
+                  ),
+                  CircleAvatar(
+                    maxRadius: 30,
+                    backgroundColor: Colors.grey[900],
+                    backgroundImage: NetworkImage(image),
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.05,
+                  ),
+                  Text(
+                    name,
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.01,
+              ),
+              Row(
+                children: [
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.08,
+                  ),
+                  Text(
+                    "Gender",
+                    style: TextStyle(color: Colors.grey, fontSize: 20),
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.1,
+                  ),
+                  Text(
+                    gender,
+                    style: TextStyle(fontSize: 18),
+                  )
+                ],
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.01,
+              ),
+              Row(
+                children: [
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.08,
+                  ),
+                  Text(
+                    "Age",
+                    style: TextStyle(color: Colors.grey, fontSize: 20),
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.17,
+                  ),
+                  Text(
+                    age,
+                    style: TextStyle(fontSize: 18),
+                  )
+                ],
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.01,
+              ),
+              Row(
+                children: [
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.08,
+                  ),
+                  Text(
+                    "Level",
+                    style: TextStyle(color: Colors.grey, fontSize: 20),
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.14,
+                  ),
+                  Text(
+                    level,
+                    style: TextStyle(fontSize: 18),
+                  )
+                ],
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.01,
+              ),
+              Row(
+                children: [
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.08,
+                  ),
+                  Text(
+                    "Sports",
+                    style: TextStyle(color: Colors.grey, fontSize: 20),
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.12,
+                  ),
+                  CircleAvatar(
+                    backgroundColor: Colors.grey[900],
+                    child: Container(
+                        height: 20,
+                        width: 20,
+                        child: SvgPicture.asset(
+                          'assets/icon/basketball.svg',
+                          color: Colors.grey,
+                        )),
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  CircleAvatar(
+                    backgroundColor: Colors.grey[900],
+                    child: Container(
+                        height: 20,
+                        width: 20,
+                        child: SvgPicture.asset(
+                          'assets/icon/cricket.svg',
+                          color: Colors.grey,
+                        )),
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  CircleAvatar(
+                    backgroundColor: Colors.grey[900],
+                    child: Container(
+                        height: 20,
+                        width: 20,
+                        child: SvgPicture.asset(
+                          'assets/icon/gym.svg',
+                          color: Colors.grey,
+                        )),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.01,
+              ),
+              Divider(
+                thickness: 3,
+                indent: 20,
+                endIndent: 20,
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.01,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.check,
+                    size: 35,
+                    color: Colors.green,
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Text(
+                    "Invited",
+                    style: TextStyle(
+                        color: Colors.green,
+                        fontSize: 30,
+                        fontWeight: FontWeight.w200),
+                  )
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );
