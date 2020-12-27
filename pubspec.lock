@@ -149,11 +149,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  flutter_web_plugins:
-    dependency: transitive
-    description: flutter
-    source: sdk
-    version: "0.0.0"
   font_awesome_flutter:
     dependency: "direct main"
     description:
@@ -173,13 +168,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.2.0"
-  hexcolor:
-    dependency: "direct main"
-    description:
-      name: hexcolor
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.6"
   integration_test:
     dependency: "direct dev"
     description: flutter
