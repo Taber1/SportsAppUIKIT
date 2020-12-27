@@ -155,11 +155,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                   'https://cdn.pixabay.com/photo/2016/03/09/15/10/man-1246508__340.jpg',
               name: 'John Doe',
               status: "IN",
-              color: [
-                Colors.lightGreenAccent,
-                Colors.lightGreenAccent[100],
-                Colors.tealAccent[100]
-              ].toList(),
+              color: [Color(0xffD2FF66), Color(0xff9AFAA8)].toList(),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.02,
@@ -170,9 +166,8 @@ class _NotificationScreenState extends State<NotificationScreen> {
               name: 'John Doe',
               status: "PENDING",
               color: [
-                Colors.yellowAccent[100],
-                Colors.yellowAccent,
-                Colors.yellow
+                Color(0xffE8AD01),
+                Color(0xffE8AD01),
               ].toList(),
             ),
             SizedBox(
@@ -183,7 +178,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                   'https://cdn.pixabay.com/photo/2016/03/09/15/10/man-1246508__340.jpg',
               name: 'John Doe',
               status: "OUT",
-              color: [Colors.redAccent, Colors.redAccent[100]].toList(),
+              color: [Color(0xffF24141), Color(0xffF24141)].toList(),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,

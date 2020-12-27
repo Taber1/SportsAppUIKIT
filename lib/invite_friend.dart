@@ -115,22 +115,16 @@ class _InviteFriendScreenState extends State<InviteFriendScreen> {
               padding: EdgeInsets.all(0.0),
               child: Container(
                 decoration: BoxDecoration(
-                  gradient: LinearGradient(colors: [
-                    Colors.tealAccent[100],
-                    Colors.lightGreenAccent[100],
-                    Colors.lightGreenAccent,
-                  ]),
+                  gradient: LinearGradient(
+                      colors: [Color(0xff9AFAA8), Color(0xffD2FF66)]),
                   borderRadius: BorderRadius.all(Radius.circular(80.0)),
                 ),
                 child: Padding(
                   padding: EdgeInsets.all(3),
                   child: Container(
                     decoration: BoxDecoration(
-                      gradient: LinearGradient(colors: [
-                        Colors.lightGreenAccent,
-                        Colors.lightGreenAccent[100],
-                        Colors.tealAccent[100]
-                      ]),
+                      gradient: LinearGradient(
+                          colors: [Color(0xffD2FF66), Color(0xff9AFAA8)]),
                       borderRadius: BorderRadius.all(Radius.circular(80.0)),
                     ),
                     height: MediaQuery.of(context).size.height * 0.06,
@@ -343,7 +337,7 @@ class EachCard extends StatelessWidget {
                   Icon(
                     Icons.check,
                     size: 35,
-                    color: Colors.green,
+                    color: Color(0xffACFB92),
                   ),
                   SizedBox(
                     width: 5,
@@ -351,7 +345,7 @@ class EachCard extends StatelessWidget {
                   Text(
                     "Invited",
                     style: TextStyle(
-                        color: Colors.green,
+                        color: Color(0xffACFB92),
                         fontSize: 30,
                         fontWeight: FontWeight.w200),
                   )

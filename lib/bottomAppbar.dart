@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sport/player_profile.dart';
 import 'package:sport/select_sport.dart';
-
 import 'dart:ui' as ui;
 import 'booking.dart';
 import 'home.dart';
@@ -71,10 +70,7 @@ class _BottomAppbarScreenState extends State<BottomAppbarScreen> {
                               Offset(4.0, 24.0),
                               Offset(24.0, 4.0),
                               currentTab == 0
-                                  ? [
-                                      Colors.tealAccent[100],
-                                      Colors.lightGreenAccent,
-                                    ]
+                                  ? [Color(0xffD2FF66), Color(0xff9AFAA8)]
                                   : [Colors.grey, Colors.grey],
                             );
                           },
@@ -102,10 +98,7 @@ class _BottomAppbarScreenState extends State<BottomAppbarScreen> {
                               Offset(4.0, 24.0),
                               Offset(24.0, 4.0),
                               currentTab == 1
-                                  ? [
-                                      Colors.tealAccent[100],
-                                      Colors.lightGreenAccent,
-                                    ]
+                                  ? [Color(0xffD2FF66), Color(0xff9AFAA8)]
                                   : [Colors.grey, Colors.grey],
                             );
                           },
@@ -133,10 +126,7 @@ class _BottomAppbarScreenState extends State<BottomAppbarScreen> {
                               Offset(4.0, 24.0),
                               Offset(24.0, 4.0),
                               currentTab == 2
-                                  ? [
-                                      Colors.tealAccent[100],
-                                      Colors.lightGreenAccent,
-                                    ]
+                                  ? [Color(0xffD2FF66), Color(0xff9AFAA8)]
                                   : [Colors.grey, Colors.grey],
                             );
                           },
@@ -164,10 +154,7 @@ class _BottomAppbarScreenState extends State<BottomAppbarScreen> {
                               Offset(4.0, 24.0),
                               Offset(24.0, 4.0),
                               currentTab == 3
-                                  ? [
-                                      Colors.tealAccent[100],
-                                      Colors.lightGreenAccent,
-                                    ]
+                                  ? [Color(0xffD2FF66), Color(0xff9AFAA8)]
                                   : [Colors.grey, Colors.grey],
                             );
                           },
@@ -180,6 +167,38 @@ class _BottomAppbarScreenState extends State<BottomAppbarScreen> {
                     ),
                   ])),
         ),
+      ),
+    );
+  }
+}
+
+class GradientAppBar extends StatelessWidget {
+  final String title;
+  final double barHeight = 50.0;
+
+  GradientAppBar(this.title);
+
+  @override
+  Widget build(BuildContext context) {
+    final double statusbarHeight = MediaQuery.of(context).padding.top;
+
+    return new Container(
+      padding: EdgeInsets.only(top: statusbarHeight),
+      height: statusbarHeight + barHeight,
+      child: Center(
+        child: Text(
+          title,
+          style: TextStyle(
+              fontSize: 20.0, color: Colors.white, fontWeight: FontWeight.bold),
+        ),
+      ),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+            colors: [Colors.red, Colors.blue],
+            begin: const FractionalOffset(0.0, 0.0),
+            end: const FractionalOffset(0.5, 0.0),
+            stops: [0.0, 1.0],
+            tileMode: TileMode.clamp),
       ),
     );
   }

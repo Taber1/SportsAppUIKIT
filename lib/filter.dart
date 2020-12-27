@@ -92,7 +92,7 @@ class _FilterScreenState extends State<FilterScreen> {
                         height: MediaQuery.of(context).size.height * 0.01,
                       ),
                       RangeSlider(
-                        activeColor: Colors.lightGreenAccent,
+                        activeColor: Color(0xffACFB92),
                         inactiveColor: Colors.grey,
                         values: _values,
                         min: 0,
@@ -139,8 +139,8 @@ class _FilterScreenState extends State<FilterScreen> {
                                         begin: Alignment.centerRight,
                                         end: Alignment.centerLeft,
                                         colors: [
-                                          Colors.grey[700],
-                                          Colors.grey[700],
+                                          Color(0xff9AFAA8),
+                                          Color(0xffD2FF66),
                                         ]),
                                     borderRadius:
                                         BorderRadius.all(Radius.circular(10.0)),
@@ -155,8 +155,8 @@ class _FilterScreenState extends State<FilterScreen> {
                                           0.27,
                                       decoration: BoxDecoration(
                                         gradient: LinearGradient(colors: [
-                                          Colors.grey[700],
-                                          Colors.grey[700],
+                                          Color(0xffD2FF66),
+                                          Color(0xff9AFAA8)
                                         ]),
                                         borderRadius: BorderRadius.all(
                                             Radius.circular(10.0)),
@@ -166,12 +166,17 @@ class _FilterScreenState extends State<FilterScreen> {
                                             MainAxisAlignment.center,
                                         children: [
                                           Icon(
-                                            FontAwesomeIcons.venus,
+                                            FontAwesomeIcons.transgender,
+                                            color: Colors.black,
                                           ),
                                           SizedBox(
                                             width: 5,
                                           ),
-                                          Text("Female")
+                                          Text(
+                                            "ANY",
+                                            style:
+                                                TextStyle(color: Colors.black),
+                                          )
                                         ],
                                       ),
                                     ),
