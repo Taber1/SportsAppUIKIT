@@ -552,6 +552,7 @@ class _FilterScreenState extends State<FilterScreen> {
                         height: MediaQuery.of(context).size.height * 0.03,
                       ),
                       RaisedButton(
+                        color: Colors.transparent,
                         onPressed: () {},
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(50.0)),

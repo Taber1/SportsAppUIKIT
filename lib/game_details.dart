@@ -214,6 +214,7 @@ class _EventDetailScreenState extends State<EventDetailScreen> {
                 height: MediaQuery.of(context).size.height * 0.08,
               ),
               RaisedButton(
+                color: Colors.transparent,
                 onPressed: () {},
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50.0)),

@@ -143,6 +143,7 @@ class _LoginScreenState extends State<LoginScreen> {
               height: MediaQuery.of(context).size.height * 0.05,
             ),
             RaisedButton(
+              color: Colors.transparent,
               onPressed: () {
                 Navigator.push(
                     context,

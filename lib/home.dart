@@ -65,6 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
               RaisedButton(
+                color: Colors.transparent,
                 onPressed: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => VenueScreen()));
@@ -134,6 +135,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
               RaisedButton(
+                color: Colors.transparent,
                 onPressed: () {
                   Navigator.push(
                       context,
@@ -195,6 +197,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
               RaisedButton(
+                color: Colors.transparent,
                 onPressed: () {},
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50.0)),

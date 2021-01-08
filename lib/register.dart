@@ -172,6 +172,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 height: MediaQuery.of(context).size.height * 0.05,
               ),
               RaisedButton(
+                color: Colors.transparent,
                 onPressed: () {
                   Navigator.push(
                       context,
@@ -193,7 +194,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     borderRadius: BorderRadius.all(Radius.circular(80.0)),
                   ),
                   height: MediaQuery.of(context).size.height * 0.06,
-                  width: MediaQuery.of(context).size.height * 0.2,
+                  width: MediaQuery.of(context).size.height * 0.5,
                   alignment: Alignment.center,
                   child: const Text(
                     'REGISTER',

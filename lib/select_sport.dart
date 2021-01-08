@@ -264,6 +264,7 @@ class _SelectSportScreenState extends State<SelectSportScreen> {
                 height: MediaQuery.of(context).size.height * 0.05,
               ),
               RaisedButton(
+                color: Colors.transparent,
                 onPressed: () {
                   showAlertDialog(context);
                 },

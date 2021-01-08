@@ -237,6 +237,7 @@ class _EachCardState extends State<EachCard> {
                   Padding(
                     padding: const EdgeInsets.only(right: 17.0),
                     child: RaisedButton(
+                      color: Colors.transparent,
                       onPressed: () {
                         Navigator.push(
                             context,
